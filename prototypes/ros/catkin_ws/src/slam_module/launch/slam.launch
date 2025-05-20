@@ -1,0 +1,11 @@
+<launch>
+  <!-- Gmapping Node -->
+  <node pkg="gmapping" type="slam_gmapping" name="slam_gmapping" output="screen">
+    <param name="base_frame" value="base_link"/>
+    <param name="odom_frame" value="odom"/>
+    <param name="map_update_interval" value="5.0"/>
+    <param name="maxUrange" value="8.0"/>
+    <rosparam file="$(find slam_module)/config/gmapping_params.yaml" command="load"/>
+    <remap from="scan" to="/scan"/>
+  </node>
+</launch>

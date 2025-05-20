@@ -1,0 +1,9 @@
+base_global_planner: "navfn/NavfnROS"
+base_local_planner: "base_local_planner/TrajectoryPlannerROS"
+
+# Recovery behaviors and planner/controller settings
+recovery_behavior_enabled: true
+clearing_rotation_allowed: true
+shutdown_costmaps: false
+controller_frequency: 10.0
+planner_frequency: 5.0

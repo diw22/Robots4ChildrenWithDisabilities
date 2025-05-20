@@ -1,0 +1,10 @@
+<launch>
+  <!-- Launch Lidar -->
+  <include file="$(find rplidar_ros)/launch/rplidar_a2m12.launch"/>
+
+  <!-- Launch SLAM -->
+  <include file="$(find slam_module)/launch/slam.launch"/>
+
+  <!-- Launch Navigation -->
+  <include file="$(find nav_module)/launch/navigation.launch"/>
+</launch>
