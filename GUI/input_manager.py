@@ -1,12 +1,13 @@
 from control_modes_basic import controller_manager
-from headtracking import HeadTracker
+from headtrackingwithcam import HeadTracker
 
 class InputManager:
-    def __init__(self):
+    def __init__(self, queue = None):
         self.input_type = "controller"
         self.active = False
         self.tracker = None
         self.callback = None
+        self.qRgb = queue
 
     def set_input_type(self, input_type):
         if input_type not in ["controller", "head"]:
@@ -21,7 +22,7 @@ class InputManager:
         if self.input_type == "controller":
             controller_manager.start(callback)
         elif self.input_type == "head":
-            self.tracker = HeadTracker(direction_callback=callback)
+            self.tracker = HeadTracker(direction_callback=callback, queue=self.qRgb)
             self.tracker.start()
 
     def stop(self):
