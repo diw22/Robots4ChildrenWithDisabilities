@@ -1,62 +1,129 @@
 import cv2
 import mediapipe as mp
-import threading
 import time
 
-class HeadTracker:
-    def __init__(self, direction_callback=None, threshold=40):
-        self.threshold = threshold
-        self.callback = direction_callback
-        self.running = False
-        self.cap = cv2.VideoCapture(0)
-        self.face_mesh = mp.solutions.face_mesh.FaceMesh(max_num_faces=1, refine_landmarks=True)
-        self.calibrated_x = None
-        self.calibrated_y = None
-        self.NOSE_ID = 1
+mp_face_mesh = mp.solutions.face_mesh
+face_mesh = mp_face_mesh.FaceMesh(max_num_faces=1, refine_landmarks=True)
 
-    def start(self):
-        self.running = True
-        threading.Thread(target=self._track_loop, daemon=True).start()
+cap = cv2.VideoCapture(0)
+if not cap.isOpened():
+    print("[ERROR] Could not open webcam.")
+    exit()
 
-    def stop(self):
-        self.running = False
-        self.cap.release()
+print("[INFO] Webcam initialized. Press 'C' to calibrate. ESC to quit.")
 
-    def _track_loop(self):
-        last_direction = None
-        last_sent = time.time()
+center_x, center_y = None, None
+threshold = 40
+morse_mode = False
+morse_buffer = ""
 
-        while self.running:
-            ret, frame = self.cap.read()
-            if not ret:
-                continue
+morse_input_delay = 0.5  # seconds
+last_morse_time = 0
 
-            h, w, _ = frame.shape
-            rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-            results = self.face_mesh.process(rgb)
+def get_direction(nose_x, nose_y):
+    dx = nose_x - center_x
+    dy = nose_y - center_y
+    print(f"[DEBUG] dx: {dx}, dy: {dy}")
+    if abs(dx) < threshold and abs(dy) < threshold:
+        return "Center"
+    elif abs(dx) > abs(dy):
+        return "Right" if dx < 0 else "Left"
+    else:
+        return "Up" if dy < 0 else "Down"
 
-            if results.multi_face_landmarks:
-                nose = results.multi_face_landmarks[0].landmark[self.NOSE_ID]
-                x = int(nose.x * w)
-                y = int(nose.y * h)
+def handle_morse(direction):
+    global morse_buffer, last_morse_time
+    current_time = time.time()
 
-                if self.calibrated_x is None:
-                    self.calibrated_x, self.calibrated_y = x, y
-                    print(f"[HEADTRACKING] Calibrated at ({x}, {y})")
-                    continue
+    if direction in ["Left", "Right"]:
+        if current_time - last_morse_time < morse_input_delay:
+            print(f"[SKIP] Ignored {direction} due to delay")
+            return
+        last_morse_time = current_time
 
-                dx = x - self.calibrated_x
-                dy = y - self.calibrated_y
+    if direction == "Left":
+        morse_buffer += "."
+    elif direction == "Right":
+        morse_buffer += "-"
+    elif direction == "Up":
+        print(f"[MORSE SUBMIT] {morse_buffer}")
+        morse_buffer = ""
+    elif direction == "Down":
+        morse_buffer = morse_buffer[:-1]
 
-                if abs(dx) < self.threshold and abs(dy) < self.threshold:
-                    direction = "Centre"
-                elif abs(dx) > abs(dy):
-                    direction = "Left" if dx < 0 else "Right"
+    print(f"[MORSE BUFFER] {morse_buffer}")
+
+def get_pupil_center(landmarks, indices, img_w, img_h):
+    xs = [landmarks[i].x * img_w for i in indices]
+    ys = [landmarks[i].y * img_h for i in indices]
+    return int(sum(xs) / len(xs)), int(sum(ys) / len(ys))
+
+while cap.isOpened():
+    ret, frame = cap.read()
+    if not ret:
+        print("[ERROR] Failed to read from webcam.")
+        break
+
+    img_h, img_w, _ = frame.shape
+    rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+    results = face_mesh.process(rgb)
+
+    if results.multi_face_landmarks:
+        for face_landmarks in results.multi_face_landmarks:
+            lm = face_landmarks.landmark
+
+            left_pupil = get_pupil_center(lm, [468, 469, 470, 471], img_w, img_h)
+            right_pupil = get_pupil_center(lm, [473, 474, 475, 476], img_w, img_h)
+
+            cv2.circle(frame, left_pupil, 3, (0, 255, 255), -1)
+            cv2.circle(frame, right_pupil, 3, (255, 255, 0), -1)
+            print(f"[DEBUG] Left pupil Y: {left_pupil[1]}, Right pupil Y: {right_pupil[1]}")
+
+            if left_pupil[1] < right_pupil[1] - 30:
+                morse_mode = False
+            elif right_pupil[1] < left_pupil[1] - 30:
+                morse_mode = True
+            print(f"[MODE] {'Morse' if morse_mode else 'Joystick'}")
+
+            nose = lm[1]
+            nose_x = int(nose.x * img_w)
+            nose_y = int(nose.y * img_h)
+            cv2.circle(frame, (nose_x, nose_y), 5, (0, 255, 0), -1)
+            print(f"[DEBUG] Nose at ({nose_x}, {nose_y})")
+
+            if center_x is not None and center_y is not None:
+                direction = get_direction(nose_x, nose_y)
+                if morse_mode:
+                    handle_morse(direction)
+                    cv2.putText(frame, f"Morse: {morse_buffer}", (10, 70),
+                                cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 0), 2)
                 else:
-                    direction = "Up" if dy < 0 else "Down"
+                    cv2.putText(frame, f"Direction: {direction}", (10, 70),
+                                cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
+                    print(f"[HEAD] {direction}")
+            else:
+                cv2.putText(frame, "Press 'C' to calibrate center", (10, 30),
+                            cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 255, 255), 2)
 
-                if direction != last_direction and time.time() - last_sent > 0.3:
-                    if self.callback:
-                        self.callback(direction)
-                    last_direction = direction
-                    last_sent = time.time()
+    else:
+        print("[DEBUG] No face detected.")
+
+    mode_text = "Morse Mode" if morse_mode else "Joystick Mode"
+    cv2.putText(frame, mode_text, (10, 30),
+                cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 255, 255), 2)
+
+    cv2.imshow("Head Tracking Joystick + Morse", frame)
+
+    key = cv2.waitKey(1) & 0xFF
+    if key == 27:
+        print("[INFO] Exiting...")
+        break
+    elif key == ord('c'):
+        if results.multi_face_landmarks:
+            nose = results.multi_face_landmarks[0].landmark[1]
+            center_x = int(nose.x * img_w)
+            center_y = int(nose.y * img_h)
+            print(f"[CALIBRATED] Center set to: ({center_x}, {center_y})")
+
+cap.release()
+cv2.destroyAllWindows()
