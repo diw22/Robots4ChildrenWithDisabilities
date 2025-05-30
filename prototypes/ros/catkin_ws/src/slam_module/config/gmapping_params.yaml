@@ -1,6 +1,0 @@
-minimumScore: 200
-delta: 0.1
-particles: 30
-linearUpdate: 1.0
-angularUpdate: 0.5
-resampleThreshold: 0.5
