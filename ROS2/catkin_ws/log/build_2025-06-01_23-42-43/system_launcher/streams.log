@@ -1,0 +1,47 @@
+[0.027s] Invoking command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/build/system_launcher': /usr/bin/cmake /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/src/system_launcher -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/system_launcher
+[0.480s] -- The C compiler identification is GNU 13.3.0
+[0.880s] -- The CXX compiler identification is GNU 13.3.0
+[0.913s] -- Detecting C compiler ABI info
+[1.188s] -- Detecting C compiler ABI info - done
+[1.207s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.207s] -- Detecting C compile features
+[1.209s] -- Detecting C compile features - done
+[1.225s] -- Detecting CXX compiler ABI info
+[1.529s] -- Detecting CXX compiler ABI info - done
+[1.544s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.545s] -- Detecting CXX compile features
+[1.547s] -- Detecting CXX compile features - done
+[1.561s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[2.022s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[2.511s] -- Configuring done (2.5s)
+[2.517s] -- Generating done (0.0s)
+[2.518s] [33mCMake Warning:
+[2.518s]   Manually-specified variables were not used by the project:
+[2.518s] 
+[2.518s]     CATKIN_INSTALL_INTO_PREFIX_ROOT
+[2.518s] 
+[2.518s] [0m
+[2.522s] -- Build files have been written to: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/build/system_launcher
+[2.529s] Invoked command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/build/system_launcher' returned '0': /usr/bin/cmake /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/src/system_launcher -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/system_launcher
+[2.531s] Invoking command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/build/system_launcher': /usr/bin/cmake --build /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/build/system_launcher -- -j4 -l4
+[2.606s] Invoked command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/build/system_launcher' returned '0': /usr/bin/cmake --build /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/build/system_launcher -- -j4 -l4
+[2.625s] Invoking command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/build/system_launcher': /usr/bin/cmake --install /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/build/system_launcher
+[2.643s] -- Install configuration: ""
+[2.643s] -- Installing: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/system_launcher/share/system_launcher/launch
+[2.644s] -- Installing: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/system_launcher/share/system_launcher/launch/system.launch.py
+[2.644s] -- Installing: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/system_launcher/share/ament_index/resource_index/package_run_dependencies/system_launcher
+[2.645s] -- Installing: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/system_launcher/share/ament_index/resource_index/parent_prefix_path/system_launcher
+[2.645s] -- Installing: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/system_launcher/share/system_launcher/environment/ament_prefix_path.sh
+[2.646s] -- Installing: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/system_launcher/share/system_launcher/environment/ament_prefix_path.dsv
+[2.646s] -- Installing: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/system_launcher/share/system_launcher/environment/path.sh
+[2.647s] -- Installing: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/system_launcher/share/system_launcher/environment/path.dsv
+[2.647s] -- Installing: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/system_launcher/share/system_launcher/local_setup.bash
+[2.648s] -- Installing: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/system_launcher/share/system_launcher/local_setup.sh
+[2.648s] -- Installing: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/system_launcher/share/system_launcher/local_setup.zsh
+[2.648s] -- Installing: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/system_launcher/share/system_launcher/local_setup.dsv
+[2.650s] -- Installing: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/system_launcher/share/system_launcher/package.dsv
+[2.650s] -- Installing: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/system_launcher/share/ament_index/resource_index/packages/system_launcher
+[2.651s] -- Installing: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/system_launcher/share/system_launcher/cmake/system_launcherConfig.cmake
+[2.651s] -- Installing: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/system_launcher/share/system_launcher/cmake/system_launcherConfig-version.cmake
+[2.651s] -- Installing: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/system_launcher/share/system_launcher/package.xml
+[2.656s] Invoked command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/build/system_launcher' returned '0': /usr/bin/cmake --install /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/build/system_launcher

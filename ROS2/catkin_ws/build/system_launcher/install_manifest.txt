@@ -1,0 +1,16 @@
+/home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/system_launcher/share/system_launcher/launch/system.launch.py
+/home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/system_launcher/share/ament_index/resource_index/package_run_dependencies/system_launcher
+/home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/system_launcher/share/ament_index/resource_index/parent_prefix_path/system_launcher
+/home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/system_launcher/share/system_launcher/environment/ament_prefix_path.sh
+/home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/system_launcher/share/system_launcher/environment/ament_prefix_path.dsv
+/home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/system_launcher/share/system_launcher/environment/path.sh
+/home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/system_launcher/share/system_launcher/environment/path.dsv
+/home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/system_launcher/share/system_launcher/local_setup.bash
+/home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/system_launcher/share/system_launcher/local_setup.sh
+/home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/system_launcher/share/system_launcher/local_setup.zsh
+/home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/system_launcher/share/system_launcher/local_setup.dsv
+/home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/system_launcher/share/system_launcher/package.dsv
+/home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/system_launcher/share/ament_index/resource_index/packages/system_launcher
+/home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/system_launcher/share/system_launcher/cmake/system_launcherConfig.cmake
+/home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/system_launcher/share/system_launcher/cmake/system_launcherConfig-version.cmake
+/home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/system_launcher/share/system_launcher/package.xml

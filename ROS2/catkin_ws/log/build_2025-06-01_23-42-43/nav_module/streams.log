@@ -1,0 +1,68 @@
+[0.029s] Invoking command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/build/nav_module': /usr/bin/cmake /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/src/nav_module -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/nav_module
+[0.517s] -- The C compiler identification is GNU 13.3.0
+[0.892s] -- The CXX compiler identification is GNU 13.3.0
+[0.931s] -- Detecting C compiler ABI info
+[1.208s] -- Detecting C compiler ABI info - done
+[1.225s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.226s] -- Detecting C compile features
+[1.226s] -- Detecting C compile features - done
+[1.244s] -- Detecting CXX compiler ABI info
+[1.562s] -- Detecting CXX compiler ABI info - done
+[1.603s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.604s] -- Detecting CXX compile features
+[1.605s] -- Detecting CXX compile features - done
+[1.610s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[2.024s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[2.319s] -- Found rclcpp: 28.1.9 (/opt/ros/jazzy/share/rclcpp/cmake)
+[2.403s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[2.430s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[2.468s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.515s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.703s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[2.712s] -- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[2.885s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[2.914s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[2.952s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[3.334s] -- Configuring done (3.3s)
+[3.351s] -- Generating done (0.0s)
+[3.352s] [33mCMake Warning:
+[3.352s]   Manually-specified variables were not used by the project:
+[3.352s] 
+[3.352s]     CATKIN_INSTALL_INTO_PREFIX_ROOT
+[3.352s] 
+[3.352s] [0m
+[3.356s] -- Build files have been written to: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/build/nav_module
+[3.389s] Invoked command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/build/nav_module' returned '0': /usr/bin/cmake /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/src/nav_module -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/nav_module
+[3.393s] Invoking command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/build/nav_module': /usr/bin/cmake --build /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/build/nav_module -- -j4 -l4
+[3.496s] [ 50%] [32mBuilding CXX object CMakeFiles/navigator_node.dir/src/navigator_node.cpp.o[0m
+[9.390s] [100%] [32m[1mLinking CXX executable navigator_node[0m
+[9.994s] [100%] Built target navigator_node
+[10.018s] Invoked command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/build/nav_module' returned '0': /usr/bin/cmake --build /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/build/nav_module -- -j4 -l4
+[10.021s] Invoking command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/build/nav_module': /usr/bin/cmake --install /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/build/nav_module
+[10.040s] -- Install configuration: ""
+[10.042s] -- Installing: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/nav_module/lib/nav_module/navigator_node
+[10.042s] -- Set non-toolchain portion of runtime path of "/home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/nav_module/lib/nav_module/navigator_node" to ""
+[10.042s] -- Installing: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/nav_module/share/nav_module/launch
+[10.043s] -- Installing: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/nav_module/share/nav_module/launch/navigation.launch.py
+[10.043s] -- Installing: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/nav_module/share/nav_module/config
+[10.043s] -- Installing: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/nav_module/share/nav_module/config/global_costmap.yaml
+[10.043s] -- Installing: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/nav_module/share/nav_module/config/amcl.yaml
+[10.043s] -- Installing: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/nav_module/share/nav_module/config/local_costmap.yaml
+[10.043s] -- Installing: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/nav_module/share/nav_module/config/costmap_common.yaml
+[10.043s] -- Installing: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/nav_module/share/nav_module/config/move_base.yaml
+[10.044s] -- Installing: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/nav_module/share/ament_index/resource_index/package_run_dependencies/nav_module
+[10.044s] -- Installing: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/nav_module/share/ament_index/resource_index/parent_prefix_path/nav_module
+[10.044s] -- Installing: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/nav_module/share/nav_module/environment/ament_prefix_path.sh
+[10.044s] -- Installing: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/nav_module/share/nav_module/environment/ament_prefix_path.dsv
+[10.044s] -- Installing: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/nav_module/share/nav_module/environment/path.sh
+[10.044s] -- Installing: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/nav_module/share/nav_module/environment/path.dsv
+[10.044s] -- Installing: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/nav_module/share/nav_module/local_setup.bash
+[10.044s] -- Installing: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/nav_module/share/nav_module/local_setup.sh
+[10.044s] -- Installing: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/nav_module/share/nav_module/local_setup.zsh
+[10.045s] -- Installing: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/nav_module/share/nav_module/local_setup.dsv
+[10.045s] -- Installing: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/nav_module/share/nav_module/package.dsv
+[10.045s] -- Installing: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/nav_module/share/ament_index/resource_index/packages/nav_module
+[10.045s] -- Installing: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/nav_module/share/nav_module/cmake/nav_moduleConfig.cmake
+[10.045s] -- Installing: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/nav_module/share/nav_module/cmake/nav_moduleConfig-version.cmake
+[10.045s] -- Installing: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/install/nav_module/share/nav_module/package.xml
+[10.058s] Invoked command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/build/nav_module' returned '0': /usr/bin/cmake --install /home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/build/nav_module
