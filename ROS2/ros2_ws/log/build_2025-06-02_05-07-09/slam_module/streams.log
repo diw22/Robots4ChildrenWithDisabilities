@@ -1,0 +1,58 @@
+[0.021s] Invoking command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/slam_module': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/src/slam_module -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module
+[0.179s] -- The C compiler identification is GNU 13.3.0
+[0.359s] -- The CXX compiler identification is GNU 13.3.0
+[0.400s] -- Detecting C compiler ABI info
+[0.671s] -- Detecting C compiler ABI info - done
+[0.702s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.706s] -- Detecting C compile features
+[0.714s] -- Detecting C compile features - done
+[0.755s] -- Detecting CXX compiler ABI info
+[1.027s] -- Detecting CXX compiler ABI info - done
+[1.056s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.057s] -- Detecting CXX compile features
+[1.058s] -- Detecting CXX compile features - done
+[1.064s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[1.450s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.660s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.705s] -- Found rclcpp: 28.1.9 (/opt/ros/jazzy/share/rclcpp/cmake)
+[1.759s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[1.780s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[1.805s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.835s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.979s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[1.981s] -- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[2.163s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[2.192s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[2.256s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.641s] -- Configuring done (2.6s)
+[2.666s] -- Generating done (0.0s)
+[2.674s] -- Build files have been written to: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/slam_module
+[2.703s] Invoked command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/slam_module' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/src/slam_module -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module
+[2.705s] Invoking command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/slam_module': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/slam_module -- -j4 -l4
+[2.822s] [ 50%] [32mBuilding CXX object CMakeFiles/slam_node.dir/src/slam_node.cpp.o[0m
+[8.211s] [100%] [32m[1mLinking CXX executable slam_node[0m
+[8.518s] [100%] Built target slam_node
+[8.538s] Invoked command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/slam_module' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/slam_module -- -j4 -l4
+[8.541s] Invoking command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/slam_module': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/slam_module
+[8.556s] -- Install configuration: ""
+[8.557s] -- Execute custom install script
+[8.558s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module/lib/slam_node
+[8.580s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module/share/slam_module/launch/slam.launch.py
+[8.598s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module/share/slam_module/config/gmapping_params.yaml
+[8.616s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module/share/slam_module/package.xml
+[8.634s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module/share/ament_index/resource_index/package_run_dependencies/slam_module
+[8.650s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module/share/ament_index/resource_index/parent_prefix_path/slam_module
+[8.667s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module/share/slam_module/environment/ament_prefix_path.sh
+[8.686s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module/share/slam_module/environment/ament_prefix_path.dsv
+[8.703s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module/share/slam_module/environment/path.sh
+[8.724s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module/share/slam_module/environment/path.dsv
+[8.746s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module/share/slam_module/local_setup.bash
+[8.763s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module/share/slam_module/local_setup.sh
+[8.781s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module/share/slam_module/local_setup.zsh
+[8.801s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module/share/slam_module/local_setup.dsv
+[8.820s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module/share/slam_module/package.dsv
+[8.840s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module/share/ament_index/resource_index/packages/slam_module
+[8.858s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module/share/slam_module/cmake/slam_moduleConfig.cmake
+[8.876s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module/share/slam_module/cmake/slam_moduleConfig-version.cmake
+[8.894s] -- Up-to-date symlink: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module/share/slam_module/package.xml
+[8.904s] Invoked command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/slam_module' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/slam_module

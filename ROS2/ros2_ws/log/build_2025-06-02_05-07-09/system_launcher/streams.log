@@ -1,0 +1,43 @@
+[0.030s] Invoking command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/system_launcher': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/src/system_launcher -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/system_launcher
+[0.199s] -- The C compiler identification is GNU 13.3.0
+[0.351s] -- The CXX compiler identification is GNU 13.3.0
+[0.379s] -- Detecting C compiler ABI info
+[0.655s] -- Detecting C compiler ABI info - done
+[0.714s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.714s] -- Detecting C compile features
+[0.720s] -- Detecting C compile features - done
+[0.751s] -- Detecting CXX compiler ABI info
+[1.036s] -- Detecting CXX compiler ABI info - done
+[1.059s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.059s] -- Detecting CXX compile features
+[1.060s] -- Detecting CXX compile features - done
+[1.069s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[1.468s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.680s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[2.000s] -- Configuring done (2.0s)
+[2.010s] -- Generating done (0.0s)
+[2.016s] -- Build files have been written to: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/system_launcher
+[2.055s] Invoked command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/system_launcher' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/src/system_launcher -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/system_launcher
+[2.055s] Invoking command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/system_launcher': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/system_launcher -- -j4 -l4
+[2.144s] Invoked command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/system_launcher' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/system_launcher -- -j4 -l4
+[2.167s] Invoking command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/system_launcher': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/system_launcher
+[2.189s] -- Install configuration: ""
+[2.191s] -- Execute custom install script
+[2.191s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/system_launcher/share/system_launcher/launch/system.launch.py
+[2.214s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/system_launcher/share/system_launcher/package.xml
+[2.238s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/system_launcher/share/ament_index/resource_index/package_run_dependencies/system_launcher
+[2.256s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/system_launcher/share/ament_index/resource_index/parent_prefix_path/system_launcher
+[2.275s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/system_launcher/share/system_launcher/environment/ament_prefix_path.sh
+[2.294s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/system_launcher/share/system_launcher/environment/ament_prefix_path.dsv
+[2.313s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/system_launcher/share/system_launcher/environment/path.sh
+[2.333s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/system_launcher/share/system_launcher/environment/path.dsv
+[2.352s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/system_launcher/share/system_launcher/local_setup.bash
+[2.370s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/system_launcher/share/system_launcher/local_setup.sh
+[2.389s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/system_launcher/share/system_launcher/local_setup.zsh
+[2.409s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/system_launcher/share/system_launcher/local_setup.dsv
+[2.435s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/system_launcher/share/system_launcher/package.dsv
+[2.457s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/system_launcher/share/ament_index/resource_index/packages/system_launcher
+[2.483s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/system_launcher/share/system_launcher/cmake/system_launcherConfig.cmake
+[2.511s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/system_launcher/share/system_launcher/cmake/system_launcherConfig-version.cmake
+[2.544s] -- Up-to-date symlink: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/system_launcher/share/system_launcher/package.xml
+[2.551s] Invoked command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/system_launcher' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/system_launcher
