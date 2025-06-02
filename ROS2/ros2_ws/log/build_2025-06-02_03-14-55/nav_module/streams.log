@@ -1,0 +1,62 @@
+[0.026s] Invoking command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/nav_module': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/src/nav_module -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module
+[0.202s] -- The C compiler identification is GNU 13.3.0
+[0.388s] -- The CXX compiler identification is GNU 13.3.0
+[0.428s] -- Detecting C compiler ABI info
+[0.730s] -- Detecting C compiler ABI info - done
+[0.751s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.751s] -- Detecting C compile features
+[0.752s] -- Detecting C compile features - done
+[0.771s] -- Detecting CXX compiler ABI info
+[1.054s] -- Detecting CXX compiler ABI info - done
+[1.082s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.084s] -- Detecting CXX compile features
+[1.086s] -- Detecting CXX compile features - done
+[1.093s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[1.531s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.786s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.857s] -- Found rclcpp: 28.1.9 (/opt/ros/jazzy/share/rclcpp/cmake)
+[1.916s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[1.938s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[1.964s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.993s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.117s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[2.123s] -- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[2.309s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[2.347s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[2.391s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.827s] -- Configuring done (2.8s)
+[2.850s] -- Generating done (0.0s)
+[2.854s] -- Build files have been written to: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/nav_module
+[2.879s] Invoked command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/nav_module' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/src/nav_module -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module
+[2.879s] Invoking command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/nav_module': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/nav_module -- -j4 -l4
+[2.981s] [ 50%] [32mBuilding CXX object CMakeFiles/navigator_node.dir/src/navigator_node.cpp.o[0m
+[8.701s] [100%] [32m[1mLinking CXX executable navigator_node[0m
+[9.027s] [100%] Built target navigator_node
+[9.049s] Invoked command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/nav_module' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/nav_module -- -j4 -l4
+[9.051s] Invoking command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/nav_module': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/nav_module
+[9.065s] -- Install configuration: ""
+[9.066s] -- Execute custom install script
+[9.067s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module/lib/navigator_node
+[9.086s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module/share/nav_module/launch/navigation.launch.py
+[9.107s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module/share/nav_module/config/amcl.yaml
+[9.121s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module/share/nav_module/config/costmap_common.yaml
+[9.137s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module/share/nav_module/config/global_costmap.yaml
+[9.154s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module/share/nav_module/config/local_costmap.yaml
+[9.170s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module/share/nav_module/config/move_base.yaml
+[9.187s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module/share/nav_module/package.xml
+[9.203s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module/share/ament_index/resource_index/package_run_dependencies/nav_module
+[9.219s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module/share/ament_index/resource_index/parent_prefix_path/nav_module
+[9.235s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module/share/nav_module/environment/ament_prefix_path.sh
+[9.251s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module/share/nav_module/environment/ament_prefix_path.dsv
+[9.267s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module/share/nav_module/environment/path.sh
+[9.283s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module/share/nav_module/environment/path.dsv
+[9.300s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module/share/nav_module/local_setup.bash
+[9.316s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module/share/nav_module/local_setup.sh
+[9.332s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module/share/nav_module/local_setup.zsh
+[9.348s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module/share/nav_module/local_setup.dsv
+[9.364s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module/share/nav_module/package.dsv
+[9.380s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module/share/ament_index/resource_index/packages/nav_module
+[9.395s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module/share/nav_module/cmake/nav_moduleConfig.cmake
+[9.411s] -- Symlinking: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module/share/nav_module/cmake/nav_moduleConfig-version.cmake
+[9.427s] -- Up-to-date symlink: /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module/share/nav_module/package.xml
+[9.430s] Invoked command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/nav_module' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/nav_module

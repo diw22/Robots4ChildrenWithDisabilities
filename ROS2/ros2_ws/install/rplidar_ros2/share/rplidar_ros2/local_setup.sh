@@ -1,0 +1,1 @@
+/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/rplidar_ros2/ament_cmake_environment_hooks/local_setup.sh

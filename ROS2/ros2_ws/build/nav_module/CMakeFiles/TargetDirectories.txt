@@ -1,0 +1,10 @@
+/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/nav_module/CMakeFiles/uninstall.dir
+/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/nav_module/CMakeFiles/nav_module_uninstall.dir
+/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/nav_module/CMakeFiles/navigator_node.dir
+/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/nav_module/CMakeFiles/test.dir
+/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/nav_module/CMakeFiles/edit_cache.dir
+/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/nav_module/CMakeFiles/rebuild_cache.dir
+/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/nav_module/CMakeFiles/list_install_components.dir
+/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/nav_module/CMakeFiles/install.dir
+/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/nav_module/CMakeFiles/install/local.dir
+/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/nav_module/CMakeFiles/install/strip.dir
