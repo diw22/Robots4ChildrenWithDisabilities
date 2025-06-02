@@ -1,9 +1,0 @@
-/home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/build/system_launcher/CMakeFiles/uninstall.dir
-/home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/build/system_launcher/CMakeFiles/system_launcher_uninstall.dir
-/home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/build/system_launcher/CMakeFiles/test.dir
-/home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/build/system_launcher/CMakeFiles/edit_cache.dir
-/home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/build/system_launcher/CMakeFiles/rebuild_cache.dir
-/home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/build/system_launcher/CMakeFiles/list_install_components.dir
-/home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/build/system_launcher/CMakeFiles/install.dir
-/home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/build/system_launcher/CMakeFiles/install/local.dir
-/home/raspi/Robots4ChildrenWithDisabilities/ROS2/catkin_ws/build/system_launcher/CMakeFiles/install/strip.dir
