@@ -2,14 +2,14 @@ import sys
 from PyQt5.QtWidgets import (QApplication, QWidget, QPushButton, QVBoxLayout,
                              QHBoxLayout, QLabel, QMessageBox, QSpacerItem,
                              QSizePolicy, QStackedWidget)
-from PyQt5.QtGui import QPixmap, QPalette, QBrush, QIcon
+from PyQt5.QtGui import QPixmap, QPalette, QBrush, QIcon, QMovie
 from PyQt5.QtCore import Qt, QSize, QTimer, QMetaObject, Q_ARG
 from control_modes_basic import controller_manager
 import threading
-#from input_manager import input_manager
+
+import socket
+import threading
 from input_manager import InputManager
-#from head_tracker import HeadTracker
-#from input_manager import input_manager
 import depthai as dai
 from headtrackingwithcam import HeadTracker
 
@@ -20,6 +20,7 @@ class MainMenu(QWidget):
         self.stacked_widget = stacked_widget
         self.game_widget = None
         self.message_widget = None
+        self.dice_widget = None
         self.setWindowTitle("Main Menu")
         self.setGeometry(0, 0, 1920, 1080)
 
@@ -57,7 +58,14 @@ class MainMenu(QWidget):
         self.btn_clean.clicked.connect(lambda: QMessageBox.information(self, "Tidy", "Tidying up..."))
         self.buttons.append(self.btn_clean)
         button_layout.addWidget(self.btn_clean)
-
+        
+        self.btn_dice = QPushButton()
+        self.btn_dice.setIcon(QIcon("tidyup_button.png"))
+        self.btn_dice.setIconSize(QSize(350, 350))
+        self.btn_dice.setFlat(True)
+        #self.btn_dice.clicked.connect(self.start_dice_game)
+        self.buttons.append(self.btn_dice)
+        button_layout.addWidget(self.btn_dice)
         self.button_icons = {
             self.btn_ttt: {
                 "normal": QIcon("tictactoe_button.png"),
@@ -70,6 +78,10 @@ class MainMenu(QWidget):
             self.btn_clean: {
                 "normal": QIcon("tidyup_button.png"),
                 "highlight": QIcon("highlight_tidy_button.png")
+            },
+            self.btn_dice: {
+                "normal": QIcon("dice_button.png"),
+                "highlight": QIcon("highlight_dice_button.png")
             }
         }
         layout.addLayout(button_layout)
@@ -108,6 +120,13 @@ class MainMenu(QWidget):
     def set_message_widget(self, message_widget):
         self.message_widget = message_widget
     
+    def start_dice(self):
+        input_manager.stop()
+        self.stacked_widget.setCurrentWidget(self.dice_widget)
+        self.dice_widget.activate_controller()
+    def set_dice_widget(self, dice_widget):
+        self.dice_widget = dice_widget
+    
     def start_message_menu(self):
         input_manager.stop()
         self.stacked_widget.setCurrentWidget(self.message_widget)
@@ -129,8 +148,7 @@ class MainMenu(QWidget):
     def activate_controller(self):
         self.setFocus()
         input_manager.start(self.handle_direction)
-    def set_message_widget(self, message_widget):
-        self.message_widget = message_widget
+        
 class TicTacToe(QWidget):
     def set_background(self, image_path):
         self.setAutoFillBackground(True)
@@ -143,9 +161,21 @@ class TicTacToe(QWidget):
         from control_modes_basic import controller_manager
         input_manager.stop()
         self.stacked_widget.setCurrentIndex(0)
+        #self.close_connection()
         self.stacked_widget.currentWidget().activate_controller()
     def __init__(self, stacked_widget):
+    #def __init__(self, stacked_widget, is_server=False, server_ip=None, port=XXXXX):
         super().__init__()
+        self.stacked_widget = stacked_widget
+        #self.is_server = is_server
+        #self.port = port
+        #self.sock = None
+
+        self.board = [''] * 9
+        self.selected_index = 0
+        self.buttons = []
+        self.turn = 'X'
+
         self.setFocusPolicy(Qt.StrongFocus)
         self.stacked_widget = stacked_widget
         self.setWindowTitle("Tic-Tac-Toe")
@@ -161,7 +191,10 @@ class TicTacToe(QWidget):
         top_spacer = QSpacerItem(20, self.height() // 3, QSizePolicy.Minimum, QSizePolicy.Expanding)
         main_layout.addSpacerItem(top_spacer)
 
-        back_button = QPushButton("← Back to Menu")
+        
+
+        back_button = QPushButton()
+        back_button.setIcon(QIcon("tidyup_button.png"))
         back_button.setFixedSize(200, 50)
         back_button.clicked.connect(self.back_to_menu)
         back_button.setStyleSheet("font-size: 18px; padding: 5px;")
@@ -197,8 +230,44 @@ class TicTacToe(QWidget):
             }
         }
         self.setLayout(main_layout)
-
         self.highlight_selected()
+        #if is_server:
+        #    threading.Thread(target=self.start_server, daemon=True).start()
+        #elif server_ip:
+        #    self.connect_to_server(server_ip)
+    def start_server(self):
+        server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+        server_socket.bind(("0.0.0.0", self.port))
+        server_socket.listen(1)
+        print("Waiting for client...")
+        conn, addr = server_socket.accept()
+        print(f"Connected to {addr}")
+        self.sock = conn
+
+        try:
+            while True:
+                data = conn.recv(1024).decode()
+                if not data:
+                    break
+                print("Received:", data)
+                self.apply_remote_move(data)
+        except Exception as e:
+            print(f"Server error: {e}")
+        finally:
+            self.close_connection()
+
+    def connect_to_server(self, ip, port=None):
+        port = port or self.port
+        try:
+            self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            self.sock.connect((ip, port))
+            print("Connected to server.")
+        except Exception as e:
+            print(f"Client connection error: {e}")
+            self.sock = None
+
+    
     def activate_controller(self):
         from control_modes_basic import controller_manager
         input_manager.start(self.handle_direction)
@@ -235,6 +304,15 @@ class TicTacToe(QWidget):
         if self.board[idx] == '':
             self.board[idx] = 'X'
             self.highlight_selected()
+            row = idx // 3  # e.g., 5 // 3 = 1 (second row)
+            col = idx % 3 
+            move_str = f"X:{chr(65 + row)}{col + 1}"
+
+            #if self.sock:
+            #    try:
+            #        self.sock.send(move_str.encode())
+            #    except Exception as e:
+            #        print(f"Send error: {e}")
             if self.check_winner('X'):
                 QTimer.singleShot(0, lambda: QMessageBox.information(self, "Game Over", "You win!"))
                 self.reset_game()
@@ -244,7 +322,18 @@ class TicTacToe(QWidget):
 
     def delayed_computer_move(self):
         QTimer.singleShot(500, self.computer_move)
-    
+    def close_connection(self):
+        if self.sock:
+            try:
+                self.sock.shutdown(socket.SHUT_RDWR)
+            except Exception:
+                pass
+            try:
+                self.sock.close()
+            except Exception:
+                pass
+            print("Socket closed.")
+            self.sock = None
     def activate_controller(self):
         self.setFocus()
         input_manager.start(self.handle_direction)
@@ -295,9 +384,9 @@ class MessageWidget(QWidget):
             for j in range(2):
                 idx = i * 2 + j
                 btn = QPushButton()
-                btn.setFixedSize(200, 200)
+                btn.setFixedSize(600, 600)
                 btn.setIcon(QIcon(f"message_{idx}.png")) 
-                btn.setIconSize(QSize(200, 200))
+                btn.setIconSize(QSize(600, 600))
                 btn.setFlat(True)
                 btn.clicked.connect(lambda checked, idx=idx: self.send_message(idx))
                 self.buttons.append(btn)
@@ -352,7 +441,51 @@ class MessageWidget(QWidget):
     def activate_controller(self):
         self.setFocus()
         input_manager.start(self.handle_direction)
-        
+
+
+class DiceWidget(QWidget):
+    def __init__(self, stacked_widget):
+        super().__init__()
+        self.setFocusPolicy(Qt.StrongFocus)
+        self.stacked_widget = stacked_widget
+        self.setWindowTitle("Dice Game")
+        self.setGeometry(0, 0, 1920, 1080)
+
+        self.layout = QVBoxLayout()
+        self.setLayout(self.layout)
+
+        self.label = QLabel()
+        self.label.setAlignment(Qt.AlignCenter)
+        self.layout.addWidget(self.label)
+
+        self.idle_animation_path = "animation_0.gif"
+        self.transition_animation_path = "transition.gif"
+        self.action_animations = {
+            Qt.Key_D: "animation_1.gif",
+            Qt.Key_W: "animation_2.gif",
+            Qt.Key_A: "animation_3.gif",
+            Qt.Key_S: "animation_4.gif"
+        }
+
+        self.current_movie = None
+        self.play_animation(self.idle_animation_path)
+
+    def keyPressEvent(self, event):
+        key = event.key()
+        if key in self.action_animations:
+            self.play_transition_then_action(self.action_animations[key])
+
+    def play_animation(self, gif_path):
+        if self.current_movie:
+            self.current_movie.stop()
+            self.label.clear()
+        self.current_movie = QMovie(gif_path)
+        self.label.setMovie(self.current_movie)
+        self.current_movie.start()
+
+    def play_transition_then_action(self, action_gif_path):
+        self.play_animation(self.transition_animation_path)
+        QTimer.singleShot(2000, lambda: self.play_animation(action_gif_path))
 
 headtrack = False
 
