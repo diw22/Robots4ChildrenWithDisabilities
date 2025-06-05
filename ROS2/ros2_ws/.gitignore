@@ -1,0 +1,17 @@
+# ROS2 build artifacts
+build/
+install/
+log/
+
+# Editor settings
+.vscode/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# RViz auto-generated config (optional)
+*.rviz
+
+# Ignore .DS_Store on macOS (safe to include)
+.DS_Store
