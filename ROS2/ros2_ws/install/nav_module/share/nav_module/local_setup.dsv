@@ -1,1 +1,2 @@
-/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/nav_module/ament_cmake_environment_hooks/local_setup.dsv
+source;share/nav_module/environment/ament_prefix_path.sh
+source;share/nav_module/environment/path.sh

@@ -197,43 +197,6 @@ slam_module_uninstall/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/slam_module_uninstall.dir/build.make CMakeFiles/slam_module_uninstall.dir/build
 .PHONY : slam_module_uninstall/fast
 
-#=============================================================================
-# Target rules for targets named slam_node
-
-# Build rule for target.
-slam_node: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 slam_node
-.PHONY : slam_node
-
-# fast build rule for target.
-slam_node/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/slam_node.dir/build.make CMakeFiles/slam_node.dir/build
-.PHONY : slam_node/fast
-
-src/slam_node.o: src/slam_node.cpp.o
-.PHONY : src/slam_node.o
-
-# target to build an object file
-src/slam_node.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/slam_node.dir/build.make CMakeFiles/slam_node.dir/src/slam_node.cpp.o
-.PHONY : src/slam_node.cpp.o
-
-src/slam_node.i: src/slam_node.cpp.i
-.PHONY : src/slam_node.i
-
-# target to preprocess a source file
-src/slam_node.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/slam_node.dir/build.make CMakeFiles/slam_node.dir/src/slam_node.cpp.i
-.PHONY : src/slam_node.cpp.i
-
-src/slam_node.s: src/slam_node.cpp.s
-.PHONY : src/slam_node.s
-
-# target to generate assembly for a file
-src/slam_node.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/slam_node.dir/build.make CMakeFiles/slam_node.dir/src/slam_node.cpp.s
-.PHONY : src/slam_node.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -249,10 +212,6 @@ help:
 	@echo "... test"
 	@echo "... slam_module_uninstall"
 	@echo "... uninstall"
-	@echo "... slam_node"
-	@echo "... src/slam_node.o"
-	@echo "... src/slam_node.i"
-	@echo "... src/slam_node.s"
 .PHONY : help
 
 

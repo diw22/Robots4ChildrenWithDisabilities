@@ -1,1 +1,18 @@
-/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/src/slam_module/package.xml
+<?xml version="1.0"?>
+<package format="3">
+  <name>slam_module</name>
+  <version>0.0.1</version>
+  <description>SLAM module for XLeRobot</description>
+  <maintainer email="jinyoungk0126@gmail.com">Jinyoung</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <exec_depend>slam_toolbox</exec_depend>
+  <exec_depend>rclcpp</exec_depend>
+  <exec_depend>nav_msgs</exec_depend>
+  <exec_depend>tf2_ros</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

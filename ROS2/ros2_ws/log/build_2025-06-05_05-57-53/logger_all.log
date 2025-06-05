@@ -1,0 +1,350 @@
+[0.161s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.161s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0xffff8ae78f50>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffff8b025850>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffff8b025850>>)
+[0.228s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.228s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.228s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.228s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.228s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.228s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.228s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(rviz) by extensions ['ignore', 'ignore_ament_install']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(rviz) by extension 'ignore'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(rviz) by extension 'ignore_ament_install'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(rviz) by extensions ['colcon_pkg']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(rviz) by extension 'colcon_pkg'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(rviz) by extensions ['colcon_meta']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(rviz) by extension 'colcon_meta'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(rviz) by extensions ['ros']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(rviz) by extension 'ros'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(rviz) by extensions ['cmake', 'python']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(rviz) by extension 'cmake'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(rviz) by extension 'python'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(rviz) by extensions ['python_setup_py']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(rviz) by extension 'python_setup_py'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_module) by extensions ['ignore', 'ignore_ament_install']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_module) by extension 'ignore'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_module) by extension 'ignore_ament_install'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_module) by extensions ['colcon_pkg']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_module) by extension 'colcon_pkg'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_module) by extensions ['colcon_meta']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_module) by extension 'colcon_meta'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_module) by extensions ['ros']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_module) by extension 'ros'
+[0.280s] DEBUG:colcon.colcon_core.package_identification:Package 'src/nav_module' with type 'ros.ament_cmake' and name 'nav_module'
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam_module) by extensions ['ignore', 'ignore_ament_install']
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam_module) by extension 'ignore'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam_module) by extension 'ignore_ament_install'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam_module) by extensions ['colcon_pkg']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam_module) by extension 'colcon_pkg'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam_module) by extensions ['colcon_meta']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam_module) by extension 'colcon_meta'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam_module) by extensions ['ros']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam_module) by extension 'ros'
+[0.282s] DEBUG:colcon.colcon_core.package_identification:Package 'src/slam_module' with type 'ros.ament_cmake' and name 'slam_module'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/sllidar_ros2) by extensions ['ignore', 'ignore_ament_install']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/sllidar_ros2) by extension 'ignore'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/sllidar_ros2) by extension 'ignore_ament_install'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/sllidar_ros2) by extensions ['colcon_pkg']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/sllidar_ros2) by extension 'colcon_pkg'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/sllidar_ros2) by extensions ['colcon_meta']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/sllidar_ros2) by extension 'colcon_meta'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/sllidar_ros2) by extensions ['ros']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/sllidar_ros2) by extension 'ros'
+[0.284s] DEBUG:colcon.colcon_core.package_identification:Package 'src/sllidar_ros2' with type 'ros.ament_cmake' and name 'sllidar_ros2'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/system_launcher) by extensions ['ignore', 'ignore_ament_install']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/system_launcher) by extension 'ignore'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/system_launcher) by extension 'ignore_ament_install'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/system_launcher) by extensions ['colcon_pkg']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/system_launcher) by extension 'colcon_pkg'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/system_launcher) by extensions ['colcon_meta']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/system_launcher) by extension 'colcon_meta'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/system_launcher) by extensions ['ros']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/system_launcher) by extension 'ros'
+[0.285s] DEBUG:colcon.colcon_core.package_identification:Package 'src/system_launcher' with type 'ros.ament_cmake' and name 'system_launcher'
+[0.285s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.285s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.285s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.285s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.285s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.312s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.312s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.317s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 289 installed packages in /opt/ros/jazzy
+[0.319s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.389s] Level 5:colcon.colcon_core.verb:set package 'nav_module' build argument 'cmake_args' from command line to 'None'
+[0.389s] Level 5:colcon.colcon_core.verb:set package 'nav_module' build argument 'cmake_target' from command line to 'None'
+[0.389s] Level 5:colcon.colcon_core.verb:set package 'nav_module' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.389s] Level 5:colcon.colcon_core.verb:set package 'nav_module' build argument 'cmake_clean_cache' from command line to 'False'
+[0.389s] Level 5:colcon.colcon_core.verb:set package 'nav_module' build argument 'cmake_clean_first' from command line to 'False'
+[0.389s] Level 5:colcon.colcon_core.verb:set package 'nav_module' build argument 'cmake_force_configure' from command line to 'False'
+[0.389s] Level 5:colcon.colcon_core.verb:set package 'nav_module' build argument 'ament_cmake_args' from command line to 'None'
+[0.389s] Level 5:colcon.colcon_core.verb:set package 'nav_module' build argument 'catkin_cmake_args' from command line to 'None'
+[0.389s] Level 5:colcon.colcon_core.verb:set package 'nav_module' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.390s] DEBUG:colcon.colcon_core.verb:Building package 'nav_module' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/nav_module', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module', 'merge_install': False, 'path': '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/src/nav_module', 'symlink_install': False, 'test_result_base': None}
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'slam_module' build argument 'cmake_args' from command line to 'None'
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'slam_module' build argument 'cmake_target' from command line to 'None'
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'slam_module' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'slam_module' build argument 'cmake_clean_cache' from command line to 'False'
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'slam_module' build argument 'cmake_clean_first' from command line to 'False'
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'slam_module' build argument 'cmake_force_configure' from command line to 'False'
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'slam_module' build argument 'ament_cmake_args' from command line to 'None'
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'slam_module' build argument 'catkin_cmake_args' from command line to 'None'
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'slam_module' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.390s] DEBUG:colcon.colcon_core.verb:Building package 'slam_module' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/slam_module', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module', 'merge_install': False, 'path': '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/src/slam_module', 'symlink_install': False, 'test_result_base': None}
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'sllidar_ros2' build argument 'cmake_args' from command line to 'None'
+[0.390s] Level 5:colcon.colcon_core.verb:set package 'sllidar_ros2' build argument 'cmake_target' from command line to 'None'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'sllidar_ros2' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'sllidar_ros2' build argument 'cmake_clean_cache' from command line to 'False'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'sllidar_ros2' build argument 'cmake_clean_first' from command line to 'False'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'sllidar_ros2' build argument 'cmake_force_configure' from command line to 'False'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'sllidar_ros2' build argument 'ament_cmake_args' from command line to 'None'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'sllidar_ros2' build argument 'catkin_cmake_args' from command line to 'None'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'sllidar_ros2' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.391s] DEBUG:colcon.colcon_core.verb:Building package 'sllidar_ros2' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/sllidar_ros2', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/sllidar_ros2', 'merge_install': False, 'path': '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/src/sllidar_ros2', 'symlink_install': False, 'test_result_base': None}
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'system_launcher' build argument 'cmake_args' from command line to 'None'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'system_launcher' build argument 'cmake_target' from command line to 'None'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'system_launcher' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'system_launcher' build argument 'cmake_clean_cache' from command line to 'False'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'system_launcher' build argument 'cmake_clean_first' from command line to 'False'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'system_launcher' build argument 'cmake_force_configure' from command line to 'False'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'system_launcher' build argument 'ament_cmake_args' from command line to 'None'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'system_launcher' build argument 'catkin_cmake_args' from command line to 'None'
+[0.391s] Level 5:colcon.colcon_core.verb:set package 'system_launcher' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.391s] DEBUG:colcon.colcon_core.verb:Building package 'system_launcher' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/system_launcher', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/system_launcher', 'merge_install': False, 'path': '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/src/system_launcher', 'symlink_install': False, 'test_result_base': None}
+[0.391s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.393s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.394s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/src/nav_module' with build type 'ament_cmake'
+[0.394s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/src/nav_module'
+[0.397s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.397s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.397s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.402s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/src/slam_module' with build type 'ament_cmake'
+[0.402s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/src/slam_module'
+[0.403s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.404s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.410s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/src/sllidar_ros2' with build type 'ament_cmake'
+[0.411s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/src/sllidar_ros2'
+[0.411s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.411s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.415s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/src/system_launcher' with build type 'ament_cmake'
+[0.415s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/src/system_launcher'
+[0.415s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.416s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.426s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/nav_module': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/src/nav_module -DCMAKE_INSTALL_PREFIX=/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module
+[0.432s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/slam_module': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/src/slam_module -DCMAKE_INSTALL_PREFIX=/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module
+[0.436s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/sllidar_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/src/sllidar_ros2 -DCMAKE_INSTALL_PREFIX=/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/sllidar_ros2
+[0.455s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/system_launcher': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/src/system_launcher -DCMAKE_INSTALL_PREFIX=/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/system_launcher
+[3.491s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/system_launcher' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/src/system_launcher -DCMAKE_INSTALL_PREFIX=/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/system_launcher
+[3.492s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/system_launcher': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/system_launcher -- -j4 -l4
+[3.702s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/system_launcher' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/system_launcher -- -j4 -l4
+[3.737s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/system_launcher': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/system_launcher
+[3.779s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(system_launcher)
+[3.782s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/system_launcher' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/system_launcher
+[3.785s] Level 1:colcon.colcon_core.environment:checking '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/system_launcher' for CMake module files
+[3.786s] Level 1:colcon.colcon_core.environment:checking '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/system_launcher' for CMake config files
+[3.786s] Level 1:colcon.colcon_core.shell:create_environment_hook('system_launcher', 'cmake_prefix_path')
+[3.787s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/system_launcher/share/system_launcher/hook/cmake_prefix_path.ps1'
+[3.790s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/system_launcher/share/system_launcher/hook/cmake_prefix_path.dsv'
+[3.791s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/system_launcher/share/system_launcher/hook/cmake_prefix_path.sh'
+[3.793s] Level 1:colcon.colcon_core.environment:checking '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/system_launcher/bin'
+[3.793s] Level 1:colcon.colcon_core.environment:checking '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/system_launcher/lib/pkgconfig/system_launcher.pc'
+[3.794s] Level 1:colcon.colcon_core.environment:checking '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/system_launcher/lib/python3.12/site-packages'
+[3.794s] Level 1:colcon.colcon_core.environment:checking '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/system_launcher/bin'
+[3.795s] INFO:colcon.colcon_core.shell:Creating package script '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/system_launcher/share/system_launcher/package.ps1'
+[3.797s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/system_launcher/share/system_launcher/package.dsv'
+[3.798s] INFO:colcon.colcon_core.shell:Creating package script '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/system_launcher/share/system_launcher/package.sh'
+[3.799s] INFO:colcon.colcon_core.shell:Creating package script '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/system_launcher/share/system_launcher/package.bash'
+[3.800s] INFO:colcon.colcon_core.shell:Creating package script '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/system_launcher/share/system_launcher/package.zsh'
+[3.801s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/system_launcher/share/colcon-core/packages/system_launcher)
+[3.803s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(system_launcher)
+[3.803s] Level 1:colcon.colcon_core.environment:checking '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/system_launcher' for CMake module files
+[3.804s] Level 1:colcon.colcon_core.environment:checking '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/system_launcher' for CMake config files
+[3.804s] Level 1:colcon.colcon_core.shell:create_environment_hook('system_launcher', 'cmake_prefix_path')
+[3.805s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/system_launcher/share/system_launcher/hook/cmake_prefix_path.ps1'
+[3.806s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/system_launcher/share/system_launcher/hook/cmake_prefix_path.dsv'
+[3.807s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/system_launcher/share/system_launcher/hook/cmake_prefix_path.sh'
+[3.808s] Level 1:colcon.colcon_core.environment:checking '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/system_launcher/bin'
+[3.808s] Level 1:colcon.colcon_core.environment:checking '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/system_launcher/lib/pkgconfig/system_launcher.pc'
+[3.809s] Level 1:colcon.colcon_core.environment:checking '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/system_launcher/lib/python3.12/site-packages'
+[3.809s] Level 1:colcon.colcon_core.environment:checking '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/system_launcher/bin'
+[3.810s] INFO:colcon.colcon_core.shell:Creating package script '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/system_launcher/share/system_launcher/package.ps1'
+[3.815s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/system_launcher/share/system_launcher/package.dsv'
+[3.818s] INFO:colcon.colcon_core.shell:Creating package script '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/system_launcher/share/system_launcher/package.sh'
+[3.820s] INFO:colcon.colcon_core.shell:Creating package script '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/system_launcher/share/system_launcher/package.bash'
+[3.821s] INFO:colcon.colcon_core.shell:Creating package script '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/system_launcher/share/system_launcher/package.zsh'
+[3.822s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/system_launcher/share/colcon-core/packages/system_launcher)
+[4.524s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/nav_module' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/src/nav_module -DCMAKE_INSTALL_PREFIX=/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module
+[4.526s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/nav_module': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/nav_module -- -j4 -l4
+[4.533s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/sllidar_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/src/sllidar_ros2 -DCMAKE_INSTALL_PREFIX=/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/sllidar_ros2
+[4.537s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/sllidar_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/sllidar_ros2 -- -j4 -l4
+[4.861s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/slam_module' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/src/slam_module -DCMAKE_INSTALL_PREFIX=/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module
+[4.862s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/slam_module': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/slam_module -- -j4 -l4
+[5.111s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/slam_module' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/slam_module -- -j4 -l4
+[5.117s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/slam_module': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/slam_module
+[5.243s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(slam_module)
+[5.244s] Level 1:colcon.colcon_core.environment:checking '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module' for CMake module files
+[5.245s] Level 1:colcon.colcon_core.environment:checking '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module' for CMake config files
+[5.245s] Level 1:colcon.colcon_core.shell:create_environment_hook('slam_module', 'cmake_prefix_path')
+[5.256s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/slam_module' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/slam_module
+[5.258s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module/share/slam_module/hook/cmake_prefix_path.ps1'
+[5.259s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module/share/slam_module/hook/cmake_prefix_path.dsv'
+[5.259s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module/share/slam_module/hook/cmake_prefix_path.sh'
+[5.269s] Level 1:colcon.colcon_core.environment:checking '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module/bin'
+[5.271s] Level 1:colcon.colcon_core.environment:checking '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module/lib/pkgconfig/slam_module.pc'
+[5.273s] Level 1:colcon.colcon_core.environment:checking '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module/lib/python3.12/site-packages'
+[5.274s] Level 1:colcon.colcon_core.environment:checking '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module/bin'
+[5.278s] INFO:colcon.colcon_core.shell:Creating package script '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module/share/slam_module/package.ps1'
+[5.286s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module/share/slam_module/package.dsv'
+[5.292s] INFO:colcon.colcon_core.shell:Creating package script '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module/share/slam_module/package.sh'
+[5.296s] INFO:colcon.colcon_core.shell:Creating package script '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module/share/slam_module/package.bash'
+[5.301s] INFO:colcon.colcon_core.shell:Creating package script '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module/share/slam_module/package.zsh'
+[5.305s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module/share/colcon-core/packages/slam_module)
+[5.310s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(slam_module)
+[5.313s] Level 1:colcon.colcon_core.environment:checking '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module' for CMake module files
+[5.318s] Level 1:colcon.colcon_core.environment:checking '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module' for CMake config files
+[5.322s] Level 1:colcon.colcon_core.shell:create_environment_hook('slam_module', 'cmake_prefix_path')
+[5.322s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module/share/slam_module/hook/cmake_prefix_path.ps1'
+[5.328s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module/share/slam_module/hook/cmake_prefix_path.dsv'
+[5.331s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module/share/slam_module/hook/cmake_prefix_path.sh'
+[5.337s] Level 1:colcon.colcon_core.environment:checking '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module/bin'
+[5.339s] Level 1:colcon.colcon_core.environment:checking '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module/lib/pkgconfig/slam_module.pc'
+[5.342s] Level 1:colcon.colcon_core.environment:checking '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module/lib/python3.12/site-packages'
+[5.343s] Level 1:colcon.colcon_core.environment:checking '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module/bin'
+[5.347s] INFO:colcon.colcon_core.shell:Creating package script '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module/share/slam_module/package.ps1'
+[5.353s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module/share/slam_module/package.dsv'
+[5.357s] INFO:colcon.colcon_core.shell:Creating package script '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module/share/slam_module/package.sh'
+[5.365s] INFO:colcon.colcon_core.shell:Creating package script '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module/share/slam_module/package.bash'
+[5.369s] INFO:colcon.colcon_core.shell:Creating package script '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module/share/slam_module/package.zsh'
+[5.372s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/slam_module/share/colcon-core/packages/slam_module)
+[23.565s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/nav_module' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/nav_module -- -j4 -l4
+[23.570s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/nav_module': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/nav_module
+[23.611s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(nav_module)
+[23.611s] Level 1:colcon.colcon_core.environment:checking '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module' for CMake module files
+[23.613s] Level 1:colcon.colcon_core.environment:checking '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module' for CMake config files
+[23.613s] Level 1:colcon.colcon_core.shell:create_environment_hook('nav_module', 'cmake_prefix_path')
+[23.616s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module/share/nav_module/hook/cmake_prefix_path.ps1'
+[23.618s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module/share/nav_module/hook/cmake_prefix_path.dsv'
+[23.619s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module/share/nav_module/hook/cmake_prefix_path.sh'
+[23.617s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/nav_module' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/nav_module
+[23.629s] Level 1:colcon.colcon_core.environment:checking '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module/lib'
+[23.631s] Level 1:colcon.colcon_core.environment:checking '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module/bin'
+[23.632s] Level 1:colcon.colcon_core.environment:checking '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module/lib/pkgconfig/nav_module.pc'
+[23.633s] Level 1:colcon.colcon_core.environment:checking '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module/lib/python3.12/site-packages'
+[23.633s] Level 1:colcon.colcon_core.environment:checking '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module/bin'
+[23.634s] INFO:colcon.colcon_core.shell:Creating package script '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module/share/nav_module/package.ps1'
+[23.636s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module/share/nav_module/package.dsv'
+[23.642s] INFO:colcon.colcon_core.shell:Creating package script '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module/share/nav_module/package.sh'
+[23.648s] INFO:colcon.colcon_core.shell:Creating package script '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module/share/nav_module/package.bash'
+[23.654s] INFO:colcon.colcon_core.shell:Creating package script '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module/share/nav_module/package.zsh'
+[23.655s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module/share/colcon-core/packages/nav_module)
+[23.660s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(nav_module)
+[23.661s] Level 1:colcon.colcon_core.environment:checking '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module' for CMake module files
+[23.666s] Level 1:colcon.colcon_core.environment:checking '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module' for CMake config files
+[23.671s] Level 1:colcon.colcon_core.shell:create_environment_hook('nav_module', 'cmake_prefix_path')
+[23.672s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module/share/nav_module/hook/cmake_prefix_path.ps1'
+[23.677s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module/share/nav_module/hook/cmake_prefix_path.dsv'
+[23.679s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module/share/nav_module/hook/cmake_prefix_path.sh'
+[23.685s] Level 1:colcon.colcon_core.environment:checking '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module/lib'
+[23.685s] Level 1:colcon.colcon_core.environment:checking '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module/bin'
+[23.689s] Level 1:colcon.colcon_core.environment:checking '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module/lib/pkgconfig/nav_module.pc'
+[23.693s] Level 1:colcon.colcon_core.environment:checking '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module/lib/python3.12/site-packages'
+[23.694s] Level 1:colcon.colcon_core.environment:checking '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module/bin'
+[23.694s] INFO:colcon.colcon_core.shell:Creating package script '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module/share/nav_module/package.ps1'
+[23.697s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module/share/nav_module/package.dsv'
+[23.705s] INFO:colcon.colcon_core.shell:Creating package script '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module/share/nav_module/package.sh'
+[23.707s] INFO:colcon.colcon_core.shell:Creating package script '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module/share/nav_module/package.bash'
+[23.712s] INFO:colcon.colcon_core.shell:Creating package script '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module/share/nav_module/package.zsh'
+[23.713s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/nav_module/share/colcon-core/packages/nav_module)
+[34.948s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/sllidar_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/sllidar_ros2 -- -j4 -l4
+[34.950s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/sllidar_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/sllidar_ros2
+[34.990s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sllidar_ros2)
+[34.991s] Level 1:colcon.colcon_core.environment:checking '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/sllidar_ros2' for CMake module files
+[34.992s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/sllidar_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/sllidar_ros2
+[34.992s] Level 1:colcon.colcon_core.environment:checking '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/sllidar_ros2' for CMake config files
+[34.993s] Level 1:colcon.colcon_core.shell:create_environment_hook('sllidar_ros2', 'cmake_prefix_path')
+[34.993s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/hook/cmake_prefix_path.ps1'
+[34.995s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/hook/cmake_prefix_path.dsv'
+[34.995s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/hook/cmake_prefix_path.sh'
+[34.996s] Level 1:colcon.colcon_core.environment:checking '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/sllidar_ros2/lib'
+[34.996s] Level 1:colcon.colcon_core.environment:checking '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/sllidar_ros2/bin'
+[34.997s] Level 1:colcon.colcon_core.environment:checking '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/sllidar_ros2/lib/pkgconfig/sllidar_ros2.pc'
+[34.998s] Level 1:colcon.colcon_core.environment:checking '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/sllidar_ros2/lib/python3.12/site-packages'
+[34.999s] Level 1:colcon.colcon_core.environment:checking '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/sllidar_ros2/bin'
+[35.000s] INFO:colcon.colcon_core.shell:Creating package script '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/package.ps1'
+[35.002s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/package.dsv'
+[35.003s] INFO:colcon.colcon_core.shell:Creating package script '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/package.sh'
+[35.004s] INFO:colcon.colcon_core.shell:Creating package script '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/package.bash'
+[35.005s] INFO:colcon.colcon_core.shell:Creating package script '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/package.zsh'
+[35.005s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/sllidar_ros2/share/colcon-core/packages/sllidar_ros2)
+[35.006s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sllidar_ros2)
+[35.006s] Level 1:colcon.colcon_core.environment:checking '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/sllidar_ros2' for CMake module files
+[35.007s] Level 1:colcon.colcon_core.environment:checking '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/sllidar_ros2' for CMake config files
+[35.008s] Level 1:colcon.colcon_core.shell:create_environment_hook('sllidar_ros2', 'cmake_prefix_path')
+[35.008s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/hook/cmake_prefix_path.ps1'
+[35.008s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/hook/cmake_prefix_path.dsv'
+[35.009s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/hook/cmake_prefix_path.sh'
+[35.010s] Level 1:colcon.colcon_core.environment:checking '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/sllidar_ros2/lib'
+[35.010s] Level 1:colcon.colcon_core.environment:checking '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/sllidar_ros2/bin'
+[35.010s] Level 1:colcon.colcon_core.environment:checking '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/sllidar_ros2/lib/pkgconfig/sllidar_ros2.pc'
+[35.010s] Level 1:colcon.colcon_core.environment:checking '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/sllidar_ros2/lib/python3.12/site-packages'
+[35.011s] Level 1:colcon.colcon_core.environment:checking '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/sllidar_ros2/bin'
+[35.011s] INFO:colcon.colcon_core.shell:Creating package script '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/package.ps1'
+[35.012s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/package.dsv'
+[35.012s] INFO:colcon.colcon_core.shell:Creating package script '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/package.sh'
+[35.013s] INFO:colcon.colcon_core.shell:Creating package script '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/package.bash'
+[35.013s] INFO:colcon.colcon_core.shell:Creating package script '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/sllidar_ros2/share/sllidar_ros2/package.zsh'
+[35.014s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/sllidar_ros2/share/colcon-core/packages/sllidar_ros2)
+[35.015s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[35.015s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[35.016s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[35.016s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[35.030s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[35.030s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[35.031s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[35.047s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[35.047s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/local_setup.ps1'
+[35.048s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/_local_setup_util_ps1.py'
+[35.051s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/setup.ps1'
+[35.052s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/local_setup.sh'
+[35.053s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/_local_setup_util_sh.py'
+[35.054s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/setup.sh'
+[35.056s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/local_setup.bash'
+[35.057s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/setup.bash'
+[35.059s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/local_setup.zsh'
+[35.061s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/install/setup.zsh'

@@ -1,1 +1,4 @@
-/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/src/nav_module/launch/navigation.launch.py
+from launch import LaunchDescription
+
+def generate_launch_description():
+    return LaunchDescription([])
