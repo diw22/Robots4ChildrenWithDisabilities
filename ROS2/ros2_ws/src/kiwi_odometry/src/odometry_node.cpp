@@ -1,4 +1,3 @@
-// odometry_node.cpp
 #include "rclcpp/rclcpp.hpp"
 #include "nav_msgs/msg/odometry.hpp"
 #include "geometry_msgs/msg/transform_stamped.hpp"
@@ -6,58 +5,88 @@
 #include <chrono>
 #include <cmath>
 #include <string>
+#include <zmq.hpp>
+#include <nlohmann/json.hpp>
 
 using namespace std::chrono_literals;
 
 class OdometryPublisher : public rclcpp::Node {
 public:
-  OdometryPublisher() : Node("kiwi_odometry_node") {
+  OdometryPublisher() : Node("kiwi_odometry_node"), context_(1), socket_(context_, zmq::socket_type::pull) {
     odom_pub_ = this->create_publisher<nav_msgs::msg::Odometry>("odom", 10);
     tf_broadcaster_ = std::make_shared<tf2_ros::TransformBroadcaster>(this);
     timer_ = this->create_wall_timer(50ms, std::bind(&OdometryPublisher::update, this));
 
-    x_ = 0.0;
-    y_ = 0.0;
-    theta_ = 0.0;
+    x_ = y_ = theta_ = 0.0;
     last_time_ = this->now();
+
+    std::string ip = "192.168.137.109";
+    int port = 5556;
+    std::string connection_string = "tcp://" + ip + ":" + std::to_string(port);
+
+    socket_.connect(connection_string);
+    int conflate = 1;
+    socket_.set(zmq::sockopt::conflate, conflate);
   }
 
 private:
-  // Converts 16-bit raw motor speed to degrees per second
+  zmq::context_t context_;
+  zmq::socket_t socket_;
+  int raw_left_ = 0;
+  int raw_right_ = 0;
+  int raw_back_ = 0;
+
+  double x_, y_, theta_;
+  rclcpp::Time last_time_;
+  rclcpp::Publisher<nav_msgs::msg::Odometry>::SharedPtr odom_pub_;
+  std::shared_ptr<tf2_ros::TransformBroadcaster> tf_broadcaster_;
+  rclcpp::TimerBase::SharedPtr timer_;
+
   double rawToDegPerSec(int raw_speed) {
     const double steps_per_deg = 4096.0 / 360.0;
     int magnitude = raw_speed & 0x7FFF;
     double degps = static_cast<double>(magnitude) / steps_per_deg;
-    if (raw_speed & 0x8000) {
-      degps = -degps;
-    }
+    if (raw_speed & 0x8000) degps = -degps;
     return degps;
   }
 
   void update() {
+    zmq::message_t message;
+    try {
+      auto result = socket_.recv(message, zmq::recv_flags::dontwait);
+      if (result.has_value()) {
+        std::string msg_str(static_cast<char*>(message.data()), message.size());
+        auto json_msg = nlohmann::json::parse(msg_str);
+
+        raw_left_ = json_msg.at("left_wheel").get<int>();
+        raw_back_ = json_msg.at("back_wheel").get<int>();
+        raw_right_ = json_msg.at("right_wheel").get<int>();
+
+        RCLCPP_INFO(this->get_logger(), "\n[ZMQ] Received message: left=%d, right=%d, back=%d", raw_left_, raw_right_, raw_back_);
+      }else {
+        RCLCPP_INFO(this->get_logger(), "\n[ZMQ] No message received.");
+      }
+    } catch (const zmq::error_t& e) {
+      RCLCPP_WARN(this->get_logger(), "ZMQ error: %s", e.what());
+    } catch (const std::exception& e) {
+      RCLCPP_WARN(this->get_logger(), "JSON parse error: %s", e.what());
+    }
+
     rclcpp::Time current_time = this->now();
     double dt = (current_time - last_time_).seconds();
     last_time_ = current_time;
 
-    // Dummy raw data to simulate encoder input (replace with actual input)
-    int raw_left = 1200;
-    int raw_back = -800;
-    int raw_right = 1000;
+    double w1 = rawToDegPerSec(raw_left_) * (M_PI / 180.0);
+    double w2 = rawToDegPerSec(raw_back_) * (M_PI / 180.0);
+    double w3 = rawToDegPerSec(raw_right_) * (M_PI / 180.0);
 
-    // Convert raw to rad/s
-    double w1 = rawToDegPerSec(raw_left) * (M_PI / 180.0);
-    double w2 = rawToDegPerSec(raw_back) * (M_PI / 180.0);
-    double w3 = rawToDegPerSec(raw_right) * (M_PI / 180.0);
+    const double r = 0.05;
+    const double l = 0.125;
 
-    const double r = 0.05;   // wheel radius (m)
-    const double l = 0.125;  // base radius (m)
-
-    // Compute robot velocity from wheel angular velocities
     double vx = r / 3.0 * (-std::sqrt(3) * w1 + std::sqrt(3) * w3);
     double vy = r / 3.0 * (-w1 + 2 * w2 - w3);
     double omega = r / (3.0 * l) * (w1 + w2 + w3);
 
-    // Integrate to get position
     double delta_x = (vx * std::cos(theta_) - vy * std::sin(theta_)) * dt;
     double delta_y = (vx * std::sin(theta_) + vy * std::cos(theta_)) * dt;
     double delta_theta = omega * dt;
@@ -66,7 +95,6 @@ private:
     y_ += delta_y;
     theta_ += delta_theta;
 
-    // Publish odometry message
     auto odom = nav_msgs::msg::Odometry();
     odom.header.stamp = current_time;
     odom.header.frame_id = "odom";
@@ -84,7 +112,6 @@ private:
 
     odom_pub_->publish(odom);
 
-    // Broadcast TF transform
     geometry_msgs::msg::TransformStamped tf_msg;
     tf_msg.header.stamp = current_time;
     tf_msg.header.frame_id = "odom";
@@ -97,12 +124,6 @@ private:
 
     tf_broadcaster_->sendTransform(tf_msg);
   }
-
-  rclcpp::Publisher<nav_msgs::msg::Odometry>::SharedPtr odom_pub_;
-  std::shared_ptr<tf2_ros::TransformBroadcaster> tf_broadcaster_;
-  rclcpp::TimerBase::SharedPtr timer_;
-  rclcpp::Time last_time_;
-  double x_, y_, theta_;
 };
 
 int main(int argc, char **argv) {

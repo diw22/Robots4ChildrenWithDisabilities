@@ -12,6 +12,12 @@ find_package(nav_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(tf2 REQUIRED)
 find_package(tf2_ros REQUIRED)
+find_package(nlohmann_json REQUIRED)
+
+#Include directories
+include_directories(
+  include
+)
 
 # Executable
 add_executable(odometry_node src/odometry_node.cpp)
@@ -21,11 +27,14 @@ ament_target_dependencies(odometry_node
   geometry_msgs
   tf2
   tf2_ros
+  nlohmann_json
 )
+
+target_link_libraries(odometry_node zmq)
 
 # Install
 install(TARGETS odometry_node
-  DESTINATION lib
+  DESTINATION lib/${PROJECT_NAME}
 )
 
 ament_package()
