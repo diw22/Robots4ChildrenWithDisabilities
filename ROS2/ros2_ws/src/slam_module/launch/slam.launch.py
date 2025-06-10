@@ -6,7 +6,7 @@ from ament_index_python.packages import get_package_share_directory
 import os
 
 def generate_launch_description():
-    # SLAM Toolbox 관련 설정
+    # SLAM Toolbox
     slam_toolbox_dir = get_package_share_directory('slam_toolbox')
     slam_launch_file = os.path.join(slam_toolbox_dir, 'launch', 'online_async_launch.py')
     slam_params = '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/src/slam_module/config/slam_toolbox_params.yaml'
