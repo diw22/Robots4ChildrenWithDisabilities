@@ -76,8 +76,8 @@ class MainMenu(QWidget):
                 "highlight": QIcon("highlight_tidy_button.png")
             },
             self.btn_free_roam: {
-                "normal": QIcon("freeroam_button.png"),
-                "highlight": QIcon("highlight_freeroam_button.png")
+                "normal": QIcon("free_button.png"),
+                "highlight": QIcon("highlight_free_button.png")
             }
         }
         layout.addLayout(button_layout)
@@ -540,7 +540,7 @@ class FreeRoamWidget(QWidget):
         self.stacked_widget = stacked_widget
         self.setWindowTitle("Free Roam")
         self.setGeometry(0, 0, 1920, 1080)
-        self.set_background("GUI_background.png")
+        self.set_background("freeroamback.png")
 
         self.selected_index = 0
         self.buttons = []
