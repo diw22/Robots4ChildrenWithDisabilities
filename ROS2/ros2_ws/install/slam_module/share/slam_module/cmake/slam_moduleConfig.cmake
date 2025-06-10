@@ -1,1 +1,0 @@
-/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/slam_module/ament_cmake_core/slam_moduleConfig.cmake

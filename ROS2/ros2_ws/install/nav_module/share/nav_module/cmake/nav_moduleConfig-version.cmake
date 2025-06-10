@@ -1,1 +1,0 @@
-/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/nav_module/ament_cmake_core/nav_moduleConfig-version.cmake

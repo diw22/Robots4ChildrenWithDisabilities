@@ -1,1 +1,0 @@
-/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/build/system_launcher/ament_cmake_environment_hooks/local_setup.bash

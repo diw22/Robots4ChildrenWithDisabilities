@@ -1,1 +1,23 @@
-# Empty YAML configuration
+obstacle_layer:
+  enabled: true
+  obstacle_range: 5.0
+  raytrace_range: 6.0
+  inflation_radius: 0.5
+  max_obstacle_height: 2.0
+  min_obstacle_height: 0.1
+  combination_method: 1
+  track_unknown_space: true
+  observation_sources: scan
+  scan:
+    topic: scan
+    sensor_frame: laser
+    data_type: LaserScan
+    clearing: true
+    marking: true
+    min_obstacle_height: 0.1
+    max_obstacle_height: 2.0
+
+inflation_layer:
+  enabled: true
+  inflation_radius: 0.5
+  cost_scaling_factor: 3.0
