@@ -6,6 +6,8 @@ from PyQt5.QtGui import QPixmap, QPalette, QBrush, QIcon
 from PyQt5.QtCore import Qt, QSize, QTimer, QMetaObject, Q_ARG
 from control_modes_basic import controller_manager
 import threading
+import requests
+
 from input_manager import input_manager
 #from head_tracker import HeadTracker
 #from input_manager import input_manager
@@ -567,6 +569,13 @@ class FreeRoamWidget(QWidget):
         self.setLayout(layout)
         self.highlight_selected()
 
+    
+    def back_to_menu(self):
+        from draft_ps5_control_thread import stop_ps5_control
+        stop_ps5_control()        # ✅ Stop PS5 control thread
+        input_manager.start(self.stacked_widget.currentWidget().handle_direction)
+        self.stacked_widget.setCurrentIndex(0)
+
     def set_background(self, image_path):
         self.setAutoFillBackground(True)
         background = QPixmap(image_path)
@@ -574,10 +583,7 @@ class FreeRoamWidget(QWidget):
         palette.setBrush(QPalette.Window, QBrush(background))
         self.setPalette(palette)
 
-    def back_to_menu(self):
-        input_manager.stop()
-        self.stacked_widget.setCurrentIndex(0)
-        self.stacked_widget.currentWidget().activate_controller()
+
 
     def handle_direction(self, direction):
         if direction == "Left" or direction == "Right":
@@ -598,8 +604,10 @@ class FreeRoamWidget(QWidget):
             self.handle_direction("Centre")
 
     def activate_controller(self):
-        self.setFocus()
-        input_manager.start(self.handle_direction)
+        from draft_ps5_control_thread import start_ps5_control
+        input_manager.stop()  # 🚨 Stop ControllerManager
+        start_ps5_control()   # 🚨 Starts PS5 logic instead
+        print("[INFO] Free Roam activated, controller input started.")
 
 
 if __name__ == '__main__':

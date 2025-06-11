@@ -1,4 +1,4 @@
-from raspi_control_modes import controller_manager
+from control_modes_basic import controller_manager
 from headtrackingwithcam import HeadTracker
 
 class InputManager:
