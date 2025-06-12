@@ -11,6 +11,7 @@ class ControllerManager:
         self.callback = None
         self.joystick = None
         self._init_joystick_once()
+        print("[INFO] ControllerManager initialized.")
 
     def _init_joystick_once(self):
         pygame.init()

@@ -7,6 +7,7 @@ from PyQt5.QtCore import Qt, QSize, QTimer, QMetaObject, Q_ARG
 from control_modes_basic import controller_manager
 import threading
 import requests
+import zmq
 
 from input_manager import input_manager
 #from head_tracker import HeadTracker
@@ -89,13 +90,19 @@ class MainMenu(QWidget):
         input_manager.start(self.handle_direction)
     def set_message_widget(self, message_widget):
             self.message_widget = message_widget
-    def set_free_roam_widget(self, widget):
-            self.free_roam_widget = widget
+    def set_free_roam_widget(self, free_roam_widget):
+            self.free_roam_widget = free_roam_widget
+    def set_motor_roam_widget(self, motor_roam_widget):
+            self.motor_roam_widget = motor_roam_widget
     def start_message_menu(self):
             input_manager.stop()
             self.stacked_widget.setCurrentWidget(self.message_widget)
             self.message_widget.activate_controller()
-            
+    
+    def start_motor_roam(self):
+            input_manager.stop()
+            self.stacked_widget.setCurrentWidget(self.motor_roam_widget)
+            self.motor_roam_widget.activate_controller()
     def start_free_roam(self):
             input_manager.stop()
             self.stacked_widget.setCurrentWidget(self.free_roam_widget)
@@ -303,7 +310,7 @@ class TicTacToe(QWidget):
                 QTimer.singleShot(0, lambda: self.show_game_result("win"))
                 return
             elif self.check_draw():
-                QTimer.singleShot(0, lambda: self.show_game_result("draw"))
+                QTimer.singleShot(100, lambda: self.show_game_result("draw"))
                 return
             QTimer.singleShot(0, self.delayed_computer_move)
 
@@ -366,6 +373,9 @@ class TicTacToe(QWidget):
                 QTimer.singleShot(0, lambda: self.show_game_result("lose"))
             elif self.check_draw():
                 QTimer.singleShot(0, lambda: self.show_game_result("draw"))
+            else:
+                if self.check_draw():
+                    QTimer.singleShot(0, lambda: self.show_game_result("draw"))
 
     def check_winner(self, player):
         wins = [(0,1,2), (3,4,5), (6,7,8),
@@ -490,50 +500,6 @@ class MessageWidget(QWidget):
         self.setFocus()
         input_manager.start(self.handle_direction)
 
-class DiceWidget(QWidget):
-    def __init__(self, stacked_widget):
-        super().__init__()
-        self.setFocusPolicy(Qt.StrongFocus)
-        self.stacked_widget = stacked_widget
-        self.setWindowTitle("Dice Game")
-        self.setGeometry(0, 0, 1920, 1080)
-
-        self.layout = QVBoxLayout()
-        self.setLayout(self.layout)
-
-        self.label = QLabel()
-        self.label.setAlignment(Qt.AlignCenter)
-        self.layout.addWidget(self.label)
-
-        #Define paths to animations
-        self.idle_animation_path = "animation_0.gif"
-        self.transition_animation_path = "transition.gif"
-        self.action_animations = {
-            Qt.Key_D: "animation_1.gif",
-            Qt.Key_W: "animation_2.gif",
-            Qt.Key_A: "animation_3.gif",
-            Qt.Key_S: "animation_4.gif"
-        }
-
-        self.current_movie = None
-        self.play_animation(self.idle_animation_path)
-
-    def keyPressEvent(self, event):
-        key = event.key()
-        if key in self.action_animations:
-            self.play_transition_then_action(self.action_animations[key])
-
-    def play_animation(self, gif_path):
-        if self.current_movie:
-            self.current_movie.stop()
-            self.label.clear()
-        self.current_movie = QMovie(gif_path)
-        self.label.setMovie(self.current_movie)
-        self.current_movie.start()
-
-    def play_transition_then_action(self, action_gif_path):
-        self.play_animation(self.transition_animation_path)
-        QTimer.singleShot(2000, lambda: self.play_animation(action_gif_path))
 
 class FreeRoamWidget(QWidget):
     def __init__(self, stacked_widget):
@@ -575,6 +541,8 @@ class FreeRoamWidget(QWidget):
         stop_ps5_control()        # ✅ Stop PS5 control thread
         input_manager.start(self.stacked_widget.currentWidget().handle_direction)
         self.stacked_widget.setCurrentIndex(0)
+        self.stacked_widget.currentWidget().activate_controller()
+        
 
     def set_background(self, image_path):
         self.setAutoFillBackground(True)
@@ -608,7 +576,84 @@ class FreeRoamWidget(QWidget):
         input_manager.stop()  # 🚨 Stop ControllerManager
         start_ps5_control()   # 🚨 Starts PS5 logic instead
         print("[INFO] Free Roam activated, controller input started.")
+        #button 7 or 10 back to main menu
 
+class MotorRoamWidget(QWidget):
+    def __init__(self, stacked_widget):
+        super().__init__()
+        self.setFocusPolicy(Qt.StrongFocus)
+        self.stacked_widget = stacked_widget
+        self.setWindowTitle("Motor Roam")
+        self.setGeometry(0, 0, 1920, 1080)
+        self.set_background("freeroamback.png")
+
+        self.selected_index = 0
+        self.buttons = []
+        self.button_icons = {}
+
+        layout = QVBoxLayout()
+        self.back_button = QPushButton()
+        self.back_button.setIcon(QIcon("backmenu.png"))
+        self.back_button.setIconSize(QSize(250, 250))
+        self.back_button.setFlat(True)
+        self.back_button.clicked.connect(self.back_to_menu)
+
+        self.buttons.append(self.back_button)
+        self.button_icons[self.back_button] = {
+            "normal": QIcon("backmenu.png"),
+            "highlight": QIcon("highlight_backmenu_button.png")
+        }
+
+        top_row = QHBoxLayout()
+        top_row.addWidget(self.back_button)
+        top_row.addStretch()
+        layout.addLayout(top_row)
+
+        self.setLayout(layout)
+        self.highlight_selected()
+
+    
+    def back_to_menu(self):
+        from motor_roam_control import stop_motor_roam_control
+        stop_motor_roam_control()        # ✅ Stop PS5 control thread
+        input_manager.start(self.stacked_widget.currentWidget().handle_direction)
+        self.stacked_widget.setCurrentIndex(0)
+        self.stacked_widget.currentWidget().activate_controller()
+        
+
+    def set_background(self, image_path):
+        self.setAutoFillBackground(True)
+        background = QPixmap(image_path)
+        palette = QPalette()
+        palette.setBrush(QPalette.Window, QBrush(background))
+        self.setPalette(palette)
+
+
+
+    def handle_direction(self, direction):
+        if direction == "Left" or direction == "Right":
+            self.selected_index = 0  # Only one button
+        elif direction == "Centre":
+            self.back_button.click()
+        self.highlight_selected()
+
+    def highlight_selected(self):
+        icon_type = "highlight" if self.selected_index == 0 else "normal"
+        self.back_button.setIcon(self.button_icons[self.back_button][icon_type])
+
+    def keyPressEvent(self, event):
+        key = event.key()
+        if key == Qt.Key_Left or key == Qt.Key_Right:
+            self.handle_direction("Left")
+        elif key == Qt.Key_Space:
+            self.handle_direction("Centre")
+
+    def activate_controller(self):
+        from motor_roam_control import start_motor_roam_control
+        input_manager.stop()  # 🚨 Stop ControllerManager
+        start_motor_roam_control()   # 🚨 Starts PS5 logic instead
+        print("[INFO] Motor Roam activated, controller input started.")
+        #button 7 or 10 back to main menu
 
 if __name__ == '__main__':
     input_manager.set_input_type("controller")
@@ -619,15 +664,18 @@ if __name__ == '__main__':
     game = TicTacToe(stacked_widget)
     message_widget = MessageWidget(stacked_widget)
     free_roam = FreeRoamWidget(stacked_widget)
+    motor_roam = MotorRoamWidget(stacked_widget)
     
     stacked_widget.addWidget(menu)
     stacked_widget.addWidget(game)
     stacked_widget.addWidget(message_widget)
     stacked_widget.addWidget(free_roam)
+    stacked_widget.addWidget(motor_roam)
 
     menu.set_game_widget(game)
     menu.set_message_widget(message_widget)
     menu.set_free_roam_widget(free_roam)
+    menu.set_motor_roam_widget(motor_roam)
 
     stacked_widget.setCurrentWidget(menu)
     stacked_widget.showFullScreen()

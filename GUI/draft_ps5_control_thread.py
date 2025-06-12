@@ -81,6 +81,8 @@ def run_ps5_control():
     global teleoperation
     pygame.init()
     pygame.joystick.init()
+    print("[INFO] Initializing PS5 controller...")
+    
 
     try:
         ds5 = pygame.joystick.Joystick(0)
@@ -95,6 +97,7 @@ def run_ps5_control():
     while not stop_event.is_set():
         pygame.event.pump()
         data = None
+        #print("beans 2...")
 
         if device == "Darwin":
             if ds5.get_button(0):
@@ -139,18 +142,18 @@ def run_ps5_control():
             elif hat_x == 1:
                 data = commands["yaw_right"]
 
-                if data is not None and teleoperation:
-                    try:
-                        #response = requests.post(f"{BASE_URL}/move/relative", json=data, params={"robot_id": 0})
-                        #print(response.status_code, response.text)
-                        print(f"({data}) sent to robot")
-                    except Exception as e:
-                        print(f"[ERROR] Failed to send request: {e}")
+            if data is not None and teleoperation:
+                try:
+                    #response = requests.post(f"{BASE_URL}/move/relative", json=data, params={"robot_id": 0})
+                    #print(response.status_code, response.text)
+                    print(f"({data}) sent to robot")
+                except Exception as e:
+                    print(f"[ERROR] Failed to send request: {e}")
 
-                if ds5.get_button(0) and ds5.get_button(1):
-                    teleoperation = not teleoperation
-                    print(f"[INFO] Teleoperation {'enabled' if teleoperation else 'disabled'}")
-                    time.sleep(1)
+            if ds5.get_button(0) and ds5.get_button(1):
+                teleoperation = not teleoperation
+                print(f"[INFO] Teleoperation {'enabled' if teleoperation else 'disabled'}")
+                time.sleep(1)
 
 
 
