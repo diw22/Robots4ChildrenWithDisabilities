@@ -166,8 +166,8 @@ while running:
 
     # If a command is selected and teleoperation is on, send it
     if data is not None and teleoperation:
-        response = requests.post(f"{BASE_URL}/move/relative", json=data, params=params)
-        print(response.status_code, response.text)
+        #response = requests.post(f"{BASE_URL}/move/relative", json=data, params=params)
+        #print(response.status_code, response.text)
         print(data)
         
 

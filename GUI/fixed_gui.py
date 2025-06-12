@@ -4,7 +4,7 @@ from PyQt5.QtCore import Qt
 
 from input_manager import input_manager
 from control_modes_basic import controller_manager
-from GUI_draft_input_old import MainMenu, TicTacToe, MessageWidget, DiceWidget, FreeRoamWidget
+from GUI_draft_input_old import MainMenu, TicTacToe, MessageWidget, FreeRoamWidget
 
 class MainWindow(QMainWindow):
     def __init__(self):

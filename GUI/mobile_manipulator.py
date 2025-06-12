@@ -264,6 +264,8 @@ class MobileManipulator:
                 self.pressed_keys["forward"] = False
 
         if self.xbx.controller.get_button(0):
+            self.pressed_keys["left"] = False 
+            self.pressed_keys["right"] = False
             if hat_x == 1:
                 self.pressed_keys["rotate_right"] = True
                 self.pressed_keys["rotate_left"] = False 

@@ -6,7 +6,7 @@ import platform
 import json
 import threading
 
-BASE_URL = "http://0.0.0.0:80"
+BASE_URL = "http://raspberrypi.local"
 STEP_SIZE = 1  # cm
 device = platform.system()
 
@@ -144,9 +144,9 @@ def run_ps5_control():
 
             if data is not None and teleoperation:
                 try:
-                    #response = requests.post(f"{BASE_URL}/move/relative", json=data, params={"robot_id": 0})
-                    #print(response.status_code, response.text)
-                    print(f"({data}) sent to robot")
+                    response = requests.post(f"{BASE_URL}/move/relative", json=data, params={"robot_id": 0})
+                    print(response.status_code, response.text)
+                    #print(f"({data}) sent to robot")
                 except Exception as e:
                     print(f"[ERROR] Failed to send request: {e}")
 

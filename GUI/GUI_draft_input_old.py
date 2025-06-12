@@ -22,7 +22,7 @@ class MainMenu(QWidget):
         self.setWindowTitle("Main Menu")
         self.setGeometry(0, 0, 1920, 1080)
 
-        self.set_background("GUI_background.png")
+        self.set_background("GUI_Background.png")
 
         layout = QVBoxLayout()
         layout.addSpacerItem(QSpacerItem(20, int(self.height() * 2/3), QSizePolicy.Minimum, QSizePolicy.Expanding))

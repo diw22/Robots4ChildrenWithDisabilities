@@ -608,7 +608,8 @@ class FreeRoamWidget(QWidget):
         input_manager.stop()  # 🚨 Stop ControllerManager
         start_ps5_control()   # 🚨 Starts PS5 logic instead
         print("[INFO] Free Roam activated, controller input started.")
-
+        # button 7 to return to main menu
+        
 
 if __name__ == '__main__':
     input_manager.set_input_type("controller")
