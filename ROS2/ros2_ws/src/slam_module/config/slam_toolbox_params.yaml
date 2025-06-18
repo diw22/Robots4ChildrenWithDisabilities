@@ -1,26 +1,29 @@
 slam_toolbox:
   ros__parameters:
-    use_sim_time: false
-    slam_mode: true
-    resolution: 0.05
-    map_update_interval: 1.0          # Update map more frequently (default is 2.0)
-    publish_period: 0.05              # Map publishing rate
-    transform_publish_period: 0.05    # TF broadcasting rate
-    map_file_name: "map"
-    scan_topic: /scan
-    odom_frame: odom
-    base_frame: base_link
-    map_frame: map
-    publish_map_tf: true
-    use_scan_matching: true           # Enable scan matching for better alignment
+    use_sim_time: false                         # Don't use simulation time (set to true if simulating)
+    slam_mode: true                             # Enable mapping mode
+    resolution: 0.05                            # Map resolution in meters per cell
+    map_update_interval: 1.0                    # Time interval (in seconds) to update the map
+    publish_period: 0.05                        # Frequency (in seconds) to publish the map
+    transform_publish_period: 0.05              # Frequency to publish the TF transforms
+    map_file_name: "map"                        # Default map file name (used in serialization)
 
-    use_scan_barycenter: true         # Use scan barycenter for better registration
-    minimum_travel_distance: 0.05     # Update SLAM even with small linear motion (meters)
-    minimum_travel_heading: 0.017     # Update SLAM with small angular motion (~1 degree in radians)
-    max_laser_range: 8.0              # Maximum usable lidar range (adjust if needed)
-    scan_buffer_size: 10              # Number of scans to keep in buffer for matching
-    scan_buffer_maximum_scan_distance: 2.0  # Max distance between scans to consider for registration
-    link_match_minimum_response_fine: 0.1   # Minimum correlation score for scan match
-    do_loop_closing: true             # Enable loop closure (adjusts drift after returning to known place)
-    loop_match_maximum_variance_coarse: 3.0
-    loop_search_maximum_distance: 3.0
+    scan_topic: /scan                           # Lidar scan topic name
+    odom_frame: odom                            # Odometry frame
+    base_frame: base_link                       # Robot base frame
+    map_frame: map                              # Map frame
+    publish_map_tf: true                        # Publish map->odom transform
+
+    use_scan_matching: true                     # Enable scan matching for better alignment
+    use_scan_barycenter: true                   # Use barycenter of scan points for alignment accuracy
+
+    pose_update_distance: 0.05                  # Update pose after 5 cm linear movement
+    pose_update_angle: 0.0175                   # Update pose after ~1 degree rotation (in radians)
+    max_laser_range: 8.0                        # Maximum lidar range used for mapping (meters)
+
+    scan_buffer_size: 10                        # Number of recent scans to store in buffer (for matching)
+    scan_buffer_maximum_scan_distance: 2.0      # Max allowed distance between scans for matching (meters)
+
+    use_map_saver: true                         # enable map backup service
+    temporal_update: true 	                    # reduce ghost scan noise over time
+    minimum_time_interval: 0.5                  # Minimum 0.5 s between map updates

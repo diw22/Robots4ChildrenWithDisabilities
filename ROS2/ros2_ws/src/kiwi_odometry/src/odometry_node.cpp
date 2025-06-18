@@ -62,9 +62,9 @@ private:
         raw_back_ = json_msg.at("back_wheel").get<int>();
         raw_right_ = json_msg.at("right_wheel").get<int>();
 
-        RCLCPP_INFO(this->get_logger(), "\n[ZMQ] Received message: left=%d, right=%d, back=%d", raw_left_, raw_right_, raw_back_);
-      }else {
-        RCLCPP_INFO(this->get_logger(), "\n[ZMQ] No message received.");
+        RCLCPP_INFO(this->get_logger(), "[ZMQ] Received message: left=%d, right=%d, back=%d", raw_left_, raw_right_, raw_back_);
+      } else {
+        RCLCPP_INFO(this->get_logger(), "[ZMQ] No message received.");
       }
     } catch (const zmq::error_t& e) {
       RCLCPP_WARN(this->get_logger(), "ZMQ error: %s", e.what());
@@ -76,9 +76,9 @@ private:
     double dt = (current_time - last_time_).seconds();
     last_time_ = current_time;
 
-    double w1 = rawToDegPerSec(raw_left_) * (M_PI / 180.0);
+    double w1 = -rawToDegPerSec(raw_left_) * (M_PI / 180.0);
     double w2 = rawToDegPerSec(raw_back_) * (M_PI / 180.0);
-    double w3 = rawToDegPerSec(raw_right_) * (M_PI / 180.0);
+    double w3 = -rawToDegPerSec(raw_right_) * (M_PI / 180.0);
 
     const double r = 0.05;
     const double l = 0.125;
@@ -87,6 +87,11 @@ private:
     double vy = r / 3.0 * (-w1 + 2 * w2 - w3);
     double omega = r / (3.0 * l) * (w1 + w2 + w3);
 
+    // Invert velocity directions for alignment with map coordinates
+    vx = -vx;
+    vy = -vy;
+    omega = -omega;
+
     double delta_x = (vx * std::cos(theta_) - vy * std::sin(theta_)) * dt;
     double delta_y = (vx * std::sin(theta_) + vy * std::cos(theta_)) * dt;
     double delta_theta = omega * dt;
@@ -94,6 +99,8 @@ private:
     x_ += delta_x;
     y_ += delta_y;
     theta_ += delta_theta;
+
+    RCLCPP_INFO(this->get_logger(), "POSE | x: %.3f, y: %.3f, theta: %.3f", x_, y_, theta_);
 
     auto odom = nav_msgs::msg::Odometry();
     odom.header.stamp = current_time;
