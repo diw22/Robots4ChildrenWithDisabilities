@@ -42,6 +42,7 @@ private:
   std::shared_ptr<tf2_ros::TransformBroadcaster> tf_broadcaster_;
   rclcpp::TimerBase::SharedPtr timer_;
 
+  // Converts raw motor speed (16-bit encoded) to degrees per second
   double rawToDegPerSec(int raw_speed) {
     const double steps_per_deg = 4096.0 / 360.0;
     int magnitude = raw_speed & 0x7FFF;
@@ -76,22 +77,27 @@ private:
     double dt = (current_time - last_time_).seconds();
     last_time_ = current_time;
 
+    // Convert raw motor data to angular velocity (rad/s)
     double w1 = -rawToDegPerSec(raw_left_) * (M_PI / 180.0);
     double w2 = rawToDegPerSec(raw_back_) * (M_PI / 180.0);
     double w3 = -rawToDegPerSec(raw_right_) * (M_PI / 180.0);
 
-    const double r = 0.05;
-    const double l = 0.125;
+    // Wheel and robot geometry
+    const double r = 0.05;       // Wheel radius in meters
+    const double l = 0.10;       // Distance from center to wheel (adjusted from 0.125)
+    const double omega_gain = 1.2;  // Scaling factor to improve rotational tracking
 
+    // Convert wheel angular velocities to robot velocity (body frame)
     double vx = r / 3.0 * (-std::sqrt(3) * w1 + std::sqrt(3) * w3);
     double vy = r / 3.0 * (-w1 + 2 * w2 - w3);
-    double omega = r / (3.0 * l) * (w1 + w2 + w3);
+    double omega = omega_gain * r / (3.0 * l) * (w1 + w2 + w3);
 
-    // Invert velocity directions for alignment with map coordinates
+    // Optional: invert directions to align with mapping orientation
     vx = -vx;
     vy = -vy;
     omega = -omega;
 
+    // Integrate velocity to update robot position
     double delta_x = (vx * std::cos(theta_) - vy * std::sin(theta_)) * dt;
     double delta_y = (vx * std::sin(theta_) + vy * std::cos(theta_)) * dt;
     double delta_theta = omega * dt;
@@ -102,6 +108,7 @@ private:
 
     RCLCPP_INFO(this->get_logger(), "POSE | x: %.3f, y: %.3f, theta: %.3f", x_, y_, theta_);
 
+    // Publish Odometry message
     auto odom = nav_msgs::msg::Odometry();
     odom.header.stamp = current_time;
     odom.header.frame_id = "odom";
@@ -119,6 +126,7 @@ private:
 
     odom_pub_->publish(odom);
 
+    // Publish TF from odom to base_link
     geometry_msgs::msg::TransformStamped tf_msg;
     tf_msg.header.stamp = current_time;
     tf_msg.header.frame_id = "odom";
