@@ -11,6 +11,7 @@
   <!-- Dependencies -->
   <depend>rclcpp</depend>
   <depend>rclcpp_action</depend>
+  <exec_depend>rclpy</exec_depend>
   <depend>geometry_msgs</depend>
   <depend>nav2_msgs</depend>
 

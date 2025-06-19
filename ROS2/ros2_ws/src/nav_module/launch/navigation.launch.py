@@ -1,78 +1,112 @@
 from launch import LaunchDescription
+from launch.actions import DeclareLaunchArgument, ExecuteProcess
+from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
 from launch_ros.actions import Node
+from launch_ros.substitutions import FindPackageShare
 
 def generate_launch_description():
-    config_dir = 'config/'  # relative path to the config directory
+    # Declare launch configurations
+    map_yaml = LaunchConfiguration('map')
+    config_dir = LaunchConfiguration('config_dir')
+    rviz_config = LaunchConfiguration('rviz_config')
+
+    # Resolve config directory as path within the package
+    config_path = PathJoinSubstitution([
+        FindPackageShare('nav_module'),
+        config_dir
+    ])
 
     return LaunchDescription([
+        DeclareLaunchArgument(
+            'map',
+            default_value='/home/raspi/my_map.yaml',
+            description='Full path to the map YAML file to load'
+        ),
+        DeclareLaunchArgument(
+            'config_dir',
+            default_value='config/',
+            description='Relative path to the config directory inside the package'
+        ),
+        DeclareLaunchArgument(
+            'rviz_config',
+            default_value='/home/raspi/.rviz/map.rviz',
+            description='Full path to the RViz config file'
+        ),
 
-        # Map server is only needed if using a static map (i.e. not using SLAM)
-        # Node(
-        #     package='nav2_map_server',
-        #     executable='map_server',
-        #     name='map_server',
-        #     parameters=[config_dir + 'map.yaml'],
-        #     output='screen'
-        # ),
+        Node(
+            package='nav2_map_server',
+            executable='map_server',
+            name='map_server',
+            parameters=[{'yaml_filename': map_yaml}],
+            output='screen'
+        ),
 
-        # AMCL for localization using laser scans
         Node(
             package='nav2_amcl',
             executable='amcl',
             name='amcl',
-            parameters=[config_dir + 'amcl.yaml'],
+            parameters=[PathJoinSubstitution([config_path, 'amcl.yaml'])],
             output='screen'
         ),
 
-        # Global planner for path generation
         Node(
             package='nav2_planner',
             executable='planner_server',
             name='planner_server',
             parameters=[
-                config_dir + 'move_base.yaml',
-                config_dir + 'global_costmap.yaml',
-                config_dir + 'costmap_common.yaml'
+                PathJoinSubstitution([config_path, 'move_base.yaml']),
+                PathJoinSubstitution([config_path, 'global_costmap.yaml']),
+                PathJoinSubstitution([config_path, 'costmap_common.yaml'])
             ],
             output='screen'
         ),
 
-        # Local controller for path following and obstacle avoidance
         Node(
             package='nav2_controller',
             executable='controller_server',
             name='controller_server',
             parameters=[
-                config_dir + 'move_base.yaml',
-                config_dir + 'local_costmap.yaml',
-                config_dir + 'costmap_common.yaml'
+                PathJoinSubstitution([config_path, 'move_base.yaml']),
+                PathJoinSubstitution([config_path, 'local_costmap.yaml']),
+                PathJoinSubstitution([config_path, 'costmap_common.yaml'])
             ],
             output='screen'
         ),
 
-        # Behavior Tree navigator for high-level goal handling
         Node(
             package='nav2_bt_navigator',
             executable='bt_navigator',
             name='bt_navigator',
-            parameters=[config_dir + 'move_base.yaml'],
+            parameters=[PathJoinSubstitution([config_path, 'move_base.yaml'])],
             output='screen'
         ),
 
-        # Recovery behaviors (e.g. spin, backup, clear costmap)
         Node(
-            package='nav2_recoveries',
-            executable='recoveries_server',
-            name='recoveries_server',
-            parameters=[config_dir + 'move_base.yaml'],
+            package='nav2_behaviors',
+            executable='behavior_server',
+            name='behavior_server',
+            parameters=[PathJoinSubstitution([config_path, 'move_base.yaml'])],
             output='screen'
         ),
 
-        # Custom navigator node that sends navigation goals (optional)
         Node(
             package='nav_module',
             executable='navigator_node',
             name='navigator_node',
+            output='screen'
+        ),
+
+        ExecuteProcess(
+            cmd=['python3', '/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/src/nav_module/src/cmd_vel_bridge.py'],
+            name='cmd_vel_bridge',
+            output='screen'
+        ),
+
+        Node(
+            package='rviz2',
+            executable='rviz2',
+            name='rviz2',
+            arguments=['-d', rviz_config],
             output='screen'
         ),
     ])

@@ -21,3 +21,16 @@ bt_navigator:
     loop_timeout: 10.0
     cancel_recovery_behavior: true
     enable_replanning: true
+
+behavior_server:
+  ros__parameters:
+    costmap_topic: local_costmap/costmap_raw
+    footprint_topic: local_costmap/published_footprint
+    cycle_frequency: 10.0
+    behavior_plugins: ["spin", "backup", "clearing"]
+    spin:
+      plugin: "nav2_behaviors/Spin"
+    backup:
+      plugin: "nav2_behaviors/BackUp"
+    clearing:
+      plugin: "nav2_behaviors/ClearCostmap"

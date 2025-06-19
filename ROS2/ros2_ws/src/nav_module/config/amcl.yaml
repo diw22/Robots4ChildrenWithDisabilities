@@ -7,12 +7,12 @@ amcl:
     scan_topic: scan
     min_particles: 500
     max_particles: 2000
-    alpha1: 0.2
-    alpha2: 0.2
-    alpha3: 0.2
-    alpha4: 0.2
-    update_min_d: 0.25
-    update_min_a: 0.2
+    alpha1: 0.3
+    alpha2: 0.3
+    alpha3: 0.3
+    alpha4: 0.3
+    update_min_d: 0.1
+    update_min_a: 0.1
     resample_interval: 1
     transform_tolerance: 0.2
     recovery_alpha_slow: 0.0

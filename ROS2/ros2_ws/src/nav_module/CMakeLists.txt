@@ -23,7 +23,11 @@ ament_target_dependencies(navigator_node
 
 # Installation
 install(TARGETS navigator_node
-  DESTINATION lib
+  DESTINATION lib/${PROJECT_NAME}
+)
+
+install (PROGRAMS src/cmd_vel_bridge.py
+  DESTINATION lib/${PROJECT_NAME}
 )
 
 install(DIRECTORY launch config
