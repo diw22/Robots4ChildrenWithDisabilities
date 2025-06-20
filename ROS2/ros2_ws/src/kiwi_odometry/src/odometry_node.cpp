@@ -84,8 +84,8 @@ private:
 
     // Wheel and robot geometry
     const double r = 0.05;       // Wheel radius in meters
-    const double l = 0.10;       // Distance from center to wheel (adjusted from 0.125)
-    const double omega_gain = 1.2;  // Scaling factor to improve rotational tracking
+    const double l = 0.125;       // Distance from center to wheel (adjusted from 0.125)
+    const double omega_gain = 3.2;  // Scaling factor to improve rotational tracking
 
     // Convert wheel angular velocities to robot velocity (body frame)
     double vx = r / 3.0 * (-std::sqrt(3) * w1 + std::sqrt(3) * w3);

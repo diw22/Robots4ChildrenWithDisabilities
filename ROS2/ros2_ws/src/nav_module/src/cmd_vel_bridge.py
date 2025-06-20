@@ -24,8 +24,8 @@ class CmdVelBridge(Node):
         )
         
         # ZMQ socket (PUSH to motor controller)
-        self.context = zmq.Context()
-        self.socket = self.context.socket(zmq.PUSH)
+        self.zmq_context = zmq.Context()
+        self.socket = self.zmq_context.socket(zmq.PUSH)
         self.socket.connect("tcp://192.168.137.109:5555")  # Port and IP must match motor side
 
         self.get_logger().info("cmd_vel_bridge node started and connected to ZMQ motor controller.")
@@ -126,8 +126,8 @@ class CmdVelBridge(Node):
         # Clean up ZMQ socket and context explicitly
         if hasattr(self, "socket"):
             self.socket.close()
-        if hasattr(self, "context"):
-            self.context.term()
+        if hasattr(self, "zmq_context"):
+            self.zmq_context.term()
         self.get_logger().info("cmd_vel_bridge node shutdown. ZMQ resources cleaned up.")
         super().destroy_node()
 
