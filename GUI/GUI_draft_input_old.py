@@ -8,6 +8,9 @@ from control_modes_basic import controller_manager
 import threading
 import requests
 import zmq
+import random
+import queue
+import json
 
 from input_manager import input_manager
 #from head_tracker import HeadTracker
@@ -16,6 +19,8 @@ from input_manager import input_manager
 class MainMenu(QWidget):
     def __init__(self, stacked_widget):
         super().__init__()
+        
+        self.input_mode = "controller"
         self.setFocusPolicy(Qt.StrongFocus)
         self.stacked_widget = stacked_widget
         self.game_widget = None
@@ -25,13 +30,32 @@ class MainMenu(QWidget):
         self.set_background("GUI_background.png")
 
         layout = QVBoxLayout()
+
+        top_bar_layout = QHBoxLayout()
+        top_bar_layout.addStretch()
+        
+        self.input_mode_button = QPushButton()
+        self.input_mode_button.setIcon(QIcon("controller_toggle_button.png"))
+        self.input_mode_button.setIconSize(QSize(350, 350))
+        self.input_mode_button.setFlat(True)
+        self.input_mode_button.clicked.connect(self.toggle_input_mode)
+        
+        top_bar_layout.addWidget(self.input_mode_button)
+        layout.addLayout(top_bar_layout)
+
+        # Spacer to push main buttons down
         layout.addSpacerItem(QSpacerItem(20, int(self.height() * 2/3), QSizePolicy.Minimum, QSizePolicy.Expanding))
 
+
+        
         button_layout = QHBoxLayout()
         button_layout.setAlignment(Qt.AlignHCenter)
-
+        layout.addLayout(button_layout)
+        
         self.buttons = []
-        self.selected_index = 0
+        self.selected_index = 1
+        
+        self.buttons.insert(0, self.input_mode_button)
 
         self.btn_ttt = QPushButton()
         self.btn_ttt.setIcon(QIcon("tictactoe_button.png"))
@@ -53,12 +77,12 @@ class MainMenu(QWidget):
         self.btn_clean.setIcon(QIcon("tidyup_button.png"))
         self.btn_clean.setIconSize(QSize(350, 350))
         self.btn_clean.setFlat(True)
-        self.btn_clean.clicked.connect(lambda: QMessageBox.information(self, "Tidy", "Tidying up..."))
+        self.btn_clean.clicked.connect(self.send_tidy_command)
         self.buttons.append(self.btn_clean)
         button_layout.addWidget(self.btn_clean)
 
         self.btn_free_roam = QPushButton()
-        self.btn_free_roam.setIcon(QIcon("message_button.png"))
+        self.btn_free_roam.setIcon(QIcon("free_button.png"))
         self.btn_free_roam.setIconSize(QSize(350, 350))
         self.btn_free_roam.setFlat(True)
         self.btn_free_roam.clicked.connect(self.start_free_roam)
@@ -66,6 +90,16 @@ class MainMenu(QWidget):
         button_layout.addWidget(self.btn_free_roam)
         
         self.button_icons = {
+            self.input_mode_button: {
+                "controller": {
+                    "normal": QIcon("controller_toggle_button.png"),
+                    "highlight": QIcon("highlight_controller_toggle_button.png")
+                },
+                "headtracking": {
+                    "normal": QIcon("headtracking_toggle_button.png"),
+                    "highlight": QIcon("highlight_headtracking_toggle_button.png")
+                }
+            },
             self.btn_ttt: {
                 "normal": QIcon("tictactoe_button.png"),
                 "highlight": QIcon("highlight_tictactoe_button.png")
@@ -81,15 +115,51 @@ class MainMenu(QWidget):
             self.btn_free_roam: {
                 "normal": QIcon("free_button.png"),
                 "highlight": QIcon("highlight_free_button.png")
-            }
+                }
         }
-        layout.addLayout(button_layout)
+
+        
+        
         self.setLayout(layout)
         self.highlight_selected()
+        
 
         input_manager.start(self.handle_direction)
     def set_message_widget(self, message_widget):
             self.message_widget = message_widget
+            
+    def tidy_function(self):
+        
+        
+        tidy_done = False
+        
+        context = zmq.Context()
+        
+        receive_socket = context.socket(zmq.PULL)
+        receive_socket.connect("tcp://192.168.137.109:5555")
+        receive_socket.setsockopt(zmq.CONFLATE, 1)
+        socket = context.socket(zmq.PUSH)
+        socket.connect("tcp://192.168.137.109:5556") 
+        socket.setsockopt(zmq.CONFLATE, 1)
+        socket.send_string(json.dumps("start"))
+        print("[INFO] Sent 'start' to port 5556")
+        #start waiting for message
+        while not tidy_done:
+            try:
+                message = receive_socket.recv_string(flags=zmq.NOBLOCK)
+                data = json.loads(message)
+                if data == "stop":
+                    tidy_done = True
+                    print("[INFO] Tidy command completed.")
+                    break
+            except zmq.Again:
+                pass
+        
+
+        
+    def toggle_input_mode(self):
+        self.input_mode = "headtracking" if self.input_mode == "controller" else "controller"
+        self.highlight_selected()
     def set_free_roam_widget(self, free_roam_widget):
             self.free_roam_widget = free_roam_widget
     def set_motor_roam_widget(self, motor_roam_widget):
@@ -110,8 +180,14 @@ class MainMenu(QWidget):
         
     def highlight_selected(self):
         for i, btn in enumerate(self.buttons):
-            icon_type = "highlight" if i == self.selected_index else "normal"
-            btn.setIcon(self.button_icons[btn][icon_type])
+            is_selected = (i == self.selected_index)
+            if btn == self.input_mode_button:
+                mode = self.input_mode
+                icon_type = "highlight" if is_selected else "normal"
+                btn.setIcon(self.button_icons[btn][mode][icon_type])
+            else:
+                icon_type = "highlight" if is_selected else "normal"
+                btn.setIcon(self.button_icons[btn][icon_type])
 
     def handle_direction(self, direction):
         if direction == "Left":
@@ -174,6 +250,8 @@ class TicTacToe(QWidget):
         input_manager.stop()
         self.stacked_widget.setCurrentIndex(0)
         self.stacked_widget.currentWidget().activate_controller()
+        print(self.selected_index_ttt)
+
     def __init__(self, stacked_widget):
         super().__init__()
         self.game_over = False
@@ -183,10 +261,11 @@ class TicTacToe(QWidget):
         self.setGeometry(0, 0, 1920, 1080)
         self.set_background("tictac_background.png")
 
+        self.game_count = 0
         self.turn = 'X'
         self.board = [''] * 9
         self.buttons = []
-        self.selected_index = 1
+        self.selected_index_ttt = 1
 
         main_layout = QVBoxLayout()
         top_spacer = QSpacerItem(20, self.height() // 3, QSizePolicy.Minimum, QSizePolicy.Expanding)
@@ -264,12 +343,12 @@ class TicTacToe(QWidget):
     def highlight_selected(self):
         for i, btn in enumerate(self.buttons):
             if btn == self.back_button:
-                icon_type = "highlight" if i == self.selected_index else "normal"
+                icon_type = "highlight" if i == self.selected_index_ttt else "normal"
                 btn.setIcon(self.button_icons[btn][icon_type])
             else:
                 cell_index = i - 1
                 cell_value = self.board[cell_index]
-                icon_type = "highlight" if i == self.selected_index else "normal"
+                icon_type = "highlight" if i == self.selected_index_ttt else "normal"
                 btn.setIcon(self.button_icons[cell_value][icon_type]) 
     def handle_direction(self, direction):
         if self.game_over:
@@ -277,14 +356,14 @@ class TicTacToe(QWidget):
             return
 
         if direction == "Left":
-            self.selected_index = (self.selected_index - 1) % len(self.buttons)
+            self.selected_index_ttt = (self.selected_index_ttt - 1) % len(self.buttons)
         elif direction == "Right":
-            self.selected_index = (self.selected_index + 1) % len(self.buttons)
+            self.selected_index_ttt = (self.selected_index_ttt + 1) % len(self.buttons)
         elif direction == "Centre":
-            if self.selected_index == 0:
+            if self.selected_index_ttt == 0:
                 self.back_button.click()
             else:
-                self.make_move(self.selected_index - 1)  # subtract 1 to match board index
+                self.make_move(self.selected_index_ttt - 1) 
 
         self.highlight_selected()
 
@@ -310,7 +389,7 @@ class TicTacToe(QWidget):
                 QTimer.singleShot(0, lambda: self.show_game_result("win"))
                 return
             elif self.check_draw():
-                QTimer.singleShot(100, lambda: self.show_game_result("draw"))
+                QTimer.singleShot(0, lambda: self.show_game_result("draw"))
                 return
             QTimer.singleShot(0, self.delayed_computer_move)
 
@@ -326,6 +405,19 @@ class TicTacToe(QWidget):
         return '' not in self.board and self.get_winner(self.board) is None
 
     def computer_move(self):
+        if self.game_count % 2 == 1:
+            available_moves = [i for i in range(9) if self.board[i] == '']
+            if available_moves:
+                move = random.choice(available_moves)
+                self.board[move] = 'O'
+                self.send_move_to_server('O', move)
+                self.highlight_selected()
+                if self.check_winner('O'):
+                    QMetaObject.invokeMethod(self, lambda: self.show_game_result("lose"), Qt.QueuedConnection)
+                elif self.check_draw():
+                    QMetaObject.invokeMethod(self, lambda: self.show_game_result("draw"), Qt.QueuedConnection)
+            return
+
         def minimax(board, depth, is_maximizing):
             winner = self.get_winner(board)
             if winner == 'O':
@@ -373,10 +465,6 @@ class TicTacToe(QWidget):
                 QTimer.singleShot(0, lambda: self.show_game_result("lose"))
             elif self.check_draw():
                 QTimer.singleShot(0, lambda: self.show_game_result("draw"))
-            else:
-                if self.check_draw():
-                    QTimer.singleShot(0, lambda: self.show_game_result("draw"))
-
     def check_winner(self, player):
         wins = [(0,1,2), (3,4,5), (6,7,8),
                 (0,3,6), (1,4,7), (2,5,8),
@@ -393,12 +481,13 @@ class TicTacToe(QWidget):
     def reset_game(self):
         self.set_background("tictac_background.png")
         self.board = [''] * 9
-        self.selected_index = 1
+        self.selected_index_ttt = 1
         self.game_over = False
-    
+        self.game_count += 1
+
         for btn in self.buttons:
             btn.show()
-    
+
         self.highlight_selected()
     
 class MessageWidget(QWidget):
@@ -410,7 +499,9 @@ class MessageWidget(QWidget):
         self.setGeometry(0, 0, 1920, 1080)
         self.set_background("message_background.png")
 
-        self.selected_index = 1
+        self.game_over = False
+        
+        self.selected_index_message = 1
         self.buttons = []
         self.button_icons = {}
         
@@ -426,30 +517,36 @@ class MessageWidget(QWidget):
         top_row.addWidget(self.back_button)
         top_row.addStretch()
         layout.addLayout(top_row)
-
+        
         for i in range(2):
             row_layout = QHBoxLayout()
             for j in range(2):
                 idx = i * 2 + j
                 btn = QPushButton()
-                btn.setFixedSize(200, 200)
+                btn.setFixedSize(350, 350)
                 btn.setIcon(QIcon(f"message_{idx}.png")) 
-                btn.setIconSize(QSize(200, 200))
+                btn.setIconSize(QSize(350, 350))
                 btn.setFlat(True)
                 btn.clicked.connect(lambda checked, idx=idx: self.send_message(idx))
                 self.buttons.append(btn)
                 row_layout.addWidget(btn)
             layout.addLayout(row_layout)
             
-        self.button_icons[self.back_button] = {
-            "normal": QIcon("backmenu.png"),
-            "highlight": QIcon("highlight_backmenu_button.png")
-        }
-        for i in range(4):
-            self.button_icons[self.buttons[i + 1]] = {
-                "normal": QIcon(f"emptybox.png"),
-                "highlight": QIcon("highlight_emptybox.png")  # Replace if needed
+        icons = [
+            ("backmenu.png", "highlight_backmenu_button.png"),
+            ("hibox.png", "highlight_hibox.png"),
+            ("lets_playbox.png", "highlight_lets_playbox.png"),
+            ("howareyoubox.png", "highlight_howareyoubox.png"),
+            ("howwasyourdaybox.png", "highlight_howwasyourdaybox.png")
+           
+        ]
+
+        for i in range(5):
+            self.button_icons[self.buttons[i]] = {
+                "normal": QIcon(icons[i][0]),
+                "highlight": QIcon(icons[i][1])
             }
+
         self.setLayout(layout)
         self.highlight_selected()
 
@@ -466,17 +563,21 @@ class MessageWidget(QWidget):
         self.stacked_widget.currentWidget().activate_controller()
 
     def handle_direction(self, direction):
-        if direction == "Left":
-            self.selected_index = (self.selected_index - 1) % len(self.buttons)
-        elif direction == "Right":
-            self.selected_index = (self.selected_index + 1) % len(self.buttons)
-        elif direction == "Centre":
-            if self.selected_index == 0:
-                self.back_button.click()
-            else:
-                self.send_message(self.selected_index)
-            
-        self.highlight_selected()
+        if self.game_over:
+            self.reset_game()
+            return
+        else:
+            if direction == "Left":
+                self.selected_index_message = (self.selected_index_message - 1) % len(self.buttons)
+            elif direction == "Right":
+                self.selected_index_message = (self.selected_index_message + 1) % len(self.buttons)
+
+            elif direction == "Centre":
+                if self.selected_index_message == 0:
+                    self.back_button.click()
+                else:
+                    self.send_message(self.selected_index_message)
+            self.highlight_selected()
 
     def keyPressEvent(self, event):
         key = event.key()
@@ -489,12 +590,26 @@ class MessageWidget(QWidget):
 
     def highlight_selected(self):
         for i, btn in enumerate(self.buttons):
-            icon_type = "highlight" if i == self.selected_index else "normal"
+            icon_type = "highlight" if i == self.selected_index_message else "normal"
             if btn in self.button_icons:
                 btn.setIcon(self.button_icons[btn][icon_type])
+    def reset_game(self):
+        self.set_background("message_background.png")
+        self.selected_index_message = 1
+        self.game_over = False
 
+        for btn in self.buttons:
+            btn.show()
+
+        self.highlight_selected()
     def send_message(self, idx):
-        QMessageBox.information(self, "Message Sent", f"Message {idx + 1} sent!")
+        
+        for btn in self.buttons:
+            btn.hide()
+        self.set_background(f"message_{idx}_background.png")
+        self.game_over = True
+        print(f"[INFO] Displaying message {idx} ...")
+        
 
     def activate_controller(self):
         self.setFocus()
@@ -504,13 +619,14 @@ class MessageWidget(QWidget):
 class FreeRoamWidget(QWidget):
     def __init__(self, stacked_widget):
         super().__init__()
+        self.control_mode = "menu"
         self.setFocusPolicy(Qt.StrongFocus)
         self.stacked_widget = stacked_widget
         self.setWindowTitle("Free Roam")
         self.setGeometry(0, 0, 1920, 1080)
         self.set_background("freeroamback.png")
 
-        self.selected_index = 0
+        self.selected_index_freeroam = 1
         self.buttons = []
         self.button_icons = {}
 
@@ -521,16 +637,41 @@ class FreeRoamWidget(QWidget):
         self.back_button.setFlat(True)
         self.back_button.clicked.connect(self.back_to_menu)
 
+        self.toggle_button = QPushButton()
+        self.toggle_button.setIcon(QIcon("arm_button.png"))
+        self.toggle_button.setIconSize(QSize(250, 250))
+        self.toggle_button.setFlat(True)
+        self.toggle_button.clicked.connect(self.toggle_control_mode)
+
+        self.buttons.append(self.toggle_button)
+        self.button_icons[self.toggle_button] = {
+            "menu": {
+                "normal": QIcon("menucontrol_button.png"),
+                "highlight": QIcon("highlight_menucontrol_button.png")
+            },
+            "free": {
+                "normal": QIcon("arm_button.png"),
+                "highlight": QIcon("highlight_arm_button.png")
+            },
+            "motor": {
+                "normal": QIcon("motor_button.png"),
+                "highlight": QIcon("highlight_motor_button.png")
+            }
+        }
+        top_row = QHBoxLayout()
+        top_row.addWidget(self.back_button)
+        top_row.addStretch()
+        top_row.addWidget(self.toggle_button)
+        layout.addLayout(top_row)
+        
+
         self.buttons.append(self.back_button)
         self.button_icons[self.back_button] = {
             "normal": QIcon("backmenu.png"),
             "highlight": QIcon("highlight_backmenu_button.png")
         }
 
-        top_row = QHBoxLayout()
-        top_row.addWidget(self.back_button)
-        top_row.addStretch()
-        layout.addLayout(top_row)
+        
 
         self.setLayout(layout)
         self.highlight_selected()
@@ -538,11 +679,32 @@ class FreeRoamWidget(QWidget):
     
     def back_to_menu(self):
         from draft_ps5_control_thread import stop_ps5_control
-        stop_ps5_control()        # ✅ Stop PS5 control thread
+        stop_ps5_control()    
         input_manager.start(self.stacked_widget.currentWidget().handle_direction)
         self.stacked_widget.setCurrentIndex(0)
         self.stacked_widget.currentWidget().activate_controller()
         
+    def toggle_control_mode(self):
+        if self.control_mode == "menu":
+            from draft_ps5_control_thread import start_ps5_control
+            start_ps5_control()
+            self.control_mode = "free"
+
+        elif self.control_mode == "free":
+            from draft_ps5_control_thread import stop_ps5_control
+            stop_ps5_control()
+
+            from motor_roam_control import start_motor_roam_control
+            start_motor_roam_control()
+            self.control_mode = "motor"
+
+        elif self.control_mode == "motor":
+            from motor_roam_control import stop_motor_roam_control
+            stop_motor_roam_control()
+            self.control_mode = "menu"
+
+        print(f"[INFO] Switched to {self.control_mode} control.")
+        self.highlight_selected()
 
     def set_background(self, image_path):
         self.setAutoFillBackground(True)
@@ -554,16 +716,22 @@ class FreeRoamWidget(QWidget):
 
 
     def handle_direction(self, direction):
-        if direction == "Left" or direction == "Right":
-            self.selected_index = 0  # Only one button
+        if direction == "Left":
+            self.selected_index_freeroam = (self.selected_index_freeroam - 1) % len(self.buttons)
+        elif direction == "Right":
+            self.selected_index_freeroam = (self.selected_index_freeroam + 1) % len(self.buttons)
         elif direction == "Centre":
-            self.back_button.click()
+            self.buttons[self.selected_index_freeroam].click()
         self.highlight_selected()
 
     def highlight_selected(self):
-        icon_type = "highlight" if self.selected_index == 0 else "normal"
-        self.back_button.setIcon(self.button_icons[self.back_button][icon_type])
-
+        for i, btn in enumerate(self.buttons):
+            icon_type = "highlight" if i == self.selected_index_freeroam else "normal"
+            if btn == self.toggle_button:
+                mode = self.control_mode
+                btn.setIcon(self.button_icons[btn][mode][icon_type])
+            else:
+                btn.setIcon(self.button_icons[btn][icon_type])
     def keyPressEvent(self, event):
         key = event.key()
         if key == Qt.Key_Left or key == Qt.Key_Right:
@@ -572,90 +740,99 @@ class FreeRoamWidget(QWidget):
             self.handle_direction("Centre")
 
     def activate_controller(self):
-        from draft_ps5_control_thread import start_ps5_control
-        input_manager.stop()  # 🚨 Stop ControllerManager
-        start_ps5_control()   # 🚨 Starts PS5 logic instead
-        print("[INFO] Free Roam activated, controller input started.")
+        input_manager.stop()
+        if self.control_mode == "free":
+            from draft_ps5_control_thread import start_ps5_control
+            start_ps5_control()
+            print("[INFO] Free control activated.")
+        elif self.control_mode == "motor":
+            from motor_roam_control import start_motor_roam_control
+            start_motor_roam_control()
+            print("[INFO] Motor control activated.")
+        else:
+            print("[INFO] Menu mode: no robot control active.")
         #button 7 or 10 back to main menu
 
-class MotorRoamWidget(QWidget):
-    def __init__(self, stacked_widget):
-        super().__init__()
-        self.setFocusPolicy(Qt.StrongFocus)
-        self.stacked_widget = stacked_widget
-        self.setWindowTitle("Motor Roam")
-        self.setGeometry(0, 0, 1920, 1080)
-        self.set_background("freeroamback.png")
-
-        self.selected_index = 0
-        self.buttons = []
-        self.button_icons = {}
-
-        layout = QVBoxLayout()
-        self.back_button = QPushButton()
-        self.back_button.setIcon(QIcon("backmenu.png"))
-        self.back_button.setIconSize(QSize(250, 250))
-        self.back_button.setFlat(True)
-        self.back_button.clicked.connect(self.back_to_menu)
-
-        self.buttons.append(self.back_button)
-        self.button_icons[self.back_button] = {
-            "normal": QIcon("backmenu.png"),
-            "highlight": QIcon("highlight_backmenu_button.png")
-        }
-
-        top_row = QHBoxLayout()
-        top_row.addWidget(self.back_button)
-        top_row.addStretch()
-        layout.addLayout(top_row)
-
-        self.setLayout(layout)
-        self.highlight_selected()
-
-    
-    def back_to_menu(self):
-        from motor_roam_control import stop_motor_roam_control
-        stop_motor_roam_control()        # ✅ Stop PS5 control thread
-        input_manager.start(self.stacked_widget.currentWidget().handle_direction)
-        self.stacked_widget.setCurrentIndex(0)
-        self.stacked_widget.currentWidget().activate_controller()
-        
-
-    def set_background(self, image_path):
-        self.setAutoFillBackground(True)
-        background = QPixmap(image_path)
-        palette = QPalette()
-        palette.setBrush(QPalette.Window, QBrush(background))
-        self.setPalette(palette)
-
-
-
-    def handle_direction(self, direction):
-        if direction == "Left" or direction == "Right":
-            self.selected_index = 0  # Only one button
-        elif direction == "Centre":
-            self.back_button.click()
-        self.highlight_selected()
-
-    def highlight_selected(self):
-        icon_type = "highlight" if self.selected_index == 0 else "normal"
-        self.back_button.setIcon(self.button_icons[self.back_button][icon_type])
-
-    def keyPressEvent(self, event):
-        key = event.key()
-        if key == Qt.Key_Left or key == Qt.Key_Right:
-            self.handle_direction("Left")
-        elif key == Qt.Key_Space:
-            self.handle_direction("Centre")
-
-    def activate_controller(self):
-        from motor_roam_control import start_motor_roam_control
-        input_manager.stop()  # 🚨 Stop ControllerManager
-        start_motor_roam_control()   # 🚨 Starts PS5 logic instead
-        print("[INFO] Motor Roam activated, controller input started.")
-        #button 7 or 10 back to main menu
+#class MotorRoamWidget(QWidget):
+#    def __init__(self, stacked_widget):
+#        super().__init__()
+#        self.setFocusPolicy(Qt.StrongFocus)
+#        self.stacked_widget = stacked_widget
+#        self.setWindowTitle("Motor Roam")
+#        self.setGeometry(0, 0, 1920, 1080)
+#        self.set_background("freeroamback.png")
+#
+#        self.selected_index = 0
+#        self.buttons = []
+#        self.button_icons = {}
+#
+#        layout = QVBoxLayout()
+#        self.back_button = QPushButton()
+#        self.back_button.setIcon(QIcon("backmenu.png"))
+#        self.back_button.setIconSize(QSize(250, 250))
+#        self.back_button.setFlat(True)
+#        self.back_button.clicked.connect(self.back_to_menu)
+#
+#        self.buttons.append(self.back_button)
+#        self.button_icons[self.back_button] = {
+#            "normal": QIcon("backmenu.png"),
+#            "highlight": QIcon("highlight_backmenu_button.png")
+#        }
+#
+#        top_row = QHBoxLayout()
+#        top_row.addWidget(self.back_button)
+#        top_row.addStretch()
+#        layout.addLayout(top_row)
+#
+#        self.setLayout(layout)
+#        self.highlight_selected()
+#
+#    
+#    def back_to_menu(self):
+#        from motor_roam_control import stop_motor_roam_control
+#        stop_motor_roam_control() 
+#        input_manager.start(self.stacked_widget.currentWidget().handle_direction)
+#        self.stacked_widget.setCurrentIndex(0)
+#        self.stacked_widget.currentWidget().activate_controller()
+#        
+#
+#    def set_background(self, image_path):
+#        self.setAutoFillBackground(True)
+#        background = QPixmap(image_path)
+#        palette = QPalette()
+#        palette.setBrush(QPalette.Window, QBrush(background))
+#        self.setPalette(palette)
+#
+#
+#
+#    def handle_direction(self, direction):
+#        if direction == "Left" or direction == "Right":
+#            self.selected_index = 0
+#        elif direction == "Centre":
+#            self.back_button.click()
+#        self.highlight_selected()
+#
+#    def highlight_selected(self):
+#        icon_type = "highlight" if self.selected_index == 0 else "normal"
+#        self.back_button.setIcon(self.button_icons[self.back_button][icon_type])
+#
+#    def keyPressEvent(self, event):
+#        key = event.key()
+#        if key == Qt.Key_Left or key == Qt.Key_Right:
+#            self.handle_direction("Left")
+#        elif key == Qt.Key_Space:
+#            self.handle_direction("Centre")
+#
+#    def activate_controller(self):
+#        from motor_roam_control import start_motor_roam_control
+#        input_manager.stop()  
+#        start_motor_roam_control() 
+#        print("[INFO] Motor Roam activated, controller input started.")
+#        #button 7 or 10 back to main menu
 
 if __name__ == '__main__':
+    qRgb = queue.Queue()
+    input_manager.qRgb = qRgb 
     input_manager.set_input_type("controller")
     app = QApplication(sys.argv)
     stacked_widget = QStackedWidget()
@@ -664,18 +841,18 @@ if __name__ == '__main__':
     game = TicTacToe(stacked_widget)
     message_widget = MessageWidget(stacked_widget)
     free_roam = FreeRoamWidget(stacked_widget)
-    motor_roam = MotorRoamWidget(stacked_widget)
+    #motor_roam = MotorRoamWidget(stacked_widget)
     
     stacked_widget.addWidget(menu)
     stacked_widget.addWidget(game)
     stacked_widget.addWidget(message_widget)
     stacked_widget.addWidget(free_roam)
-    stacked_widget.addWidget(motor_roam)
+    #stacked_widget.addWidget(motor_roam)
 
     menu.set_game_widget(game)
     menu.set_message_widget(message_widget)
     menu.set_free_roam_widget(free_roam)
-    menu.set_motor_roam_widget(motor_roam)
+    #menu.set_motor_roam_widget(motor_roam)
 
     stacked_widget.setCurrentWidget(menu)
     stacked_widget.showFullScreen()
