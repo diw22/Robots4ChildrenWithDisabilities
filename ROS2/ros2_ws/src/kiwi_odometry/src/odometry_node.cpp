@@ -18,7 +18,8 @@ public:
     timer_ = this->create_wall_timer(50ms, std::bind(&OdometryPublisher::update, this));
 
     x_ = y_ = theta_ = 0.0;
-    last_time_ = this->now();
+    filtered_vx_ = filtered_vy_ = filtered_omega_ = 0.0;
+    last_time_ = this->get_clock()->now();
 
     std::string ip = "192.168.137.109";
     int port = 5556;
@@ -37,6 +38,7 @@ private:
   int raw_back_ = 0;
 
   double x_, y_, theta_;
+  double filtered_vx_, filtered_vy_, filtered_omega_;
   rclcpp::Time last_time_;
   rclcpp::Publisher<nav_msgs::msg::Odometry>::SharedPtr odom_pub_;
   std::shared_ptr<tf2_ros::TransformBroadcaster> tf_broadcaster_;
@@ -73,8 +75,16 @@ private:
       RCLCPP_WARN(this->get_logger(), "JSON parse error: %s", e.what());
     }
 
-    rclcpp::Time current_time = this->now();
+    rclcpp::Time current_time = this->get_clock()->now();
     double dt = (current_time - last_time_).seconds();
+
+    // Skip update if dt is too large to avoid odometry jump
+    if (dt > 1.0) {
+      RCLCPP_WARN(this->get_logger(), "Large dt (%.3f s), skipping update to avoid odometry error.", dt);
+      last_time_ = current_time;
+      return;
+    }
+
     last_time_ = current_time;
 
     // Convert raw motor data to angular velocity (rad/s)
@@ -83,13 +93,13 @@ private:
     double w3 = -rawToDegPerSec(raw_right_) * (M_PI / 180.0);
 
     // Wheel and robot geometry
-    const double r = 0.05;       // Wheel radius in meters
-    const double l = 0.125;       // Distance from center to wheel (adjusted from 0.125)
-    const double omega_gain = 3.2;  // Scaling factor to improve rotational tracking
+    const double r = 0.05;
+    const double l = 0.125;
+    const double omega_gain = 3.0;
 
-    // Convert wheel angular velocities to robot velocity (body frame)
     double vx = r / 3.0 * (-std::sqrt(3) * w1 + std::sqrt(3) * w3);
     double vy = r / 3.0 * (-w1 + 2 * w2 - w3);
+    vy *= 0.8;
     double omega = omega_gain * r / (3.0 * l) * (w1 + w2 + w3);
 
     // Optional: invert directions to align with mapping orientation
@@ -97,10 +107,15 @@ private:
     vy = -vy;
     omega = -omega;
 
-    // Integrate velocity to update robot position
-    double delta_x = (vx * std::cos(theta_) - vy * std::sin(theta_)) * dt;
-    double delta_y = (vx * std::sin(theta_) + vy * std::cos(theta_)) * dt;
-    double delta_theta = omega * dt;
+    // Apply exponential moving average filter
+    const double alpha = 0.5;
+    filtered_vx_ = alpha * vx + (1 - alpha) * filtered_vx_;
+    filtered_vy_ = alpha * vy + (1 - alpha) * filtered_vy_;
+    filtered_omega_ = alpha * omega + (1 - alpha) * filtered_omega_;
+
+    double delta_x = (filtered_vx_ * std::cos(theta_) - filtered_vy_ * std::sin(theta_)) * dt;
+    double delta_y = (filtered_vx_ * std::sin(theta_) + filtered_vy_ * std::cos(theta_)) * dt;
+    double delta_theta = filtered_omega_ * dt;
 
     x_ += delta_x;
     y_ += delta_y;
@@ -108,7 +123,6 @@ private:
 
     RCLCPP_INFO(this->get_logger(), "POSE | x: %.3f, y: %.3f, theta: %.3f", x_, y_, theta_);
 
-    // Publish Odometry message
     auto odom = nav_msgs::msg::Odometry();
     odom.header.stamp = current_time;
     odom.header.frame_id = "odom";
@@ -120,13 +134,12 @@ private:
     odom.pose.pose.orientation.z = std::sin(theta_ / 2.0);
     odom.pose.pose.orientation.w = std::cos(theta_ / 2.0);
 
-    odom.twist.twist.linear.x = vx;
-    odom.twist.twist.linear.y = vy;
-    odom.twist.twist.angular.z = omega;
+    odom.twist.twist.linear.x = filtered_vx_;
+    odom.twist.twist.linear.y = filtered_vy_;
+    odom.twist.twist.angular.z = filtered_omega_;
 
     odom_pub_->publish(odom);
 
-    // Publish TF from odom to base_link
     geometry_msgs::msg::TransformStamped tf_msg;
     tf_msg.header.stamp = current_time;
     tf_msg.header.frame_id = "odom";

@@ -15,14 +15,14 @@ slam_toolbox:
     publish_map_tf: true                        # Publish map->odom transform
 
     use_scan_matching: true                     # Enable scan matching for better alignment
-    use_scan_barycenter: true                   # Use barycenter of scan points for alignment accuracy
+    use_scan_barycenter: false                  # Use barycenter of scan points for alignment accuracy (set to false to reduce instability)
 
-    pose_update_distance: 0.05                  # Update pose after 5 cm linear movement
-    pose_update_angle: 0.0175                   # Update pose after ~1 degree rotation (in radians)
-    max_laser_range: 8.0                        # Maximum lidar range used for mapping (meters)
+    pose_update_distance: 0.10                  # Update pose after 10 cm linear movement
+    pose_update_angle: 0.035                    # Update pose after ~2 degree rotation (in radians)
+    max_laser_range: 4.0                        # Maximum lidar range used for mapping (meters)
 
-    scan_buffer_size: 10                        # Number of recent scans to store in buffer (for matching)
-    scan_buffer_maximum_scan_distance: 2.0      # Max allowed distance between scans for matching (meters)
+    scan_buffer_size: 20                         # Number of recent scans to store in buffer (for matching)
+    scan_buffer_maximum_scan_distance: 3.0      # Max allowed distance between scans for matching (meters)
 
     use_map_saver: true                         # enable map backup service
     temporal_update: true 	                    # reduce ghost scan noise over time
