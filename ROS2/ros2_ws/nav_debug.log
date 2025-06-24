@@ -1,0 +1,1610 @@
+[INFO] [launch]: All log files can be found below /home/raspi/.ros/log/2025-06-24-19-52-42-169530-proj11-38846
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [static_transform_publisher-1]: process started with pid [38849]
+[INFO] [odometry_node-2]: process started with pid [38850]
+[INFO] [map_server-3]: process started with pid [38851]
+[INFO] [amcl-4]: process started with pid [38852]
+[INFO] [planner_server-5]: process started with pid [38853]
+[INFO] [controller_server-6]: process started with pid [38854]
+[INFO] [bt_navigator-7]: process started with pid [38855]
+[INFO] [behavior_server-8]: process started with pid [38856]
+[INFO] [navigator_node-9]: process started with pid [38857]
+[INFO] [cmd_vel_bridge-10]: process started with pid [38858]
+[INFO] [rviz2-11]: process started with pid [38859]
+[amcl-4] [INFO] [1750791162.453697533] [amcl]: 
+[amcl-4] 	amcl lifecycle node launched. 
+[amcl-4] 	Waiting on external lifecycle transitions to activate
+[amcl-4] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[amcl-4] [INFO] [1750791162.454282609] [amcl]: Creating
+[static_transform_publisher-1] [WARN] [1750791162.458798564] []: Old-style arguments are deprecated; see --help for new-style arguments
+[behavior_server-8] [INFO] [1750791162.549233573] [behavior_server]: 
+[behavior_server-8] 	behavior_server lifecycle node launched. 
+[behavior_server-8] 	Waiting on external lifecycle transitions to activate
+[behavior_server-8] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[static_transform_publisher-1] [INFO] [1750791162.690493091] [laser_static_tf]: Spinning until stopped - publishing transform
+[static_transform_publisher-1] translation: ('0.080000', '0.005000', '0.530000')
+[static_transform_publisher-1] rotation: ('0.000000', '0.000000', '0.000000', '1.000000')
+[static_transform_publisher-1] from 'base_link' to 'laser'
+[planner_server-5] [INFO] [1750791162.698802629] [planner_server]: 
+[planner_server-5] 	planner_server lifecycle node launched. 
+[planner_server-5] 	Waiting on external lifecycle transitions to activate
+[planner_server-5] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[planner_server-5] [INFO] [1750791162.722629760] [planner_server]: Creating
+[map_server-3] [INFO] [1750791162.729693425] [map_server]: 
+[map_server-3] 	map_server lifecycle node launched. 
+[map_server-3] 	Waiting on external lifecycle transitions to activate
+[map_server-3] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[map_server-3] [INFO] [1750791162.729861332] [map_server]: Creating
+[controller_server-6] [INFO] [1750791162.752505830] [controller_server]: 
+[controller_server-6] 	controller_server lifecycle node launched. 
+[controller_server-6] 	Waiting on external lifecycle transitions to activate
+[controller_server-6] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[controller_server-6] [INFO] [1750791162.764816692] [controller_server]: Creating controller server
+[controller_server-6] [INFO] [1750791162.776004608] [local_costmap.local_costmap]: 
+[controller_server-6] 	local_costmap lifecycle node launched. 
+[controller_server-6] 	Waiting on external lifecycle transitions to activate
+[controller_server-6] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[controller_server-6] [INFO] [1750791162.776877369] [local_costmap.local_costmap]: Creating Costmap
+[planner_server-5] [INFO] [1750791162.790859328] [global_costmap.global_costmap]: 
+[planner_server-5] 	global_costmap lifecycle node launched. 
+[planner_server-5] 	Waiting on external lifecycle transitions to activate
+[planner_server-5] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[planner_server-5] [INFO] [1750791162.803086079] [global_costmap.global_costmap]: Creating Costmap
+[bt_navigator-7] [INFO] [1750791162.820829047] [bt_navigator]: 
+[bt_navigator-7] 	bt_navigator lifecycle node launched. 
+[bt_navigator-7] 	Waiting on external lifecycle transitions to activate
+[bt_navigator-7] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[bt_navigator-7] [INFO] [1750791162.835460748] [bt_navigator]: Creating
+[odometry_node-2] [INFO] [1750791162.841204373] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791162.841372577] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[navigator_node-9] [INFO] [1750791162.848434445] [navigator_node]: NavigatorNode is ready and waiting for /goal_pose...
+[rviz2-11] qt.qpa.xcb: could not connect to display 
+[rviz2-11] qt.qpa.plugin: Could not load the Qt platform plugin "xcb" in "" even though it was found.
+[rviz2-11] This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fix this problem.
+[rviz2-11] 
+[rviz2-11] Available platform plugins are: eglfs, linuxfb, minimal, minimalegl, offscreen, vnc, wayland-egl, wayland, wayland-xcomposite-egl, wayland-xcomposite-glx, xcb.
+[rviz2-11] 
+[odometry_node-2] [INFO] [1750791162.890866545] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791162.890976657] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791162.940859774] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791162.940964885] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791162.990842947] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791162.990962892] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791163.041026269] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791163.041219325] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791163.090921109] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791163.091017572] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791163.140846634] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791163.141025931] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791163.190907030] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791163.191018049] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791163.240851018] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791163.240956722] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791163.291226341] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791163.291363119] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791163.341013976] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791163.341123699] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791163.391011020] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791163.391117891] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791163.440844582] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791163.440937527] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[cmd_vel_bridge-10] [INFO] [1750791163.453128685] [cmd_vel_bridge]: cmd_vel_bridge node started and connected to ZMQ motor controller.
+[odometry_node-2] [INFO] [1750791163.490833033] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791163.490949922] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791163.540820596] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791163.540887911] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791163.590968547] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791163.591246807] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791163.640837035] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791163.640943313] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791163.690831597] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791163.690918190] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791163.741249975] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791163.741337735] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791163.790837314] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791163.790921889] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791163.840887136] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791163.842021546] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791163.890848124] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791163.890921791] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791163.940833724] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791163.940915261] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791163.990823952] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791163.990896230] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791164.040838885] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791164.040922700] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791164.090879466] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791164.091037152] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791164.140883714] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791164.141006047] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791164.190869665] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791164.190999017] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791164.241998137] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791164.242101934] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[ERROR] [rviz2-11]: process has died [pid 38859, exit code -6, cmd '/opt/ros/jazzy/lib/rviz2/rviz2 -d /home/raspi/.rviz2/map.rviz --ros-args -r __node:=rviz2'].
+[odometry_node-2] [INFO] [1750791164.290862641] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791164.290965641] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791164.340858518] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791164.340944815] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791164.390837469] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791164.390973247] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791164.440825643] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791164.440911458] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791164.490974872] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791164.491194261] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791164.540825656] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791164.540897267] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791164.591015811] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791164.591130386] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791164.640831207] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791164.640978744] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791164.690970269] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791164.691167733] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791164.740832201] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791164.740911016] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791164.790860023] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791164.790975894] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791164.841777680] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791164.842064644] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791164.891019389] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791164.891133833] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791164.940840580] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791164.940954025] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791164.990896902] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791164.991061606] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791165.040829594] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791165.040901779] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791165.090827749] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791165.090917693] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791165.140829311] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791165.140909941] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791165.190794743] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791165.190876355] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791165.240830954] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791165.240910602] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791165.290842905] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791165.290952090] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791165.340824189] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791165.340903856] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[INFO] [lifecycle_manager-12]: process started with pid [39029]
+[INFO] [lifecycle_manager-13]: process started with pid [39030]
+[INFO] [lifecycle_manager-14]: process started with pid [39031]
+[INFO] [lifecycle_manager-15]: process started with pid [39032]
+[odometry_node-2] [INFO] [1750791165.390855215] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791165.390952382] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[INFO] [lifecycle_manager-16]: process started with pid [39033]
+[INFO] [lifecycle_manager-17]: process started with pid [39034]
+[odometry_node-2] [INFO] [1750791165.441404389] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791165.441480741] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791165.492609510] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791165.492697603] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[lifecycle_manager-13] [INFO] [1750791165.493635809] [lifecycle_manager_amcl]: Creating
+[lifecycle_manager-13] [INFO] [1750791165.524951086] [lifecycle_manager_amcl]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+[odometry_node-2] [INFO] [1750791165.540843179] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791165.540910976] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[lifecycle_manager-12] [INFO] [1750791165.542345164] [lifecycle_manager_map_server]: Creating
+[lifecycle_manager-14] [INFO] [1750791165.546840842] [lifecycle_manager_planner_server]: Creating
+[lifecycle_manager-14] [INFO] [1750791165.554887953] [lifecycle_manager_planner_server]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+[lifecycle_manager-17] [INFO] [1750791165.570813083] [lifecycle_manager_behavior_server]: Creating
+[lifecycle_manager-17] [INFO] [1750791165.585845582] [lifecycle_manager_behavior_server]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+[odometry_node-2] [INFO] [1750791165.590873538] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791165.590999890] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[lifecycle_manager-16] [INFO] [1750791165.609020655] [lifecycle_manager_bt_navigator]: Creating
+[lifecycle_manager-12] [INFO] [1750791165.626770474] [lifecycle_manager_map_server]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+[lifecycle_manager-16] [INFO] [1750791165.631544226] [lifecycle_manager_bt_navigator]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+[odometry_node-2] [INFO] [1750791165.641138712] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791165.641215490] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[lifecycle_manager-15] [INFO] [1750791165.667458904] [lifecycle_manager_controller_server]: Creating
+[lifecycle_manager-15] [INFO] [1750791165.678668152] [lifecycle_manager_controller_server]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+[odometry_node-2] [INFO] [1750791165.691120126] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791165.693865503] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791165.750001283] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791165.750104061] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791165.796018558] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791165.797262302] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791165.841091331] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791165.842264390] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791165.890822097] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791165.890899523] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791165.940992974] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791165.941102752] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791165.990833758] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791165.990918073] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791166.041018673] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791166.041277673] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791166.090834586] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791166.090922383] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791166.140837352] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791166.140980742] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791166.190840637] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791166.190976989] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791166.240875125] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791166.241053774] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791166.290831095] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791166.290905984] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791166.340825305] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791166.340943787] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791166.390831904] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791166.390910608] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791166.440846319] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791166.440951837] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791166.490822807] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791166.490904029] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791166.540829499] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791166.540906147] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791166.590993228] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791166.591086728] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791166.640831642] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791166.640915753] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791166.691012556] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791166.691107816] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791166.740849211] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791166.740975729] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791166.790843977] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791166.790920292] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791166.840960021] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791166.841230855] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791166.890834434] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791166.890919675] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791166.940832145] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791166.940915978] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791166.990916392] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791166.991065967] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791167.040822936] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791167.040894677] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791167.090839572] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791167.090945424] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791167.140899542] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791167.141150209] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791167.190826197] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791167.190903160] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791167.240834852] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791167.240920593] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791167.290831914] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791167.290939766] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791167.340845958] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791167.340943736] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791167.391026113] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791167.391236225] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791167.440834119] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791167.440946379] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791167.490983348] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791167.491198423] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791167.540841744] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791167.540918707] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[lifecycle_manager-13] [INFO] [1750791167.545404088] [lifecycle_manager_amcl]: Waiting for service amcl/get_state...
+[lifecycle_manager-14] [INFO] [1750791167.556699688] [lifecycle_manager_planner_server]: Waiting for service planner_server/get_state...
+[odometry_node-2] [INFO] [1750791167.590832602] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791167.590939065] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[lifecycle_manager-17] [INFO] [1750791167.619651892] [lifecycle_manager_behavior_server]: Waiting for service behavior_server/get_state...
+[odometry_node-2] [INFO] [1750791167.640966535] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791167.641318666] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[lifecycle_manager-12] [INFO] [1750791167.651763801] [lifecycle_manager_map_server]: Waiting for service map_server/get_state...
+[lifecycle_manager-16] [INFO] [1750791167.677474677] [lifecycle_manager_bt_navigator]: Waiting for service bt_navigator/get_state...
+[lifecycle_manager-15] [INFO] [1750791167.682320836] [lifecycle_manager_controller_server]: Waiting for service controller_server/get_state...
+[odometry_node-2] [INFO] [1750791167.690849875] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791167.690957542] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791167.740864530] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791167.741180308] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791167.790859092] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791167.790976352] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791167.840906691] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791167.841144359] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791167.890854920] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791167.890973198] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791167.940976186] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791167.941194261] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791167.990843137] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791167.990946619] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791168.040949885] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791168.041063496] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791168.090826021] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791168.090907392] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791168.140877769] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791168.141002621] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791168.191360924] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791168.191491332] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791168.240990319] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791168.241164597] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791168.290843529] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791168.290936511] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791168.340843166] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791168.340962425] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791168.390827043] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791168.390915395] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791168.440837623] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791168.440912049] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791168.490841815] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791168.490969149] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791168.540822655] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791168.540908192] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791168.590837847] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791168.590990847] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791168.640841909] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791168.640935743] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791168.690824064] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791168.690908861] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791168.740834978] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791168.740917349] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791168.790823096] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791168.790884133] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791168.840839121] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791168.840945529] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791168.890828072] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791168.890905758] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791168.940991042] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791168.941272765] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791168.990824271] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791168.990901641] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791169.040982148] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791169.041213927] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791169.090830469] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791169.090940099] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791169.140850180] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791169.140948847] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791169.190839298] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791169.190950613] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791169.240839138] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791169.240978397] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791169.290841348] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791169.290937570] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791169.340911373] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791169.341022133] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791169.390846065] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791169.390987639] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791169.440826905] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791169.440905776] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791169.490995764] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791169.491122320] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791169.540826529] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791169.540898863] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[lifecycle_manager-13] [INFO] [1750791169.545694171] [lifecycle_manager_amcl]: Waiting for service amcl/get_state...
+[lifecycle_manager-14] [INFO] [1750791169.557006253] [lifecycle_manager_planner_server]: Waiting for service planner_server/get_state...
+[odometry_node-2] [INFO] [1750791169.590872758] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791169.590976129] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[lifecycle_manager-17] [INFO] [1750791169.619868401] [lifecycle_manager_behavior_server]: Waiting for service behavior_server/get_state...
+[odometry_node-2] [INFO] [1750791169.640868080] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791169.640983562] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[lifecycle_manager-12] [INFO] [1750791169.652031069] [lifecycle_manager_map_server]: Waiting for service map_server/get_state...
+[lifecycle_manager-16] [INFO] [1750791169.677688630] [lifecycle_manager_bt_navigator]: Waiting for service bt_navigator/get_state...
+[lifecycle_manager-15] [INFO] [1750791169.682555382] [lifecycle_manager_controller_server]: Waiting for service controller_server/get_state...
+[odometry_node-2] [INFO] [1750791169.690868698] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791169.690975716] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791169.741017871] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791169.741264853] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791169.790975359] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791169.791102897] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791169.841053551] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791169.841351941] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791169.891074058] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791169.891200947] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791169.940834620] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791169.940920194] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791169.990839608] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791169.990941275] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791170.040827374] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791170.040914448] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791170.090907622] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791170.091119826] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791170.140849387] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791170.140948813] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791170.191152543] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791170.191266988] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791170.241217105] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791170.241312365] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791170.291022945] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791170.291225204] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791170.340853062] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791170.340959488] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791170.391026773] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791170.391227384] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791170.440845335] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791170.440941835] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791170.490871693] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791170.491021916] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791170.540969070] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791170.541248867] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791170.590879670] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791170.591101874] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791170.640919824] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791170.641063325] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791170.690909035] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791170.691025887] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791170.740837541] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791170.740922041] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791170.790844900] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791170.790920400] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791170.840856684] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791170.841249611] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791170.890829135] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791170.890910080] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791170.940878457] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791170.941200124] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791170.990846482] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791170.990953223] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791171.040921878] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791171.041062508] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791171.091263311] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791171.091466608] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791171.140921206] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791171.141123151] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791171.190959139] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791171.191157380] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791171.240843478] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791171.240949793] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791171.290897892] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791171.291029689] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791171.340870992] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791171.340993862] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791171.390841424] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791171.390942591] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791171.440835375] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791171.440919098] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791171.490835900] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791171.490939345] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791171.540834926] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791171.540911222] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[lifecycle_manager-13] [INFO] [1750791171.545993308] [lifecycle_manager_amcl]: Waiting for service amcl/get_state...
+[lifecycle_manager-14] [INFO] [1750791171.557371853] [lifecycle_manager_planner_server]: Waiting for service planner_server/get_state...
+[odometry_node-2] [INFO] [1750791171.590850858] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791171.590971303] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[lifecycle_manager-17] [INFO] [1750791171.620080371] [lifecycle_manager_behavior_server]: Waiting for service behavior_server/get_state...
+[odometry_node-2] [INFO] [1750791171.640824883] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791171.640901495] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[lifecycle_manager-12] [INFO] [1750791171.652640856] [lifecycle_manager_map_server]: Waiting for service map_server/get_state...
+[lifecycle_manager-16] [INFO] [1750791171.677914397] [lifecycle_manager_bt_navigator]: Waiting for service bt_navigator/get_state...
+[lifecycle_manager-15] [INFO] [1750791171.682907908] [lifecycle_manager_controller_server]: Waiting for service controller_server/get_state...
+[odometry_node-2] [INFO] [1750791171.690883464] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791171.691047798] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791171.740828804] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791171.740913712] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791171.791030607] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791171.791274886] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791171.840873558] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791171.840991466] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791171.890859417] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791171.890998843] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791171.940832182] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791171.940916534] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791171.990962504] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791171.991199486] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791172.040939233] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791172.041154030] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791172.091010166] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791172.091287981] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791172.140826579] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791172.140969376] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791172.190920790] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791172.191129587] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791172.240899722] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791172.241017149] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791172.290894229] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791172.291043915] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791172.340843013] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791172.340938625] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791172.390839001] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791172.390934094] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791172.440837564] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791172.440915471] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791172.490859237] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791172.491845628] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791172.540832595] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791172.540939096] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791172.590886954] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791172.591020288] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791172.640968016] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791172.641072943] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791172.690827245] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791172.690897338] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791172.740829085] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791172.740916993] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791172.790832203] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791172.790899277] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791172.840867858] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791172.840980950] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791172.890832864] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791172.890906494] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791172.940858297] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791172.940984723] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791172.990861581] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791172.990953618] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791173.040864180] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791173.040982477] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791173.090830150] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791173.090910224] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791173.140835638] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791173.140966546] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791173.190827330] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791173.190903997] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791173.240827466] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791173.240909152] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791173.290849677] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791173.290938140] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791173.340828350] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791173.340908757] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791173.391587432] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791173.391780970] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791173.440846456] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791173.440954419] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791173.490849833] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791173.490953574] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791173.540841599] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791173.541004988] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[lifecycle_manager-13] [INFO] [1750791173.546295371] [lifecycle_manager_amcl]: Waiting for service amcl/get_state...
+[lifecycle_manager-14] [INFO] [1750791173.557788287] [lifecycle_manager_planner_server]: Waiting for service planner_server/get_state...
+[odometry_node-2] [INFO] [1750791173.590832457] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791173.590919328] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[lifecycle_manager-17] [INFO] [1750791173.620526971] [lifecycle_manager_behavior_server]: Waiting for service behavior_server/get_state...
+[odometry_node-2] [INFO] [1750791173.640838723] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791173.640919779] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[lifecycle_manager-12] [INFO] [1750791173.653091585] [lifecycle_manager_map_server]: Waiting for service map_server/get_state...
+[lifecycle_manager-16] [INFO] [1750791173.678109551] [lifecycle_manager_bt_navigator]: Waiting for service bt_navigator/get_state...
+[lifecycle_manager-15] [INFO] [1750791173.683304471] [lifecycle_manager_controller_server]: Waiting for service controller_server/get_state...
+[odometry_node-2] [INFO] [1750791173.690952693] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791173.691054434] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791173.740839440] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791173.740919662] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791173.790981836] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791173.791206855] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791173.840837361] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791173.840920250] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791173.890818497] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791173.891178072] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791173.940832059] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791173.940914430] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791173.990863492] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791173.990968603] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791174.040832146] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791174.040912480] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791174.090844134] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791174.091009153] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791174.140834548] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791174.140953660] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791174.190877370] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791174.191079870] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791174.240823839] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791174.240907506] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791174.290846068] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791174.290949680] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791174.340835093] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791174.340917390] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791174.390827730] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791174.390898582] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791174.440857736] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791174.440982737] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791174.490855502] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791174.490972651] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791174.540865379] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791174.541135472] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791174.591253776] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791174.591337331] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791174.640875967] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791174.641134949] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791174.690852325] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791174.690947825] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791174.740837239] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791174.740915424] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791174.790847598] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791174.790966820] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791174.840831826] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791174.840915771] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791174.890831370] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791174.890921759] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791174.940987618] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791174.941139322] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791174.990845994] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791174.990949643] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791175.040921520] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791175.041055353] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791175.090832637] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791175.090935286] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791175.140846403] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791175.140964440] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791175.190850076] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791175.190959521] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791175.240841509] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791175.240952102] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791175.290852941] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791175.291050720] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791175.340838411] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791175.340939670] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791175.390823510] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791175.390937122] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791175.440845165] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791175.440944850] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791175.490829505] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791175.490969635] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791175.540832937] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791175.540909641] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[lifecycle_manager-13] [INFO] [1750791175.546659507] [lifecycle_manager_amcl]: Waiting for service amcl/get_state...
+[lifecycle_manager-14] [INFO] [1750791175.558114497] [lifecycle_manager_planner_server]: Waiting for service planner_server/get_state...
+[odometry_node-2] [INFO] [1750791175.590821370] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791175.590892129] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[lifecycle_manager-17] [INFO] [1750791175.620971645] [lifecycle_manager_behavior_server]: Waiting for service behavior_server/get_state...
+[odometry_node-2] [INFO] [1750791175.640825154] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791175.640920229] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[lifecycle_manager-12] [INFO] [1750791175.653439740] [lifecycle_manager_map_server]: Waiting for service map_server/get_state...
+[lifecycle_manager-16] [INFO] [1750791175.678319465] [lifecycle_manager_bt_navigator]: Waiting for service bt_navigator/get_state...
+[lifecycle_manager-15] [INFO] [1750791175.683508329] [lifecycle_manager_controller_server]: Waiting for service controller_server/get_state...
+[odometry_node-2] [INFO] [1750791175.690845642] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791175.690955661] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791175.740845742] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791175.740961594] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791175.790845063] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791175.790956193] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791175.840914885] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791175.841031218] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791175.890837891] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791175.890922817] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791175.941004009] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791175.941151547] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791175.990844904] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791175.990954219] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791176.040839337] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791176.040956374] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791176.090828418] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791176.090911084] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791176.140831776] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791176.140917498] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791176.190961135] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791176.191054413] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791176.241144901] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791176.241316735] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791176.290888463] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791176.290992741] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791176.340858747] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791176.340978618] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791176.391160865] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791176.391267069] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791176.440888149] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791176.441015038] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791176.490862433] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791176.491098193] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791176.540858958] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791176.540969440] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791176.590842539] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791176.590954984] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791176.640827027] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791176.640905435] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791176.690829793] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791176.690933608] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791176.740835077] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791176.740995578] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791176.790963066] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791176.791050399] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791176.840853183] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791176.840980869] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791176.890823801] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791176.890939579] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791176.940841196] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791176.940945215] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791176.990988852] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791176.991127889] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791177.040853728] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791177.040965617] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791177.090822087] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791177.090936920] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791177.140840315] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791177.140943093] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791177.190832692] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791177.190919452] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791177.240821569] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791177.240903329] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791177.290909354] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791177.291033576] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791177.340845508] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791177.340942157] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791177.390869848] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791177.391001497] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791177.440823410] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791177.440901725] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791177.490877843] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791177.491017103] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791177.540841072] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791177.540939368] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[lifecycle_manager-13] [INFO] [1750791177.546957994] [lifecycle_manager_amcl]: Waiting for service amcl/get_state...
+[lifecycle_manager-14] [INFO] [1750791177.558499743] [lifecycle_manager_planner_server]: Waiting for service planner_server/get_state...
+[odometry_node-2] [INFO] [1750791177.590897060] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791177.591033671] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[lifecycle_manager-17] [INFO] [1750791177.621260483] [lifecycle_manager_behavior_server]: Waiting for service behavior_server/get_state...
+[odometry_node-2] [INFO] [1750791177.640919770] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791177.641114826] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[lifecycle_manager-12] [INFO] [1750791177.653632504] [lifecycle_manager_map_server]: Waiting for service map_server/get_state...
+[lifecycle_manager-16] [INFO] [1750791177.678626267] [lifecycle_manager_bt_navigator]: Waiting for service bt_navigator/get_state...
+[lifecycle_manager-15] [INFO] [1750791177.683767668] [lifecycle_manager_controller_server]: Waiting for service controller_server/get_state...
+[odometry_node-2] [INFO] [1750791177.690909258] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791177.691043796] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791177.740876024] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791177.741060247] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791177.790836031] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791177.790908753] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791177.840837852] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791177.840920112] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791177.890830099] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791177.890906637] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791177.940839643] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791177.940955551] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791177.990879168] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791177.991008076] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791178.040831175] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791178.040909675] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791178.090832422] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791178.090943570] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791178.140968040] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791178.141098522] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791178.190841435] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791178.190966269] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791178.240843868] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791178.240956683] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791178.290830189] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791178.290910115] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791178.340863140] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791178.340979733] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791178.390822739] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791178.390900721] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791178.440825746] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791178.440910931] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791178.490821993] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791178.490889456] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791178.540838852] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791178.540951259] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791178.590825710] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791178.590940803] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791178.640856457] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791178.640980013] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791178.690870631] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791178.691010557] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791178.740834341] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791178.740915211] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791178.791036941] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791178.791156959] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791178.840833836] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791178.840915114] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791178.890918268] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791178.891149806] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791178.940825867] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791178.940895034] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791178.990844133] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791178.990942467] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791179.040971899] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791179.041168177] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791179.091051499] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791179.091152166] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791179.140993598] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791179.141132950] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791179.190875752] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791179.191025141] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791179.240849925] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791179.240978296] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791179.290834210] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791179.290912432] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791179.341005346] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791179.341285384] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791179.390864686] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791179.390960223] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791179.440901341] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791179.441031970] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791179.490821588] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791179.490900495] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791179.540827224] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791179.540904798] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[lifecycle_manager-13] [INFO] [1750791179.547238443] [lifecycle_manager_amcl]: Waiting for service amcl/get_state...
+[lifecycle_manager-14] [INFO] [1750791179.558816359] [lifecycle_manager_planner_server]: Waiting for service planner_server/get_state...
+[odometry_node-2] [INFO] [1750791179.590963583] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791179.591200528] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[lifecycle_manager-17] [INFO] [1750791179.621661970] [lifecycle_manager_behavior_server]: Waiting for service behavior_server/get_state...
+[odometry_node-2] [INFO] [1750791179.640842663] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791179.640940867] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[lifecycle_manager-12] [INFO] [1750791179.653844231] [lifecycle_manager_map_server]: Waiting for service map_server/get_state...
+[lifecycle_manager-16] [INFO] [1750791179.678973160] [lifecycle_manager_bt_navigator]: Waiting for service bt_navigator/get_state...
+[lifecycle_manager-15] [INFO] [1750791179.684016005] [lifecycle_manager_controller_server]: Waiting for service controller_server/get_state...
+[odometry_node-2] [INFO] [1750791179.690855447] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791179.690962059] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791179.740823658] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791179.740894435] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791179.790856905] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791179.790967924] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791179.840961652] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791179.841043171] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791179.890892307] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791179.891019789] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791179.940841925] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791179.940942092] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791179.990890505] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791179.991265951] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791180.040859697] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791180.041006531] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791180.090953371] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791180.091230519] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791180.140854099] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791180.140958247] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791180.190973569] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791180.191068476] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791180.240882372] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791180.241119242] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791180.290829508] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791180.290906693] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791180.340836125] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791180.340946329] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791180.390849576] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791180.390937391] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791180.440876379] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791180.441100120] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791180.490874960] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791180.490984182] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791180.540979596] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791180.541219189] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791180.590862936] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791180.590969195] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791180.641096906] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791180.641361018] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791180.690830449] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791180.690916727] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791180.740986437] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791180.741091086] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791180.790846573] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791180.790914981] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791180.840824728] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791180.840905006] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791180.890844586] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791180.890937587] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791180.940879463] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791180.941151668] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791180.990825673] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791180.990896692] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791181.040835236] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791181.040920847] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791181.090956687] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791181.091058132] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791181.140829286] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791181.140909119] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791181.190912626] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791181.191027496] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791181.240825965] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791181.240901540] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791181.290854491] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791181.291012158] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791181.340821905] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791181.340895071] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791181.390875319] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791181.390982819] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791181.440824066] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791181.440899788] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791181.490869572] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791181.491051628] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791181.540833246] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791181.540912209] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[lifecycle_manager-13] [INFO] [1750791181.547557132] [lifecycle_manager_amcl]: Waiting for service amcl/get_state...
+[lifecycle_manager-14] [INFO] [1750791181.559032177] [lifecycle_manager_planner_server]: Waiting for service planner_server/get_state...
+[odometry_node-2] [INFO] [1750791181.590865363] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791181.591027771] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[lifecycle_manager-17] [INFO] [1750791181.621893677] [lifecycle_manager_behavior_server]: Waiting for service behavior_server/get_state...
+[odometry_node-2] [INFO] [1750791181.640985129] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791181.641077574] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[lifecycle_manager-12] [INFO] [1750791181.653983327] [lifecycle_manager_map_server]: Waiting for service map_server/get_state...
+[lifecycle_manager-16] [INFO] [1750791181.679216979] [lifecycle_manager_bt_navigator]: Waiting for service bt_navigator/get_state...
+[lifecycle_manager-15] [INFO] [1750791181.684222435] [lifecycle_manager_controller_server]: Waiting for service controller_server/get_state...
+[odometry_node-2] [INFO] [1750791181.690830080] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791181.690915302] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791181.740998013] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791181.741103476] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791181.790828093] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791181.790901112] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791181.840873803] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791181.840991711] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791181.890826069] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791181.890980329] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791181.940848983] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791181.941108169] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791181.990880027] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791181.991023249] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791182.040832681] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791182.040912756] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791182.090922670] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791182.091146818] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791182.141159695] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791182.141284751] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791182.190983405] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791182.191223017] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791182.240855819] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791182.240984004] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791182.290827751] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791182.290909881] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791182.340827832] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791182.340907554] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791182.390824820] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791182.390904005] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791182.440842475] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791182.440991660] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791182.490818833] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791182.490885333] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791182.540880951] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791182.541038655] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791182.590922791] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791182.591067402] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791182.640815315] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791182.640907593] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791182.691123212] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791182.691214341] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791182.740831088] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791182.740905866] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791182.790847094] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791182.790969298] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791182.840841064] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791182.840956805] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791182.890853663] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791182.890973460] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791182.940834688] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791182.940940540] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791182.990855435] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791182.991599919] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791183.041010516] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791183.041273887] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791183.090849837] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791183.090955449] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791183.140851473] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791183.140960770] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791183.190831998] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791183.190918091] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791183.240843746] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791183.240944616] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791183.290824919] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791183.290893493] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791183.340842074] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791183.340958241] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791183.390827358] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791183.390901377] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791183.440834772] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791183.440919013] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791183.490970001] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791183.491169242] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791183.540825063] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791183.540901192] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[lifecycle_manager-13] [INFO] [1750791183.547754542] [lifecycle_manager_amcl]: Waiting for service amcl/get_state...
+[lifecycle_manager-14] [INFO] [1750791183.559249513] [lifecycle_manager_planner_server]: Waiting for service planner_server/get_state...
+[odometry_node-2] [INFO] [1750791183.590835866] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791183.590916532] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[lifecycle_manager-17] [INFO] [1750791183.622208976] [lifecycle_manager_behavior_server]: Waiting for service behavior_server/get_state...
+[odometry_node-2] [INFO] [1750791183.640822983] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791183.640900724] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[lifecycle_manager-12] [INFO] [1750791183.654178866] [lifecycle_manager_map_server]: Waiting for service map_server/get_state...
+[lifecycle_manager-16] [INFO] [1750791183.679453963] [lifecycle_manager_bt_navigator]: Waiting for service bt_navigator/get_state...
+[lifecycle_manager-15] [INFO] [1750791183.684410363] [lifecycle_manager_controller_server]: Waiting for service controller_server/get_state...
+[odometry_node-2] [INFO] [1750791183.690961953] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791183.691248787] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791183.740847033] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791183.740921959] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791183.790941910] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791183.791060744] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791183.840831917] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791183.840915213] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791183.890922757] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791183.891110646] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791183.940836004] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791183.940919004] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791183.990873899] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791183.991161363] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791184.041109666] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791184.041285999] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791184.090883912] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791184.091193321] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791184.140998290] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791184.141123031] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791184.190847814] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791184.190953315] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791184.240834358] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791184.240915265] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791184.290829438] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791184.290906809] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791184.340977667] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791184.341128075] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791184.390922692] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791184.391034582] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791184.440976236] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791184.441155959] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791184.490845853] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791184.490952280] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791184.540829082] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791184.540920545] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791184.590866181] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791184.590966422] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791184.640839484] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791184.640952355] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791184.690800027] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791184.690883583] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791184.740828182] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791184.740911127] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791184.790823504] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791184.790898096] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791184.840849269] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791184.840964362] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791184.890829906] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791184.890906665] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791184.940836116] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791184.940997801] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791184.990831437] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791184.990908567] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791185.041020055] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791185.041191222] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791185.090827413] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791185.090901061] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791185.140975920] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791185.141205976] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791185.190829185] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791185.190903111] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791185.241028433] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791185.241162230] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791185.290840606] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791185.290953050] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791185.340829705] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791185.340904464] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791185.390836304] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791185.390922656] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791185.440835736] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791185.440941700] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791185.490917632] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791185.491042262] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791185.540834546] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791185.540913490] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[lifecycle_manager-13] [INFO] [1750791185.547989192] [lifecycle_manager_amcl]: Waiting for service amcl/get_state...
+[lifecycle_manager-14] [INFO] [1750791185.559443164] [lifecycle_manager_planner_server]: Waiting for service planner_server/get_state...
+[odometry_node-2] [INFO] [1750791185.590843904] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791185.590922849] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[lifecycle_manager-17] [INFO] [1750791185.622509608] [lifecycle_manager_behavior_server]: Waiting for service behavior_server/get_state...
+[odometry_node-2] [INFO] [1750791185.641002763] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791185.641201726] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[lifecycle_manager-12] [INFO] [1750791185.654385887] [lifecycle_manager_map_server]: Waiting for service map_server/get_state...
+[lifecycle_manager-16] [INFO] [1750791185.679651798] [lifecycle_manager_bt_navigator]: Waiting for service bt_navigator/get_state...
+[lifecycle_manager-15] [INFO] [1750791185.684716699] [lifecycle_manager_controller_server]: Waiting for service controller_server/get_state...
+[odometry_node-2] [INFO] [1750791185.690875584] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791185.690988973] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791185.740845553] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791185.740944183] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791185.790862578] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791185.790975079] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791185.840836937] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791185.840939974] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791185.890824665] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791185.890902554] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791185.940836709] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791185.940939431] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791185.990833512] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791185.990913419] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791186.040824740] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791186.040899926] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791186.090835784] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791186.090938210] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791186.140833772] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791186.140919513] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791186.190851649] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791186.190959149] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791186.240828470] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791186.240913415] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791186.290840051] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791186.290954107] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791186.340839724] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791186.340940835] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791186.390959675] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791186.391065546] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791186.440830959] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791186.440911219] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791186.490825447] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791186.490894947] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791186.540845491] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791186.540951028] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791186.590822979] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791186.590900312] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791186.640860170] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791186.641055337] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791186.690827418] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791186.690911696] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791186.741046128] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791186.741171443] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791186.790970486] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791186.791080950] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791186.840820733] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791186.840898141] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791186.890839721] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791186.890947351] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791186.940827950] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791186.940902913] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791186.991042939] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791186.991163957] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791187.040835963] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791187.040934519] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791187.090857136] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791187.091074081] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791187.140983569] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791187.141103606] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791187.190855871] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791187.191004557] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791187.240831822] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791187.240914341] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791187.290840551] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791187.290920922] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791187.340835872] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791187.340963725] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791187.390840508] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791187.390910398] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791187.440833885] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791187.440984386] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791187.490848003] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791187.490948577] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791187.540883398] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791187.541040751] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[lifecycle_manager-13] [INFO] [1750791187.548209397] [lifecycle_manager_amcl]: Waiting for service amcl/get_state...
+[lifecycle_manager-14] [INFO] [1750791187.559672202] [lifecycle_manager_planner_server]: Waiting for service planner_server/get_state...
+[odometry_node-2] [INFO] [1750791187.590851275] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791187.590937312] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[lifecycle_manager-17] [INFO] [1750791187.622716721] [lifecycle_manager_behavior_server]: Waiting for service behavior_server/get_state...
+[odometry_node-2] [INFO] [1750791187.640864837] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791187.640997189] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[lifecycle_manager-12] [INFO] [1750791187.654719018] [lifecycle_manager_map_server]: Waiting for service map_server/get_state...
+[lifecycle_manager-16] [INFO] [1750791187.679854040] [lifecycle_manager_bt_navigator]: Waiting for service bt_navigator/get_state...
+[lifecycle_manager-15] [INFO] [1750791187.684986960] [lifecycle_manager_controller_server]: Waiting for service controller_server/get_state...
+[odometry_node-2] [INFO] [1750791187.690853066] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791187.690955751] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791187.740826258] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791187.740899332] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791187.790858838] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791187.790976987] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791187.840829826] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791187.840905345] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791187.890871648] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791187.890995129] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791187.940829524] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791187.940952228] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791187.990830975] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791187.990914846] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791188.040898908] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791188.041014778] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791188.091007322] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791188.091119970] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791188.140837828] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791188.140982125] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791188.190902187] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791188.191018539] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791188.240873360] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791188.241009823] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791188.290843051] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791188.290938885] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791188.340826076] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791188.340916650] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791188.390825434] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791188.390982102] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791188.440994552] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791188.441115090] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791188.490835929] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791188.490954911] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791188.540915065] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791188.541146899] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791188.590845072] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791188.590946757] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791188.640882949] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791188.641670987] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791188.690855140] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791188.690964233] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791188.740859387] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791188.740993962] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791188.790889764] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791188.791021968] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791188.840832400] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791188.840920530] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791188.890820962] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791188.890891148] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791188.940853302] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791188.940961525] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791188.990828401] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791188.990903235] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791189.041008075] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791189.041272686] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791189.090852396] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791189.090940025] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791189.140832069] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791189.140903013] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791189.190914835] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791189.191123539] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791189.240823489] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791189.240904749] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791189.290847088] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791189.290956644] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791189.340838780] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791189.340912484] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791189.390962009] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791189.391083028] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791189.440858459] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791189.440948793] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791189.490850429] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791189.490992170] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791189.540826583] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791189.540955676] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[lifecycle_manager-13] [INFO] [1750791189.548430287] [lifecycle_manager_amcl]: Waiting for service amcl/get_state...
+[lifecycle_manager-14] [INFO] [1750791189.559882999] [lifecycle_manager_planner_server]: Waiting for service planner_server/get_state...
+[odometry_node-2] [INFO] [1750791189.590831590] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791189.590907516] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[lifecycle_manager-17] [INFO] [1750791189.622932962] [lifecycle_manager_behavior_server]: Waiting for service behavior_server/get_state...
+[odometry_node-2] [INFO] [1750791189.640835448] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791189.640940708] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[lifecycle_manager-12] [INFO] [1750791189.655054556] [lifecycle_manager_map_server]: Waiting for service map_server/get_state...
+[lifecycle_manager-16] [INFO] [1750791189.680046966] [lifecycle_manager_bt_navigator]: Waiting for service bt_navigator/get_state...
+[lifecycle_manager-15] [INFO] [1750791189.685167330] [lifecycle_manager_controller_server]: Waiting for service controller_server/get_state...
+[odometry_node-2] [INFO] [1750791189.690827232] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791189.690933196] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791189.741138240] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791189.741227221] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791189.790825523] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791189.790906412] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791189.840971493] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791189.841292160] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791189.890835499] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791189.890922610] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791189.940820469] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791189.940895895] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791189.990829697] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791189.990908716] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791190.041156723] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791190.041463483] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791190.090865840] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791190.091005859] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791190.140827383] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791190.140912902] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791190.190846353] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791190.190995298] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791190.240854581] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791190.240967822] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791190.290842292] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791190.290943588] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791190.340831891] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791190.340914835] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791190.390822156] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791190.390905360] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791190.440854811] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791190.440977367] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791190.490825780] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791190.490902688] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791190.540838194] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791190.540940232] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791190.591124627] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791190.591377869] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791190.640840929] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791190.640945004] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791190.690903621] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791190.691106048] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791190.740826072] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791190.740900313] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791190.790908449] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791190.791018431] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791190.840828270] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791190.840909678] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791190.890834573] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791190.890960666] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791190.940832616] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791190.940918005] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791190.990832864] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791190.990913382] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791191.040836537] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791191.040917722] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791191.090836413] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791191.090921525] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791191.140831864] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791191.140916642] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791191.190835593] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791191.190916445] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791191.240839211] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791191.240917711] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791191.290823143] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791191.290900532] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791191.340856224] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791191.341052391] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791191.390849137] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791191.390960341] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791191.440868514] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791191.440985181] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791191.490856947] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791191.490973317] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791191.540831712] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791191.540914194] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[lifecycle_manager-13] [INFO] [1750791191.548626823] [lifecycle_manager_amcl]: Waiting for service amcl/get_state...
+[lifecycle_manager-14] [INFO] [1750791191.560124646] [lifecycle_manager_planner_server]: Waiting for service planner_server/get_state...
+[odometry_node-2] [INFO] [1750791191.590844941] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791191.590945867] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[lifecycle_manager-17] [INFO] [1750791191.623145924] [lifecycle_manager_behavior_server]: Waiting for service behavior_server/get_state...
+[odometry_node-2] [INFO] [1750791191.640834114] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791191.640916799] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[lifecycle_manager-12] [INFO] [1750791191.655256278] [lifecycle_manager_map_server]: Waiting for service map_server/get_state...
+[lifecycle_manager-16] [INFO] [1750791191.680254207] [lifecycle_manager_bt_navigator]: Waiting for service bt_navigator/get_state...
+[lifecycle_manager-15] [INFO] [1750791191.685355256] [lifecycle_manager_controller_server]: Waiting for service controller_server/get_state...
+[odometry_node-2] [INFO] [1750791191.690845398] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791191.690954880] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791191.740822349] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791191.740904923] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791191.790838745] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791191.790911097] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791191.840826362] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791191.840913510] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791191.890900443] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791191.891045406] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791191.940902560] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791191.940997061] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791191.990824604] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791191.990949752] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791192.040836851] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791192.040943629] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791192.090916024] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791192.091031358] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791192.140841642] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791192.140956012] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791192.190830778] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791192.190905204] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791192.240836080] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791192.240940025] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791192.290830476] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791192.290908476] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791192.340828834] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791192.340913501] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791192.390830433] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791192.390912026] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791192.440826106] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791192.440902569] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791192.490974891] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791192.491236854] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791192.540832026] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791192.540906823] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791192.590856200] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791192.590962589] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791192.640828558] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791192.640910928] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791192.690840435] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791192.690934268] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791192.740914071] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791192.741114275] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791192.790831707] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791192.790908151] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791192.840846195] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791192.840945991] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791192.890822868] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791192.890900627] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791192.940829078] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791192.940906967] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791192.990828547] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791192.990899640] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791193.041141851] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791193.041366073] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791193.090831356] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791193.090971690] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791193.140823289] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791193.140919159] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791193.190838555] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791193.190939481] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791193.240985543] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791193.241121710] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791193.290840067] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791193.290949864] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791193.340824870] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791193.340901611] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791193.391404748] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791193.391505545] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791193.440831661] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791193.441007050] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791193.490902149] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791193.491047964] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791193.540857174] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791193.540969841] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[lifecycle_manager-13] [INFO] [1750791193.548820803] [lifecycle_manager_amcl]: Waiting for service amcl/get_state...
+[lifecycle_manager-14] [INFO] [1750791193.560341164] [lifecycle_manager_planner_server]: Waiting for service planner_server/get_state...
+[odometry_node-2] [INFO] [1750791193.590841939] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791193.590921106] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[lifecycle_manager-17] [INFO] [1750791193.623380775] [lifecycle_manager_behavior_server]: Waiting for service behavior_server/get_state...
+[odometry_node-2] [INFO] [1750791193.641022650] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791193.641125280] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[lifecycle_manager-12] [INFO] [1750791193.655655851] [lifecycle_manager_map_server]: Waiting for service map_server/get_state...
+[lifecycle_manager-16] [INFO] [1750791193.680456409] [lifecycle_manager_bt_navigator]: Waiting for service bt_navigator/get_state...
+[lifecycle_manager-15] [INFO] [1750791193.685559977] [lifecycle_manager_controller_server]: Waiting for service controller_server/get_state...
+[odometry_node-2] [INFO] [1750791193.691035434] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791193.691237898] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791193.740838940] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791193.740949459] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791193.790840724] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791193.790941706] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791193.841302232] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791193.841452214] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791193.890821737] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791193.890896774] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791193.940831632] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791193.940910447] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791193.990824343] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791193.990912750] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791194.040842534] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791194.040937460] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791194.090843244] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791194.090976134] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791194.140828158] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791194.140912492] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791194.190840961] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791194.190943980] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791194.240846745] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791194.240944153] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791194.290834122] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791194.290913752] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791194.340831554] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791194.340951517] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791194.390845635] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791194.390977783] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791194.440839493] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791194.440938104] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791194.490831629] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791194.490909185] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791194.541019414] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791194.541171377] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791194.590834346] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791194.590919587] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791194.640834037] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791194.640920482] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791194.690830377] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791194.690912729] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791194.740832161] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791194.740907532] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791194.790824353] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791194.790898131] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791194.840823470] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791194.840908230] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791194.891021588] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791194.891140829] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791194.940824279] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791194.940896743] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791194.990840545] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791194.990951545] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[odometry_node-2] [INFO] [1750791195.040837940] [kiwi_odometry_node]: [ZMQ] No message received.
+[odometry_node-2] [INFO] [1750791195.040917015] [kiwi_odometry_node]: POSE | x: 0.000, y: 0.000, theta: 0.000
+[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[lifecycle_manager-16] [INFO] [1750791195.078377732] [rclcpp]: signal_handler(signum=2)
+[lifecycle_manager-16] [INFO] [1750791195.078574566] [lifecycle_manager_bt_navigator]: Running Nav2 LifecycleManager rcl preshutdown (lifecycle_manager_bt_navigator)
+[lifecycle_manager-17] [INFO] [1750791195.078377547] [rclcpp]: signal_handler(signum=2)
+[lifecycle_manager-17] [INFO] [1750791195.079884958] [lifecycle_manager_behavior_server]: Running Nav2 LifecycleManager rcl preshutdown (lifecycle_manager_behavior_server)
+[navigator_node-9] [INFO] [1750791195.078421881] [rclcpp]: signal_handler(signum=2)
+[bt_navigator-7] [INFO] [1750791195.078440918] [rclcpp]: signal_handler(signum=2)
+[bt_navigator-7] [INFO] [1750791195.078703955] [bt_navigator]: Running Nav2 LifecycleNode rcl preshutdown (bt_navigator)
+[bt_navigator-7] [INFO] [1750791195.078802270] [bt_navigator]: Destroying bond (bt_navigator) to lifecycle manager.
+[lifecycle_manager-15] [INFO] [1750791195.078463436] [rclcpp]: signal_handler(signum=2)
+[lifecycle_manager-15] [INFO] [1750791195.078592418] [lifecycle_manager_controller_server]: Running Nav2 LifecycleManager rcl preshutdown (lifecycle_manager_controller_server)
+[lifecycle_manager-14] [INFO] [1750791195.078466381] [rclcpp]: signal_handler(signum=2)
+[lifecycle_manager-14] [INFO] [1750791195.078582233] [lifecycle_manager_planner_server]: Running Nav2 LifecycleManager rcl preshutdown (lifecycle_manager_planner_server)
+[controller_server-6] [INFO] [1750791195.078724807] [rclcpp]: signal_handler(signum=2)
+[odometry_node-2] [INFO] [1750791195.078726844] [rclcpp]: signal_handler(signum=2)
+[lifecycle_manager-12] [INFO] [1750791195.078804307] [rclcpp]: signal_handler(signum=2)
+[lifecycle_manager-12] [INFO] [1750791195.079825014] [lifecycle_manager_map_server]: Running Nav2 LifecycleManager rcl preshutdown (lifecycle_manager_map_server)
+[lifecycle_manager-13] [INFO] [1750791195.078753900] [rclcpp]: signal_handler(signum=2)
+[lifecycle_manager-13] [INFO] [1750791195.079339253] [lifecycle_manager_amcl]: Running Nav2 LifecycleManager rcl preshutdown (lifecycle_manager_amcl)
+[lifecycle_manager-14] [INFO] [1750791195.081258202] [lifecycle_manager_planner_server]: Waiting for service planner_server/get_state...
+[lifecycle_manager-14] 
+[lifecycle_manager-14] >>> [rcutils|error_handling.c:108] rcutils_set_error_state()
+[lifecycle_manager-14] This error state is being overwritten:
+[lifecycle_manager-14] 
+[lifecycle_manager-14]   'rcl node's context is invalid, at ./src/rcl/node.c:404'
+[lifecycle_manager-14] 
+[lifecycle_manager-14] with this new error message:
+[lifecycle_manager-14] 
+[lifecycle_manager-14]   'publisher's context is invalid, at ./src/rcl/publisher.c:423'
+[lifecycle_manager-14] 
+[lifecycle_manager-14] rcutils_reset_error() should be called after error handling to avoid this.
+[lifecycle_manager-14] <<<
+[lifecycle_manager-14] Failed to publish log message to rosout: publisher's context is invalid, at ./src/rcl/publisher.c:423
+[lifecycle_manager-14] [INFO] [1750791195.083363800] [lifecycle_manager_planner_server]: Waiting for service planner_server/get_state...
+[lifecycle_manager-14] 
+[lifecycle_manager-14] >>> [rcutils|error_handling.c:108] rcutils_set_error_state()
+[lifecycle_manager-14] This error state is being overwritten:
+[lifecycle_manager-14] 
+[lifecycle_manager-14]   'rcl node's context is invalid, at ./src/rcl/node.c:404'
+[lifecycle_manager-14] 
+[lifecycle_manager-14] with this new error message:
+[lifecycle_manager-14] 
+[lifecycle_manager-14]   'publisher's context is invalid, at ./src/rcl/publisher.c:423'
+[lifecycle_manager-14] 
+[lifecycle_manager-14] rcutils_reset_error() should be called after error handling to avoid this.
+[lifecycle_manager-14] <<<
+[lifecycle_manager-14] Failed to publish log message to rosout: publisher's context is invalid, at ./src/rcl/publisher.c:423
+[lifecycle_manager-14] terminate called after throwing an instance of 'std::runtime_error'
+[lifecycle_manager-14]   what():  context cannot be slept with because it's invalid
+[controller_server-6] [INFO] [1750791195.082439612] [controller_server]: Running Nav2 LifecycleNode rcl preshutdown (controller_server)
+[controller_server-6] [INFO] [1750791195.082562372] [controller_server]: Destroying bond (controller_server) to lifecycle manager.
+[controller_server-6] [INFO] [1750791195.102793975] [local_costmap.local_costmap]: Destroying
+[amcl-4] [INFO] [1750791195.083162966] [rclcpp]: signal_handler(signum=2)
+[amcl-4] [INFO] [1750791195.083400485] [amcl]: Running Nav2 LifecycleNode rcl preshutdown (amcl)
+[amcl-4] [INFO] [1750791195.083496300] [amcl]: Destroying bond (amcl) to lifecycle manager.
+[amcl-4] [INFO] [1750791195.120332850] [amcl]: Destroying
+[lifecycle_manager-16] [INFO] [1750791195.083850467] [lifecycle_manager_bt_navigator]: Waiting for service bt_navigator/get_state...
+[lifecycle_manager-16] [INFO] [1750791195.083885486] [lifecycle_manager_bt_navigator]: Waiting for service bt_navigator/get_state...
+[lifecycle_manager-16] terminate called after throwing an instance of 'std::runtime_error'
+[lifecycle_manager-16]   what():  context cannot be slept with because it's invalid
+[lifecycle_manager-13] [INFO] [1750791195.084717173] [lifecycle_manager_amcl]: Waiting for service amcl/get_state...
+[lifecycle_manager-13] [INFO] [1750791195.084749433] [lifecycle_manager_amcl]: Waiting for service amcl/get_state...
+[lifecycle_manager-13] terminate called after throwing an instance of 'std::runtime_error'
+[lifecycle_manager-13]   what():  context cannot be slept with because it's invalid
+[lifecycle_manager-12] [INFO] [1750791195.084991322] [lifecycle_manager_map_server]: Waiting for service map_server/get_state...
+[lifecycle_manager-12] [INFO] [1750791195.085058081] [lifecycle_manager_map_server]: Waiting for service map_server/get_state...
+[lifecycle_manager-12] terminate called after throwing an instance of 'std::runtime_error'
+[lifecycle_manager-12]   what():  context cannot be slept with because it's invalid
+[static_transform_publisher-1] [INFO] [1750791195.085158767] [rclcpp]: signal_handler(signum=2)
+[lifecycle_manager-15] [INFO] [1750791195.086783697] [lifecycle_manager_controller_server]: Waiting for service controller_server/get_state...
+[lifecycle_manager-15] [INFO] [1750791195.086813845] [lifecycle_manager_controller_server]: Waiting for service controller_server/get_state...
+[lifecycle_manager-15] terminate called after throwing an instance of 'std::runtime_error'
+[lifecycle_manager-15]   what():  context cannot be slept with because it's invalid
+[behavior_server-8] [INFO] [1750791195.087140475] [rclcpp]: signal_handler(signum=2)
+[behavior_server-8] [INFO] [1750791195.087376365] [behavior_server]: Running Nav2 LifecycleNode rcl preshutdown (behavior_server)
+[behavior_server-8] [INFO] [1750791195.087489050] [behavior_server]: Destroying bond (behavior_server) to lifecycle manager.
+[behavior_server-8] [INFO] [1750791195.119231273] [behavior_server]: Destroying
+[cmd_vel_bridge-10] [INFO] [1750791195.090816484] [cmd_vel_bridge]: cmd_vel_bridge node shutdown. ZMQ resources cleaned up.
+[cmd_vel_bridge-10] Failed to publish log message to rosout: publisher's context is invalid, at ./src/rcl/publisher.c:423
+[planner_server-5] [INFO] [1750791195.092654896] [rclcpp]: signal_handler(signum=2)
+[planner_server-5] [INFO] [1750791195.092885007] [planner_server]: Running Nav2 LifecycleNode rcl preshutdown (planner_server)
+[planner_server-5] [INFO] [1750791195.092996100] [planner_server]: Destroying bond (planner_server) to lifecycle manager.
+[planner_server-5] [INFO] [1750791195.293162422] [global_costmap.global_costmap]: Destroying
+[lifecycle_manager-17] [INFO] [1750791195.092845026] [lifecycle_manager_behavior_server]: Waiting for service behavior_server/get_state...
+[lifecycle_manager-17] 
+[lifecycle_manager-17] >>> [rcutils|error_handling.c:108] rcutils_set_error_state()
+[lifecycle_manager-17] This error state is being overwritten:
+[lifecycle_manager-17] 
+[lifecycle_manager-17]   'rcl node's context is invalid, at ./src/rcl/node.c:404'
+[lifecycle_manager-17] 
+[lifecycle_manager-17] with this new error message:
+[lifecycle_manager-17] 
+[lifecycle_manager-17]   'publisher's context is invalid, at ./src/rcl/publisher.c:423'
+[lifecycle_manager-17] 
+[lifecycle_manager-17] rcutils_reset_error() should be called after error handling to avoid this.
+[lifecycle_manager-17] <<<
+[lifecycle_manager-17] Failed to publish log message to rosout: publisher's context is invalid, at ./src/rcl/publisher.c:423
+[lifecycle_manager-17] [INFO] [1750791195.092911118] [lifecycle_manager_behavior_server]: Waiting for service behavior_server/get_state...
+[lifecycle_manager-17] 
+[lifecycle_manager-17] >>> [rcutils|error_handling.c:108] rcutils_set_error_state()
+[lifecycle_manager-17] This error state is being overwritten:
+[lifecycle_manager-17] 
+[lifecycle_manager-17]   'rcl node's context is invalid, at ./src/rcl/node.c:404'
+[lifecycle_manager-17] 
+[lifecycle_manager-17] with this new error message:
+[lifecycle_manager-17] 
+[lifecycle_manager-17]   'publisher's context is invalid, at ./src/rcl/publisher.c:423'
+[lifecycle_manager-17] 
+[lifecycle_manager-17] rcutils_reset_error() should be called after error handling to avoid this.
+[lifecycle_manager-17] <<<
+[lifecycle_manager-17] Failed to publish log message to rosout: publisher's context is invalid, at ./src/rcl/publisher.c:423
+[lifecycle_manager-17] terminate called after throwing an instance of 'std::runtime_error'
+[lifecycle_manager-17]   what():  context cannot be slept with because it's invalid
+[bt_navigator-7] [INFO] [1750791195.096033070] [bt_navigator]: Destroying
+[map_server-3] [INFO] [1750791195.132692138] [rclcpp]: signal_handler(signum=2)
+[map_server-3] [INFO] [1750791195.132941472] [map_server]: Running Nav2 LifecycleNode rcl preshutdown (map_server)
+[map_server-3] [INFO] [1750791195.133072768] [map_server]: Destroying bond (map_server) to lifecycle manager.
+[map_server-3] [INFO] [1750791195.262378220] [map_server]: Destroying
+[INFO] [map_server-3]: process has finished cleanly [pid 38851]
+[controller_server-6] [INFO] [1750791195.664074831] [controller_server]: Destroying
+[planner_server-5] [INFO] [1750791195.681232112] [planner_server]: Destroying
+[INFO] [bt_navigator-7]: process has finished cleanly [pid 38855]
+[INFO] [controller_server-6]: process has finished cleanly [pid 38854]
+[INFO] [behavior_server-8]: process has finished cleanly [pid 38856]
+[INFO] [planner_server-5]: process has finished cleanly [pid 38853]
+[INFO] [amcl-4]: process has finished cleanly [pid 38852]
+[ERROR] [lifecycle_manager-16]: process has died [pid 39033, exit code -6, cmd '/opt/ros/jazzy/lib/nav2_lifecycle_manager/lifecycle_manager --ros-args -r __node:=lifecycle_manager_bt_navigator --params-file /tmp/launch_params_q1yzrdot'].
+[INFO] [navigator_node-9]: process has finished cleanly [pid 38857]
+[INFO] [static_transform_publisher-1]: process has finished cleanly [pid 38849]
+[INFO] [odometry_node-2]: process has finished cleanly [pid 38850]
+[cmd_vel_bridge-10] Traceback (most recent call last):
+[cmd_vel_bridge-10]   File "/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/src/nav_module/src/cmd_vel_bridge.py", line 148, in <module>
+[cmd_vel_bridge-10]     main()
+[cmd_vel_bridge-10]   File "/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/src/nav_module/src/cmd_vel_bridge.py", line 144, in main
+[cmd_vel_bridge-10]     rclpy.shutdown()
+[cmd_vel_bridge-10]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/__init__.py", line 134, in shutdown
+[cmd_vel_bridge-10]     _shutdown(context=context)
+[cmd_vel_bridge-10]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/utilities.py", line 82, in shutdown
+[cmd_vel_bridge-10]     context.shutdown()
+[cmd_vel_bridge-10]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/context.py", line 129, in shutdown
+[cmd_vel_bridge-10]     self.__context.shutdown()
+[cmd_vel_bridge-10] rclpy._rclpy_pybind11.RCLError: failed to shutdown: rcl_shutdown already called on the given context, at ./src/rcl/init.c:333
+[ERROR] [cmd_vel_bridge-10]: process has died [pid 38858, exit code 1, cmd 'python3 /home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/src/nav_module/src/cmd_vel_bridge.py'].
+[ERROR] [lifecycle_manager-12]: process has died [pid 39029, exit code -6, cmd '/opt/ros/jazzy/lib/nav2_lifecycle_manager/lifecycle_manager --ros-args -r __node:=lifecycle_manager_map_server --params-file /tmp/launch_params_u3z0rmla'].
+[ERROR] [lifecycle_manager-15]: process has died [pid 39032, exit code -6, cmd '/opt/ros/jazzy/lib/nav2_lifecycle_manager/lifecycle_manager --ros-args -r __node:=lifecycle_manager_controller_server --params-file /tmp/launch_params_stl1kix4'].
+[ERROR] [lifecycle_manager-13]: process has died [pid 39030, exit code -6, cmd '/opt/ros/jazzy/lib/nav2_lifecycle_manager/lifecycle_manager --ros-args -r __node:=lifecycle_manager_amcl --params-file /tmp/launch_params_pm3j48jm'].
+[ERROR] [lifecycle_manager-17]: process[lifecycle_manager-17] failed to terminate '5' seconds after receiving 'SIGINT', escalating to 'SIGTERM'
+[ERROR] [lifecycle_manager-14]: process[lifecycle_manager-14] failed to terminate '5' seconds after receiving 'SIGINT', escalating to 'SIGTERM'
+[INFO] [lifecycle_manager-17]: sending signal 'SIGTERM' to process[lifecycle_manager-17]
+[INFO] [lifecycle_manager-14]: sending signal 'SIGTERM' to process[lifecycle_manager-14]
+[ERROR] [lifecycle_manager-14]: process has died [pid 39031, exit code -6, cmd '/opt/ros/jazzy/lib/nav2_lifecycle_manager/lifecycle_manager --ros-args -r __node:=lifecycle_manager_planner_server --params-file /tmp/launch_params_0sm63o2c'].
+[ERROR] [lifecycle_manager-17]: process has died [pid 39034, exit code -6, cmd '/opt/ros/jazzy/lib/nav2_lifecycle_manager/lifecycle_manager --ros-args -r __node:=lifecycle_manager_behavior_server --params-file /tmp/launch_params_u6yktvrb'].

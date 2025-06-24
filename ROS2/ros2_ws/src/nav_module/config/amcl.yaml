@@ -19,3 +19,4 @@ amcl:
     recovery_alpha_fast: 0.0
     tf_broadcast: true
     queue_size: 20
+    use_lifecycle_node: true

@@ -3,20 +3,20 @@ planner_server:
     expected_planner_frequency: 1.0
     planner_plugins: ["GridBased"]
     GridBased:
-      plugin: "nav2_navfn_planner/NavfnPlanner"
+      plugin: "nav2_navfn_planner::NavfnPlanner"
 
 controller_server:
   ros__parameters:
     controller_frequency: 10.0
     controller_plugins: ["FollowPath"]
     FollowPath:
-      plugin: "nav2_regulated_pure_pursuit_controller/RegulatedPurePursuitController"
+      plugin: "nav2_regulated_pure_pursuit_controller::RegulatedPurePursuitController"
 
 bt_navigator:
   ros__parameters:
     global_frame: map
     robot_base_frame: base_link
-    default_bt_xml_filename: "config/behavior_tree.xml"
+    default_bt_xml_filename: "/home/raspi/Robots4ChildrenWithDisabilities/ROS2/ros2_ws/src/nav_module/config/behavior_tree.xml"
     goal_blackboard_id: goal
     loop_timeout: 10.0
     cancel_recovery_behavior: true
@@ -27,10 +27,8 @@ behavior_server:
     costmap_topic: local_costmap/costmap_raw
     footprint_topic: local_costmap/published_footprint
     cycle_frequency: 10.0
-    behavior_plugins: ["spin", "backup", "clearing"]
+    behavior_plugins: ["spin", "backup"]
     spin:
-      plugin: "nav2_behaviors/Spin"
+      plugin: "nav2_behaviors::Spin"
     backup:
-      plugin: "nav2_behaviors/BackUp"
-    clearing:
-      plugin: "nav2_behaviors/ClearCostmap"
+      plugin: "nav2_behaviors::BackUp"
