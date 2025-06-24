@@ -7,6 +7,7 @@ from PyQt5.QtCore import Qt, QSize, QTimer, QMetaObject, Q_ARG
 from PyQt5.QtCore import pyqtSlot
 from control_modes_basic import controller_manager
 from ai_control_script import spawn_model, start_control, pause_control, resume_control, stop_control, MODEL_MAPPING
+from ai_control_script import logger
 import threading
 import requests
 import zmq
@@ -286,6 +287,9 @@ class TicTacToe(QWidget):
         self.setGeometry(0, 0, 1920, 1080)
         self.set_background("tictac_background.png")
 
+        self.current_running = False
+        self.current_paused = False
+
         self.game_count = 0
         self.turn = 'X'
         self.board = [''] * 9
@@ -411,6 +415,30 @@ class TicTacToe(QWidget):
             self.handle_direction("Down")
         elif key == Qt.Key_Space:
             self.handle_direction("Centre")
+        elif key == Qt.Key_P:
+            if self.current_running:
+                logger.info("Pausing AI control...")
+                pause_control()
+                self.current_running = False
+                self.current_paused = True
+            else:
+                logger.warning("No running model to pause.")
+        elif key == Qt.Key_R:
+            if self.current_paused:
+                logger.info("Resuming AI control...")
+                resume_control()
+                self.current_running = True
+                self.current_paused = False
+            else:
+                logger.warning("No paused model to resume.")
+        elif key == Qt.Key_Q:
+            if self.current_running or self.current_paused:
+                logger.info("Stopping AI control...")
+                stop_control()
+                self.current_running = False
+                self.current_paused = False
+            else:
+                logger.warning("No model is running.")
 
     def make_move(self, idx):
         if self.board[idx] == '':
@@ -465,7 +493,21 @@ class TicTacToe(QWidget):
                 self.send_move_to_server('O', move)
                 self.highlight_selected()
                 finish_move()
-            return
+                model_key = self.index_to_model.get(move)
+                model_id = MODEL_MAPPING.get(model_key)
+                if model_id:
+                    if spawn_model(model_id):
+                        start_control(model_id, prompt='f')
+                        self.current_running = True
+                        self.current_paused = False
+                        logger.info(f"[INFO] Spawned and started model {model_key} for move {move}")
+                    else:
+                        logger.info(f"[ERROR] Failed to load model for move {move}")
+                else:
+                    logger.info(f"[WARN] No model mapping for move {move}")
+                
+                
+                return
 
         def minimax(board, depth, is_maximizing):
             winner = self.get_winner(board)
@@ -511,6 +553,17 @@ class TicTacToe(QWidget):
             self.send_move_to_server('O', best_move)
             self.highlight_selected()
             finish_move()
+            model_key = self.index_to_model.get(best_move)
+            model_id = MODEL_MAPPING.get(model_key)
+            if model_id:
+                if spawn_model(model_id):
+                    start_control(model_id, prompt='f')
+                    logger.info(f"[INFO] Spawned and started model {model_key} for move {best_move}")
+                else:
+                    logger.info(f"[ERROR] Failed to load model for move {best_move}")
+            else:
+                logger.info(f"[WARN] No model mapping for move {best_move}")
+            
 
     def check_winner(self, player):
         wins = [(0,1,2), (3,4,5), (6,7,8),
