@@ -16,6 +16,7 @@ Our team consisted of:
 - Gwendal Casta
 - Jinyoung Kim
 <br>
+
 ## Project Information
 The project aim was to develop an affordable autonomous robotic assistant capable of playing games and assisting in activities of daily living (ADLs) for children affected by motor disabilities. Designed with the end user in mind, the robot was intended to be friendly, safe, and intuitive to interact with.
 
