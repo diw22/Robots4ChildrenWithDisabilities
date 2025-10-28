@@ -6,6 +6,8 @@ Robots4ChildrenWithDisabilities is a summer consulting project exploring how rob
 - Group Information
 - Project Information
 - Version Control
+- Repository Structure
+- Extension work
 
 ## Group Information
 Our team consisted of:
@@ -29,6 +31,18 @@ From a technical perspective, the system combined a modular hardware architectur
 - Investigate the potential of robotics to enhance accessibility and inclusion for children with physical, cognitive, or developmental disabilities. (I'm not sure for whom the robots are designed)
 - Propose actionable, user-centered robotic solutions tailored to the needs of children with disabilities.
 - Develop proof-of-concept ideas or prototypes to demonstrate feasibility and impact.
+
+## Version Control
+
+To ensure that a functional version of the robotic assistant would be delivered by the project deadline, we adopted an iterative development workflow. With each iteration, we incrementally increased the system’s autonomy, capability, and user engagement.
+
+The first iteration focused on enabling basic control of the robot through low-dimensional input methods, such as four-directional commands, allowing users to move the robot safely and effectively.
+
+In the next stage, we concentrated on automating the robotic arm module, enabling it to perform pick-and-place operations. Alongside this, we integrated a computer vision module into the navigation system, allowing the robot to detect objects within its environment and approach them autonomously using its mobile base.
+
+Subsequent iterations prioritized user–robot interaction. We developed a child-friendly graphical interface and designed interactive games that leveraged the robot’s existing hardware modules.
+
+Finally, we integrated the system with a LiDAR-based mapping framework to enhance navigational flexibility and spatial awareness. Additional features, such as user-to-user messaging and improved robot dialogue responses, were implemented to increase communication capabilities and create a more engaging, friendly user experience.
 
 ## Repository Structure
 
