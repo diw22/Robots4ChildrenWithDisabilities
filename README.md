@@ -1,7 +1,7 @@
 # Robots4ChildrenWithDisabilities
-![alt text](assets/robots.png)
+![alt text](assets/GUI_Background.png)
 Robots4ChildrenWithDisabilities is a summer consulting project exploring how robotics can support and empower children with disabilities. 
-
+![alt text](assets/charis.png)
 ## Overview
 - Group Information
 - Project Information
@@ -22,8 +22,11 @@ Our team consisted of:
 ## Project Information
 The project aim was to develop an affordable autonomous robotic assistant capable of playing games and assisting in activities of daily living (ADLs) for children affected by motor disabilities. Designed with the end user in mind, the robot was intended to be friendly, safe, and intuitive to interact with.
 
+![alt text](assets/XLeRobot.png)
+Our work was built upon the XLeRobot platform: an open-source, modular robotic system designed for research and education in human–robot interaction. By extending its hardware and software capabilities, we adapted XLeRobot into a personalized assistive platform capable of supporting children with motor disabilities. This foundation provided a flexible and reliable base for integrating new control interfaces, perception modules, and learning algorithms.
+![alt text](assets/cv.png)
 To enable user interaction, we implemented accessible input methods such as adaptive game controllers and head tracking systems. We further enhanced the robot’s autonomy by integrating computer vision and imitation learning, allowing it to perceive, adapt, and respond intelligently to its environment.
-
+![alt text](assets/headtrack.png)
 From a technical perspective, the system combined a modular hardware architecture with a ROS-based software framework, supporting real-time control and sensor integration. The vision module utilized object detection and facial tracking to enable dynamic interaction, while the learning algorithms were trained to replicate demonstrated behaviors such as picking and placing objects. This configuration provided a robust and flexible platform for further expansion into assistive and educational robotics applications.
 
 ### Project Goals
@@ -41,8 +44,10 @@ The first iteration focused on enabling basic control of the robot through low-d
 In the next stage, we concentrated on automating the robotic arm module, enabling it to perform pick-and-place operations. Alongside this, we integrated a computer vision module into the navigation system, allowing the robot to detect objects within its environment and approach them autonomously using its mobile base.
 
 Subsequent iterations prioritized user–robot interaction. We developed a child-friendly graphical interface and designed interactive games that leveraged the robot’s existing hardware modules.
+![alt text](assets/tictactoe.png)
 
 Finally, we integrated the system with a LiDAR-based mapping framework to enhance navigational flexibility and spatial awareness. Additional features, such as user-to-user messaging and improved robot dialogue responses, were implemented to increase communication capabilities and create a more engaging, friendly user experience.
+![alt text](assets/lidar.png)
 
 ## Repository Structure
 
