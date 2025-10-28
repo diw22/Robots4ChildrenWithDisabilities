@@ -8,5 +8,6 @@ Robots4ChildrenWithDisabilities is a summer consulting project exploring how rob
 
 ## Repository Structure
 
-- `GUI/`: Background research, case studies, and stakeholder interviews.
-- `ROS2/`: Concept sketches, robot designs, and feature proposals.
+- `GUI/`: Contains code for motion control, user–robot interaction interfaces, task sequencing logic, and system integration.
+- `ROS2/`:ROS 2 packages and scripts responsible for LiDAR-based mapping, navigation, and environment perception..
+- `3D Print/`: CAD and STL files for the robot’s 3D-printed mechanical components and structural parts.
