@@ -6,8 +6,7 @@ Robots4ChildrenWithDisabilities is a summer consulting project exploring how rob
 - Propose actionable, user-centered robotic solutions tailored to the needs of children with disabilities.
 - Develop proof-of-concept ideas or prototypes to demonstrate feasibility and impact.
 
-## Repository Structure (placeholders, to be changed)
+## Repository Structure
 
-- `research/`: Background research, case studies, and stakeholder interviews.
-- `designs/`: Concept sketches, robot designs, and feature proposals.
-- `prototypes/`: Code and hardware files for any proof-of-concept implementations.
+- `GUI/`: Background research, case studies, and stakeholder interviews.
+- `ROS2/`: Concept sketches, robot designs, and feature proposals.
