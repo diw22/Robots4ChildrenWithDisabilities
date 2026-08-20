@@ -17,6 +17,7 @@ Our team consisted of:
 - Dinushan Edmond Camilus
 - Gwendal Casta
 - Jinyoung Kim
+- Dylan Winters
 <br>
 
 ## Project Information
